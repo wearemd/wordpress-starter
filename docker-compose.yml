@@ -1,0 +1,35 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      args:
+        HOST_UID: ${HOST_UID}
+        HOST_USER: ${HOST_USER}
+    environment:
+      APACHE_RUN_USER: ${HOST_USER}
+    ports:
+      - "3010:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - mysqldb
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "3011:80"
+    environment:
+      PMA_HOST: mysqldb
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/var/lib/mysql

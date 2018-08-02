@@ -1,0 +1,33 @@
+# OS related
+.DS_Store
+
+# Configuration / Env
+.env
+
+# Docker
+db
+
+# WordPress files
+app/wp-admin/
+app/wp-content/*
+!app/wp-content/themes/
+app/wp-content/themes/*
+app/wp-includes/
+
+# Dont ignore current theme
+!app/wp-content/themes/new-website
+app/wp-content/themes/new-website/vendor
+app/wp-content/themes/new-website/js
+app/wp-content/themes/new-website/app.css
+
+app/.htaccess
+app/*.log
+app/*.php
+app/license.txt
+app/readme.html
+
+# Frontend
+node_modules
+
+# Stuff
+.todo

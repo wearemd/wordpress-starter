@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# HOST_UID and HOST_USER are only here to prevent warnings with docker-compose
+HOST_UID=$(id -u) HOST_USER=$(whoami) docker-compose exec web sudo -u $(whoami) /usr/local/bin/wp $@

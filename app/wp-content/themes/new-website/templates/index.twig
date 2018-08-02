@@ -1,0 +1,37 @@
+{% extends "layouts/base.twig" %}
+
+{% block body_class "home" %}
+
+{% block content %}
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{post.title}}</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column">
+          <p class="title is-2">
+            {{__('À découvrir sur notre blog', 'new-website')}}
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        {% for post in posts %}
+          <div class="column is-3 is-offset-1">
+            <a href="{{post.link}}">
+              <div>
+                <h2 class="title is-4">{{post.title}}</h2>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

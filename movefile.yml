@@ -1,0 +1,36 @@
+global:
+  sql_adapter: default
+
+default: &default
+  exclude:
+    - 'readme.html'
+    - 'license.txt'
+    - 'wp-config.php'
+    - 'wp-content/*.sql.gz'
+    - '.htaccess'
+
+local:
+  vhost: http://localhost:3010
+  wordpress_path: "<%= Dir.pwd %>/app"
+
+  database:
+    name: wordpress
+    user: root
+    password: password
+    host: mysqldb
+
+production:
+  <<: *default
+
+  vhost: https://new-website.com
+  wordpress_path: /var/www/new-website/
+
+  database:
+    name: "<%= ENV['PROD_DB_NAME'] %>"
+    user: "<%= ENV['PROD_DB_USER'] %>"
+    password: "<%= ENV['PROD_DB_PASSWORD'] %>"
+    host: "<%= ENV['PROD_DB_HOST'] %>"
+
+  ssh: 
+    host: new-website.com
+    user: my-ssh-user 

@@ -1,0 +1,31 @@
+{% extends "layouts/base.twig" %}
+
+{% block body_class "page" %}
+
+{% block content %}
+  <section class="sectio">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column">
+          <p class="title is-6">
+            {{post.title}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-main">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <div>
+            {{post.content}}
+
+            {#% include "dev/lorem.twig" %#}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!-- Template for WordPress theme by MD - wearemd.com -->
+<!DOCTYPE html>
+<html class="{% block body_class %}{% endblock %}" {{ site.language_attributes }}>
+  <head>
+    <meta charset="{{ site.charset }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    {{function('wp_head')}}
+
+    <title>{{ wp_title }}</title>
+    <link rel="shortcut icon" href="{{ site.theme.link }}/images/favicon/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      {% include "components/navbar.twig" with {'navbar': navbar.get_items} %}
+    </header>
+
+    {% block content %}
+      Sorry, no content
+    {% endblock %}
+
+    <footer class="footer">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column is-3">
+            {# {{theme_options('address')|wpautop}} #}
+            
+            <p> 
+              <a class="footer-link" href="mailto:{# {{theme_options('contact-email')}} #}">
+                {# {{theme_options('contact-email')}} #}
+              </a>
+            </p>
+
+            <ul class="list-inline">
+              <li>
+                <a class="icon is-medium" href="{# {{theme_options('facebook')}} #}" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="icon is-medium" href="{# {{theme_options('linkedin')}} #}" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column is-3">
+            {% include "components/navbar-footer.twig" with {'navbar_footer': navbar_footer.get_items}%}
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

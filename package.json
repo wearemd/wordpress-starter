@@ -1,0 +1,31 @@
+{
+  "name": "template-wp-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "awea <aweaoftheworld@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "browser-sync": "^2.5.3",
+    "gulp": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^3.1.0",
+    "webpack-merge": "^4.1.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "repository": {
+    "url": "git@github.com:wearemd/template-wp-website.git",
+    "type": "git"
+  },
+  "gulp": {
+    "theme_path": "./app/wp-content/themes/new-website"
+  }
+}
