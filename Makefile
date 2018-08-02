@@ -49,13 +49,5 @@ pull_staging: ## Pull DB and uploads from new-website.com to local
 images: ## Regenerate images
 	$(WPCLI) media regenerate --yes
 
-clean: ## Banana
-	sudo rm -rf db node_modules
-	mv $(THEME_DIR) /tmp
-	rm app/* -rf
-	mkdir -p app/wp-content/themes
-	mv /tmp/$(THEME_NAME) $(THEME_DIR)
-	@docker-compose down
-
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
