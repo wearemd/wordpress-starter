@@ -3,23 +3,13 @@
 {% block body_class "page" %}
 
 {% block content %}
-  <section class="sectio">
+  <section class="section page-main">
     <div class="container is-fluid">
       <div class="columns">
         <div class="column">
-          <p class="title is-6">
-            {{post.title}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section page-main">
-    <div class="container is-fluid">
-      <div class="columns is-centered">
-        <div class="column is-6">
           <div>
+            <h1 class="title is-1">{{post.title}}</h1> 
+            
             {{post.content}}
 
             {#% include "dev/lorem.twig" %#}

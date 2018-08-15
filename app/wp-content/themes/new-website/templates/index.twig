@@ -5,7 +5,7 @@
 {% block content %}
   <section class="hero is-light">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-fluid">
         <h1 class="title">{{post.title}}</h1>
       </div>
     </div>
@@ -23,7 +23,7 @@
 
       <div class="columns">
         {% for post in posts %}
-          <div class="column is-3 is-offset-1">
+          <div class="column is-4">
             <a href="{{post.link}}">
               <div>
                 <h2 class="title is-4">{{post.title}}</h2>

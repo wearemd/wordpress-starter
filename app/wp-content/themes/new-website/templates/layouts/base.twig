@@ -24,30 +24,7 @@
     <footer class="footer">
       <div class="container is-fluid">
         <div class="columns">
-          <div class="column is-3">
-            {# {{theme_options('address')|wpautop}} #}
-            
-            <p> 
-              <a class="footer-link" href="mailto:{# {{theme_options('contact-email')}} #}">
-                {# {{theme_options('contact-email')}} #}
-              </a>
-            </p>
-
-            <ul class="list-inline">
-              <li>
-                <a class="icon is-medium" href="{# {{theme_options('facebook')}} #}" target="_blank">
-                  <i class="fab fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a class="icon is-medium" href="{# {{theme_options('linkedin')}} #}" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="column is-3">
+          <div class="column">
             {% include "components/navbar-footer.twig" with {'navbar_footer': navbar_footer.get_items}%}
           </div>
         </div>

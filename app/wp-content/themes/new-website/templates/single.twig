@@ -5,18 +5,10 @@
 {% block content %}
   <section class="section">
     <div class="container is-fluid">
-      <div class="columns is-centered">
-        <div class="column is-6">
+      <div class="columns">
+        <div class="column">
           <h1 class="title is-1">{{post.title}}</h1> 
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container is-fluid">
-      <div class="columns is-centered">
-        <div class="column is-6">
           {{post.content}}
 
           {#% include "dev/lorem.twig" %#}
