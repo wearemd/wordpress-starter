@@ -31,5 +31,5 @@ Rename every occurence of `new-website` to `your-theme-name` and run `make setup
 ## Folders
 * `app/wp-content/themes/new-website`: Your new WordPress theme
 * `gulp`: Gulp tasks and configuration
-* `sass`: Theme Sass files (edit those files to update our theme CSS)
+* `sass`: Theme Sass files (edit those files to update your theme CSS)
   * This theme is built using [Bulma modular CSS framework](https://bulma.io)
