@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := dev
-.PHONY: deps setup docker_build docker_up dev push_staging pull_staging images help
+.PHONY: deps setup build_docker up_docker dev push_production pull_production help
 
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
@@ -23,31 +23,30 @@ app/wp-config.php:
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
-setup: docker_up deps app/index.php app/wp-config.php ## Setup everything to works on this wordpress installation
+setup: up_docker deps app/index.php app/wp-config.php ## Setup everything required to work on this WordPress installation
 	@$(WPCLI) theme activate new-website
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu create "navbar_footer"
 	@$(WPCLI) menu item add-post navbar_footer 2
 
-docker_build: Dockerfile docker-compose.yml
+build_docker: Dockerfile docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
 
-docker_up: docker_build ## Run WordPress on localhost:3010 and phpMyAdmin on localhost:3011 (Linux)
+up_docker: build_docker ## Run WordPress on localhost:3010 and phpMyAdmin on localhost:3011
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
-dev: deps docker_up ## Run WordPress on localhost:3000 with livereload
+dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
 	@$(GULP) --continue
 
-push_staging: ## Push Theme, Plugins and languages from local to new-website.com 
+build_assets: 
 	@NODE_ENV=production $(GULP)
-	@wordmove push -all -e production
 
-pull_staging: ## Pull DB and uploads from new-website.com to local
-	@wordmove pull -d -u -e production
+push_production: build_assets ## Push theme, plugins and languages from local to new-website.com 
+	@wordmove push -t -p -l -e production
 
-images: ## Regenerate images
-	$(WPCLI) media regenerate --yes
+pull_production: ## Pull everything from new-website.com to local except the theme
+	@wordmove pull --all --no-themes -e production
 
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
