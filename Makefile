@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := dev
-.PHONY: deps setup docker_build docker_up dev push_staging pull_staging push_production pull_production clean help
+.PHONY: deps setup docker_build docker_up dev push_staging pull_staging images help
 
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
