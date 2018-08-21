@@ -4,7 +4,7 @@ A starter template for WordPress websites featuring Docker, Gulp and Webpack.
 ## Getting started
 
 ### Prerequisites
-* Node.js -> v8.0.0
+* Node.js -> 8.0.0
 * Yarn -> 1.0.0
 * Composer -> 1.5.1
 * Docker -> 17.12
