@@ -1,8 +1,5 @@
-# OS related
+# macOS stuff
 .DS_Store
-
-# Configuration / Env
-.env
 
 # Docker
 db
