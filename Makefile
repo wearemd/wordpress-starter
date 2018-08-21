@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := dev
-.PHONY: deps setup build_docker up_docker dev push_production pull_production help
+.PHONY: deps setup build_docker up_docker dev help
 
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
@@ -41,12 +41,6 @@ dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
 
 build_assets: 
 	@NODE_ENV=production $(GULP)
-
-push_production: build_assets ## Push theme, plugins and languages from local to new-website.com 
-	@wordmove push -t -p -l -e production
-
-pull_production: ## Pull everything from new-website.com to local except the theme
-	@wordmove pull --all --no-themes -e production
 
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
