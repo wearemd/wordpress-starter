@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := dev
-.PHONY: deps setup build_docker up_docker dev help
+.PHONY: deps setup build_docker up_docker dev build_assets help
 
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
@@ -39,7 +39,7 @@ up_docker: build_docker ## Run WordPress on localhost:3010 and phpMyAdmin on loc
 dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
 	@$(GULP) --continue
 
-build_assets: 
+build_assets: ## Compile theme assets for production
 	@NODE_ENV=production $(GULP)
 
 help: ## Print this help

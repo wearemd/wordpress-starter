@@ -22,6 +22,9 @@ Rename every occurence of `new-website` to `your-theme-name` and run `make setup
   * Username: `admin`
   * Password: `password`
 
+### Build
+`make build_assets`: Build theme assets for production
+
 ## Versioning
 ⚠️ When you update the WordPress theme, don’t forget to **change the theme version number** in `app/wp-content/themes/new-website/style.css` (line 5) before deploying. This version number will append to CSS/JS files to avoid browser cache on those assets.
 
