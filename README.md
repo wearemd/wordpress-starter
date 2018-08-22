@@ -11,9 +11,11 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
   * docker-compose -> 1.16.1
 
 ### Setup
-Rename every occurence of `new-website` using your **theme name**.
+First rename the `app/wp-content/themes/new-website` folder using your **`theme-name`**.
 
-Then run `make setup` to get everything ready (Docker containers, WordPress files, etc.).
+Then rename every occurence of `new-website` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
+
+Finally run `make setup` to get everything ready (Docker containers, WordPress files, etc.).
 
 ### Serve
 `make`
