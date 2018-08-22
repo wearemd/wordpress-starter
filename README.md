@@ -33,9 +33,9 @@ Your WordPress is ready to be themed, well done fella (yes, there is nothing els
 
 ### Serve
 `make`
-* Starts WordPress on [localhost:3000](http://localhost:3000) with livereload
-* Starts phpMyAdmin on [localhost:3011](http://localhost:3011)
-* Makes WordPress back-office accessible at [localhost:3010/wp-admin](http://localhost:3010/wp-admin)
+* Start WordPress on [localhost:3000](http://localhost:3000) with livereload
+* Start phpMyAdmin on [localhost:3011](http://localhost:3011)
+* Make WordPress back-office accessible at [localhost:3010/wp-admin](http://localhost:3010/wp-admin)
   * Username: `admin`
   * Password: `password`
 
