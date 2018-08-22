@@ -15,7 +15,19 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 **Step 2:** Then rename every occurrence of `md-starter-theme` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
 
-**Step 3:** Finally run `make setup` to get everything ready: Docker containers, WordPress download and configuration (Fr by default, you can change this in [`Makefile` (line 17)](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)), etc.
+**Step 3:** You can now edit all informations related to your theme in `app/wp-content/themes/[theme-name]/style.css`:
+
+```css
+/**
+ * Theme Name: MD starter theme
+ * Author: MD
+ * Author URI: https://wearemd.com
+ * Version: 1.0.0
+ */
+
+```
+
+**Step 4:** Finally run `make setup` to get everything ready: Docker containers, WordPress download and configuration (Fr by default, you can change this in [`Makefile` (line 17)](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)), etc.
 
 Your WordPress is ready to be themed, well done fella (yes, there is nothing else to do) 👊
 
