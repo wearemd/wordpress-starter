@@ -27,9 +27,13 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 ```
 
-**Step 4:** Finally run `make setup` to get everything ready: Docker containers, WordPress download and configuration (Fr by default, you can change this in [`Makefile` (line 17)](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)), etc.
+**Step 4:** Finally run `make setup` to get everything ready:
+- Docker containers
+- WordPress download (Fr by default, you can change this in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17))
+- WordPress configuration
+- Etc.
 
-Your WordPress is ready to be themed, well done fella (yes, there is nothing else to do) 👊
+**Your WordPress is ready to be themed**, well done fella (yes, there is nothing else to do) 👊
 
 ### Serve
 `make`
@@ -43,7 +47,7 @@ Your WordPress is ready to be themed, well done fella (yes, there is nothing els
 `make build_assets`: Build theme assets for production
 
 ## Versioning
-⚠️ When you update the WordPress theme, don’t forget to **change the theme version number** in [`app/wp-content/themes/md-starter-theme/style.css` (line 5)](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying. This version number will append to CSS/JS files to avoid browser cache on those assets.
+⚠️ When you update the WordPress theme, don’t forget to **change the theme version number** in [`app/wp-content/themes/md-starter-theme/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying. This version number will append to CSS/JS files to avoid browser cache on those assets.
 
 ## Folders
 * `app/wp-content/themes/md-starter-theme`: Your new WordPress theme
