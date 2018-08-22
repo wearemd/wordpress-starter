@@ -1,6 +1,0 @@
-{
-    "name": "md/new-website",
-    "require": {
-        "timber/timber": "^1.7"
-    }
-}
