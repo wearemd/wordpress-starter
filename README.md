@@ -1,5 +1,5 @@
 # WordPress starter
-A starter template for WordPress websites featuring Docker, Gulp and Webpack.
+A starter template for WordPress websites featuring [Docker](https://www.docker.com), Gulp and Webpack.
 
 ## Getting started
 
@@ -11,7 +11,9 @@ A starter template for WordPress websites featuring Docker, Gulp and Webpack.
   * docker-compose -> 1.16.1
 
 ### Setup
-Rename every occurence of `new-website` to `your-theme-name` and run `make setup` to get everything ready (Docker containers, WP files, etc.).
+Rename every occurence of `new-website` using your **theme name**.
+
+Then run `make setup` to get everything ready (Docker containers, WordPress files, etc.).
 
 ### Serve
 `make`
