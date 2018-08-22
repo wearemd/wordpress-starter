@@ -15,7 +15,9 @@ First rename the `app/wp-content/themes/new-website` folder using your **`theme-
 
 Then rename every occurence of `new-website` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
 
-Finally run `make setup` to get everything ready (Docker containers, WordPress files, etc.).
+Finally run `make setup` to get everything ready: Docker containers, WordPress download and configuration (Fr by default, you can change this in [Makefile, line 17](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)), etc.
+
+Your WordPress is ready to be themed, well done fella (yes, there is nothing else to do) 👊
 
 ### Serve
 `make`
