@@ -15,7 +15,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 **Step 2:** Then rename every occurrence of `md-starter-theme` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
 
-**Step 3:** You can now edit all informations related to your theme in `app/wp-content/themes/[theme-name]/style.css`:
+**Step 3:** You can now edit all informations related to your theme in [`app/wp-content/themes/[theme-name]/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
 
 ```css
 /**
