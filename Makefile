@@ -4,7 +4,7 @@
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
 
-THEME_NAME := new-website
+THEME_NAME := md-starter-theme
 THEME_DIR  := app/wp-content/themes/$(THEME_NAME)
 
 deps: node_modules $(THEME_DIR)/vendor ## Install/Update dependencies
@@ -18,13 +18,13 @@ app/index.php:
 
 app/wp-config.php:
 	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR 
-	@$(WPCLI) core install --url=localhost:3010 --title=Website --admin_user=admin --admin_password=password --admin_email=admin@new-website.com --skip-email
+	@$(WPCLI) core install --url=localhost:3010 --title=Website --admin_user=admin --admin_password=password --admin_email=admin@md-starter-theme.com --skip-email
 
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
 setup: up_docker deps app/index.php app/wp-config.php ## Setup everything required to work on this WordPress installation
-	@$(WPCLI) theme activate new-website
+	@$(WPCLI) theme activate md-starter-theme
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu create "navbar_footer"

@@ -1,0 +1,37 @@
+{% extends "layouts/base.twig" %}
+
+{% block body_class "blog blog-single" %}
+
+{% block content %}
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title is-1">{{post.title}}</h1> 
+
+          {{post.content}}
+
+          {#% include "dev/lorem.twig" %#}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if posts|length %}
+    <section class="section">
+      <div class="container is-fluid">
+        <div class="columns is-centered">
+          <div class="column is-6">
+              <ul>
+                {% for post in posts %}
+                  <li>
+                    <a href="{{post.link}}">{{post.title}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

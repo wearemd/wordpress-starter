@@ -1,0 +1,6 @@
+{
+    "name": "md/md-starter-theme",
+    "require": {
+        "timber/timber": "^1.7"
+    }
+}

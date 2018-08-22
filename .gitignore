@@ -12,10 +12,10 @@ app/wp-content/themes/*
 app/wp-includes/
 
 # Dont ignore current theme
-!app/wp-content/themes/new-website
-app/wp-content/themes/new-website/vendor
-app/wp-content/themes/new-website/js
-app/wp-content/themes/new-website/app.css
+!app/wp-content/themes/md-starter-theme
+app/wp-content/themes/md-starter-theme/vendor
+app/wp-content/themes/md-starter-theme/js
+app/wp-content/themes/md-starter-theme/app.css
 
 app/.htaccess
 app/*.log
