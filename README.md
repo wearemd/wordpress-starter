@@ -19,7 +19,6 @@ Then run `make setup` to get everything ready (Docker containers, WordPress file
 `make`
 * Starts WordPress on [localhost:3000](http://localhost:3000) with livereload
 * Starts phpMyAdmin on [localhost:3011](http://localhost:3011)
-* Starts [MailHog](https://github.com/mailhog/MailHog) web interface on [localhost:8025](http://localhost:8025) and SMTP on [localhost:1025](http://localhost:1025)
 * Makes WordPress back-office accessible at [localhost:3010/wp-admin](http://localhost:3010/wp-admin)
   * Username: `admin`
   * Password: `password`
