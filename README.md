@@ -13,7 +13,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 ### Setup
 First rename the `app/wp-content/themes/md-starter-theme` folder using your **`theme-name`**.
 
-Then rename every occurence of `md-starter-theme` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
+Then rename every occurrence of `md-starter-theme` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
 
 Finally run `make setup` to get everything ready: Docker containers, WordPress download and configuration (Fr by default, you can change this in [Makefile, line 17](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)), etc.
 
