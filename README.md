@@ -29,7 +29,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 **Step 4:** Finally run `make setup` to get everything ready:
 - Docker containers
-- WordPress download (Fr by default, you can change this in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17))
+- WordPress download (fr_FR by default, you can change this in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17))
 - WordPress configuration
 - Etc.
 
