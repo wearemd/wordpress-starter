@@ -9,7 +9,13 @@
 
     {{function('wp_head')}}
 
-    <title>{{ wp_title }}</title>
+    <title>
+      {% if wp_title %}
+        {{ wp_title }} - {{ site.name }}
+      {% else %}
+        {{ site.name }}
+      {% endif %}
+    </title>
     <link rel="shortcut icon" href="{{ site.theme.link }}/images/favicon/favicon.ico" type="image/x-icon">
   </head>
   <body>
