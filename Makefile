@@ -18,7 +18,7 @@ app/index.php:
 
 app/wp-config.php:
 	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR 
-	@$(WPCLI) core install --url=localhost:3010 --title=Website --admin_user=admin --admin_password=password --admin_email=admin@md-starter-theme.com --skip-email
+	@$(WPCLI) core install --url=localhost:3010 --title=MDstarter --admin_user=admin --admin_password=password --admin_email=admin@md-starter-theme.com --skip-email
 
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
