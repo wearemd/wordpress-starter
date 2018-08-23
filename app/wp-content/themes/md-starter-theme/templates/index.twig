@@ -3,20 +3,12 @@
 {% block body_class "home" %}
 
 {% block content %}
-  <section class="hero is-light">
-    <div class="hero-body">
-      <div class="container is-fluid">
-        <h1 class="title">{{post.title}}</h1>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container is-fluid">
       <div class="columns">
         <div class="column">
-          <p class="title is-2">
-            {{__('À découvrir sur notre blog', 'md-starter-theme')}}
+          <p>
+            {{__('Exemple de page d’accueil avec une mise en avant des derniers articles du blog.', 'md-starter-theme')}}
           </p>
         </div>
       </div>
@@ -24,11 +16,7 @@
       <div class="columns">
         {% for post in posts %}
           <div class="column is-4">
-            <a href="{{post.link}}">
-              <div>
-                <h2 class="title is-4">{{post.title}}</h2>
-              </div>
-            </a>
+            <h2 class="title is-4"><a href="{{post.link}}">{{post.title}}</a></h2>
           </div>
         {% endfor %}
       </div>
