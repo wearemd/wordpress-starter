@@ -13,7 +13,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 ### Setup
 **Step 1:** First rename the `app/wp-content/themes/md-starter-theme` folder using your **`theme-name`**.
 
-**Step 2:** Then rename every occurrence of `md-starter-theme` in the entire parent folder (except in `./README.md`) using your **`theme-name`**.
+**Step 2:** Then rename every occurrence of `md-starter-theme` in the parent folder (except in `./README.md`) using your **`theme-name`**.
 
 **Step 3:** You can now edit all informations related to your theme in [`app/wp-content/themes/[theme-name]/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
 
@@ -47,10 +47,10 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 `make build_assets`: Build theme assets for production
 
 ## Versioning
-⚠️ When you update the WordPress theme, don’t forget to **change the theme version number** in [`app/wp-content/themes/[theme-name]/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying. This version number will append to CSS/JS files to bust browser cache on those assets.
+⚠️ When you update the WordPress theme, don’t forget to **change the theme version number in [`app/wp-content/themes/[theme-name]/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying**. This version number will append to CSS/JS files to bust browser cache on those assets.
 
 ## Folders
-* `app/wp-content/themes/md-starter-theme`: Your new WordPress theme
+* `app/wp-content/themes/md-starter-theme`: WordPress theme
 * `gulp`: Gulp tasks and configuration
 * `sass`: Theme Sass files (edit those files to update your theme CSS)
   * This theme is built using [Bulma modular CSS framework](https://bulma.io)
