@@ -49,7 +49,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 `make build_assets`: Build theme assets for production
 
 ## Versioning
-⚠️ When you update the WordPress theme, don’t forget to **change the theme version number in [`app/wp-content/themes/[theme-name]/style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying**. This version number will append to CSS/JS files to bust browser cache on those assets.
+⚠️ When you update the WordPress theme, don’t forget to **change the theme version number in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying**. This version number will append to CSS/JS files to bust browser cache on those assets.
 
 ## Folders
 * `app/wp-content/themes/md-starter-theme`: WordPress theme
