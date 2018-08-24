@@ -27,13 +27,15 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 ```
 
-**Step 4:** Finally run `make setup` to get everything ready:
+**Step 4 (*optional*)**: WordPress will be downloaded in french by default. If you want your website in another language, set `--locale=fr_FR` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17)).
+
+**Step 5:** Finally run `make setup` to get everything ready:
 - Docker containers
-- WordPress download (fr_FR by default, you can change this in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17))
+- WordPress download
 - WordPress configuration
 - Etc.
 
-**Your WordPress is ready to be themed**, well done fella (yes, there is nothing else to do) 👊
+**Your WordPress is ready to be themed**, well done fella 👊
 
 ### Serve
 `make`
