@@ -11,7 +11,7 @@ app/wp-content/*
 app/wp-content/themes/*
 app/wp-includes/
 
-# Dont ignore current theme
+# Don’t ignore current theme
 !app/wp-content/themes/md-starter-theme
 app/wp-content/themes/md-starter-theme/vendor
 app/wp-content/themes/md-starter-theme/js
@@ -23,7 +23,7 @@ app/*.php
 app/license.txt
 app/readme.html
 
-# Frontend
+# Front-end
 node_modules
 
 # Stuff
