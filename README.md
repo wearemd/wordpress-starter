@@ -27,7 +27,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 ```
 
-**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set `--locale=fr_FR` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
+**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set `--locale` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
 
 **Step 5:** Finally run `make setup` to get everything ready:
 - Docker containers
