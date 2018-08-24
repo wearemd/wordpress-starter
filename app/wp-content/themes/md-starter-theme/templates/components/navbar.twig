@@ -1,12 +1,12 @@
-<nav class="navbar">
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <div class="navbar-item">
-      <a href="{{site.url}}" class="logo" title="{{site.description}}">
+      <a href="{{site.url}}">
         {{site.name}}
       </a>
     </div>
 
-    <a class="navbar-burger">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -14,16 +14,18 @@
   </div>
 
   <div class="navbar-menu">
-    <a href="{{site.url}}" class="navbar-item {{is_active(is_home)}}">
-      {{__('Accueil', 'md-starter-theme')}}
-    </a>
+    <div class="navbar-end">
+      <a href="{{site.url}}" class="navbar-item {{is_active(is_home)}}">
+        {{__('Accueil', 'md-starter-theme')}}
+      </a>
 
-    {% if navbar %}
-      {% for item in navbar %}
-        <a href="{{item.link}}" class="navbar-item {{is_active(item.current)}}">
-          {{item.title}}
-        </a>
-      {% endfor %}
-    {% endif %}
+      {% if navbar %}
+        {% for item in navbar %}
+          <a href="{{item.link}}" class="navbar-item {{is_active(item.current)}}">
+            {{item.title}}
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </nav>
