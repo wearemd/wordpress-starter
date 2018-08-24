@@ -22,8 +22,9 @@
   {% if posts|length %}
     <section class="section">
       <div class="container is-fluid">
-        <div class="columns is-centered">
-          <div class="column is-6">
+        <div class="columns">
+          <div class="column">
+              <p class="title is-5">{{__('Articles suggérés', 'md-starter-theme')}}</p>
               <ul>
                 {% for post in posts %}
                   <li>

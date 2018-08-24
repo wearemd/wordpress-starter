@@ -8,15 +8,21 @@
       <div class="columns">
         <div class="column">
           <p>
-            {{__('Page d’accueil avec les derniers articles du blog mis en avant.', 'md-starter-theme')}}
+            {{__('Page d’accueil avec les trois derniers articles du blog mis en avant.', 'md-starter-theme')}}
           </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <p class="title is-5">{{__('Derniers articles', 'md-starter-theme')}}</p>
         </div>
       </div>
 
       <div class="columns">
         {% for post in posts %}
           <div class="column is-4">
-            <h2 class="title is-4"><a href="{{post.link}}">{{post.title}}</a></h2>
+            <h3 class="title is-2"><a href="{{post.link}}">{{post.title}}</a></h3>
           </div>
         {% endfor %}
       </div>
