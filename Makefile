@@ -29,6 +29,7 @@ setup: up_docker deps app/index.php app/wp-config.php ## Setup everything requir
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu create "navbar_footer"
 	@$(WPCLI) menu item add-post navbar_footer 2
+	@$(WPCLI) rewrite structure '/%year%/%monthnum%/%day%/%postname%/' --hard
 
 build_docker: Dockerfile docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
