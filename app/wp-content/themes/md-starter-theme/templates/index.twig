@@ -8,9 +8,21 @@
       <div class="columns">
         <div class="column">
           <h1 class="title is-1">{{__('Bienvenue !', 'md-starter-theme')}}</h1>
-          <p>
-            {{__('Page d’accueil avec les trois derniers articles du blog mis en avant.', 'md-starter-theme')}}
-          </p>
+          <p class="title is-4">
+              {{__('Page d’accueil présentant du contenu lorem ipsum en statique ainsi que les trois derniers articles du blog.', 'md-starter-theme')}}
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column">
+          <div class="content is-medium">
+            {% include "dev/lorem.twig" %}
+          </div>
         </div>
       </div>
     </div>

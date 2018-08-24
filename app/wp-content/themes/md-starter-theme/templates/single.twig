@@ -7,7 +7,7 @@
     <div class="container is-fluid">
       <div class="columns">
         <div class="column">
-          <div class="content">
+          <div class="content is-medium">
             <h1 class="title is-1">{{post.title}}</h1> 
 
             {{post.content}}
@@ -24,10 +24,10 @@
       <div class="container is-fluid">
         <div class="columns">
           <div class="column">
-              <p class="title is-5">{{__('Articles suggérés', 'md-starter-theme')}}</p>
+              <p class="title is-3">{{__('Articles suggérés', 'md-starter-theme')}}</p>
               <ul>
                 {% for post in posts %}
-                  <li>
+                  <li class="title is-5">
                     <a href="{{post.link}}">{{post.title}}</a>
                   </li>
                 {% endfor %}
