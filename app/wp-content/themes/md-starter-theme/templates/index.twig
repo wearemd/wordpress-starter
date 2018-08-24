@@ -39,7 +39,9 @@
       <div class="columns">
         {% for post in posts %}
           <div class="column is-4">
-            <h3 class="title is-2"><a href="{{post.link}}">{{post.title}}</a></h3>
+            <h3 class="title is-2">
+              <a href="{{post.link}}">{{post.title}}</a>
+            </h3>
           </div>
         {% endfor %}
       </div>

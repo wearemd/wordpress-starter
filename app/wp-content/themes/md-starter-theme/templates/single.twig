@@ -11,8 +11,6 @@
             <h1 class="title is-1">{{post.title}}</h1> 
 
             {{post.content}}
-
-            {#% include "dev/lorem.twig" %#}
           </div>
         </div>
       </div>
@@ -25,6 +23,7 @@
         <div class="columns">
           <div class="column">
               <p class="title is-3">{{__('Articles suggérés', 'md-starter-theme')}}</p>
+              
               <ul>
                 {% for post in posts %}
                   <li class="title is-5">
