@@ -7,7 +7,7 @@ WPCLI := $(PWD)/dwp
 THEME_NAME := md-starter-theme
 THEME_DIR  := app/wp-content/themes/$(THEME_NAME)
 
-deps: node_modules $(THEME_DIR)/vendor ## Install/Update dependencies
+deps: node_modules $(THEME_DIR)/vendor ## Install/update dependencies
 
 node_modules: package.json yarn.lock
 	@yarn install

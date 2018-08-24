@@ -39,8 +39,8 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 ### Serve
 `make`
-* Start WordPress on [localhost:3000](http://localhost:3000) with livereload
-* Start phpMyAdmin on [localhost:3011](http://localhost:3011)
+* Run WordPress on [localhost:3000](http://localhost:3000) with livereload
+* Run phpMyAdmin on [localhost:3011](http://localhost:3011)
 * Make WordPress back-office accessible at [localhost:3010/wp-admin](http://localhost:3010/wp-admin)
   * Username: `admin`
   * Password: `password`
