@@ -23,8 +23,8 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
  * Author: MD
  * Author URI: https://wearemd.com
  * Version: 1.0.0
+ * Text Domain: md-starter-theme
  */
-
 ```
 
 **Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set `--locale` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
