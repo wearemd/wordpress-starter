@@ -1,9 +1,13 @@
 <?php
-
-// Template used to display default page (Legal notices, personal data)
+/**
+ * Page
+ *
+ * Template used to display default page (Legal notices, personal data)
+ *
+ * @package MD_Starter_Theme
+ */
 
 $context         = Timber::get_context();
-$post            = new TimberPost();
-$context['post'] = $post;
+$context['post'] = new TimberPost();
 
-Timber::render(['page.twig'], $context);
+Timber::render( [ 'page.twig' ], $context );
