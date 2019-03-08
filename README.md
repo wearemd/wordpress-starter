@@ -48,30 +48,16 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 ### Build
 `make build_assets`: Compile theme assets for production
 
-### WordPress Coding Standards
+## [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) 
 
-To install the __WordPress Coding standards__ just type
+**Step 1:** Run `make create-project` to install `wp-coding-standards/wpcs`.
 
-```bash
+**Step 2:** Move to your theme folder and run `composer config-set` to set path for `wpcs`.
 
-make create-project
-
-```
-
-Move to your theme folder and type the following command to set path to `wpcs`
+You are now able to lint PHP files with WordPress Coding standards, for example with `functions.php`:
 
 ```bash
-
-composer config-set
-
-```
-
-Then, to lint `functions.php` for example, :
-
-```bash
-
 composer lint functions.php
-
 ```
 
 ## Versioning
