@@ -1,6 +1,6 @@
 {
     "name": "md/md-starter-theme",
     "require": {
-        "timber/timber": "^1.7"
+        "timber/timber": "^1.9.1"
     }
 }
