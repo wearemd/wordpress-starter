@@ -1,20 +1,22 @@
 <?php
-
 /**
- * Template Name: Home
+ * Index
+ *
+ * @package MD_Starter_Theme
+ * @file    index.php
  */
 
+use Timber\Timber;
+
+if ( ! class_exists( 'Timber' ) ) {
+	echo 'Timber not activated. Make sure you activate the plugin in <a href="/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
+	return;
+}
+
 $context = Timber::get_context();
-$post    = new TimberPost();
 
-$context['is_home'] = true;
-$context['post']    = $post;
-$context['posts']   = $jobs = new Timber\PostQuery([
-    'posts_per_page' => 3,
-    'orderby' => array(
-        'rand',
-        'date' => 'desc'
-    )
-]);
+$context['post'] = new TimberPost();
 
-Timber::render(['index.twig'], $context );
+$templates = array( 'index.twig' );
+
+Timber::render( $templates, $context );

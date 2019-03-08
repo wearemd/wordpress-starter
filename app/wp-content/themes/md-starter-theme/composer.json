@@ -2,5 +2,12 @@
     "name": "md/md-starter-theme",
     "require": {
         "timber/timber": "^1.9.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "wp-coding-standards/wpcs": "^2.0"
+    },
+    "scripts": {
+        "lint": "vendor/bin/phpcs --standard=WordPress"
     }
 }
