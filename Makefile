@@ -50,9 +50,10 @@ dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
 build_assets: ## Compile theme assets for production
 	@NODE_ENV=production $(GULP)
 
+.PHONY: create-project
+create-project: $(THEME_DIR)/vendor ## Install wp-coding-standards/wpcs
+	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
+
 .PHONY: help
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
-
-create-project: $(THEME_DIR)/composer.json
-	@cd $(THEME_DIR); composer update; composer create-project wp-coding-standards/wpcs:dev-master --no-dev
