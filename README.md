@@ -48,6 +48,32 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 ### Build
 `make build_assets`: Compile theme assets for production
 
+### WordPress Coding Standards
+
+To install the __WordPress Coding standards__ just type
+
+```bash
+
+make create-project
+
+```
+
+Move to your theme folder and type the following command to set path to `wpcs`
+
+```bash
+
+composer config-set
+
+```
+
+Then, to lint `functions.php` for example, :
+
+```bash
+
+composer lint functions.php
+
+```
+
 ## Versioning
 When you update the WordPress theme, don’t forget to **change the theme version number in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying**. This version number will append to CSS/JS files to bust browser cache on those assets.
 
