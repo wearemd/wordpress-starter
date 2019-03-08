@@ -15,7 +15,7 @@ app/index.php:
 	@$(WPCLI) core download --locale=fr_FR --version=4.9.8
 
 app/wp-config.php:
-	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR 
+	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR
 	@$(WPCLI) core install --url=localhost:3010 --title=MDstarter --admin_user=admin --admin_password=password --admin_email=admin@md-starter-theme.com --skip-email
 
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
@@ -53,3 +53,6 @@ build_assets: ## Compile theme assets for production
 .PHONY: help
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+create-project: $(THEME_DIR)/composer.json
+	@cd $(THEME_DIR); composer update; composer create-project wp-coding-standards/wpcs:dev-master --no-dev
