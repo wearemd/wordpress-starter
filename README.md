@@ -54,7 +54,7 @@ A starter template for WordPress websites featuring [Docker](https://www.docker.
 
 **Step 2:** Move to your theme folder and run `composer config-set` to set path for `wpcs`.
 
-You are now able to lint PHP files with WordPress Coding standards, for example with `functions.php`:
+You are now able to lint PHP files using WordPress Coding standards, for example with `functions.php`:
 
 ```bash
 composer lint functions.php
