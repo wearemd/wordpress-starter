@@ -5,7 +5,7 @@
  * PHP version 7.2.10
  *
  * @category Reset
- * @package  MDStarterTheme
+ * @package  MD_Starter_Theme
  * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://19h47.fr
