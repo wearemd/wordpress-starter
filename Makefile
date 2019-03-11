@@ -50,9 +50,9 @@ dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
 build_assets: ## Compile theme assets for production
 	@NODE_ENV=production $(GULP)
 
-.PHONY: create-project
-create-project: $(THEME_DIR)/vendor ## Install wp-coding-standards/wpcs
-	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
+.PHONY: create_project
+create_project: $(THEME_DIR)/vendor ## Install wp-coding-standards/wpcs
+	@cd $(THEME_DIR); composer create_project wp-coding-standards/wpcs:dev-master --no-dev
 
 .PHONY: help
 help: ## Print this help
