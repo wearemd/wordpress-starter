@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := serve
+
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
 
@@ -5,7 +7,7 @@ THEME_NAME := md-starter-theme
 THEME_DIR  := app/wp-content/themes/$(THEME_NAME)
 
 .PHONY: deps
-deps: node_modules $(THEME_DIR)/vendor ## Install/update dependencies
+deps: node_modules $(THEME_DIR)/vendor
 
 node_modules: package.json yarn.lock
 	@yarn install
@@ -22,7 +24,7 @@ $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
 .PHONY: setup
-setup: up_docker deps app/index.php app/wp-config.php ## Setup everything required to work on this WordPress installation
+setup: up_docker deps app/index.php app/wp-config.php
 	@$(WPCLI) theme activate md-starter-theme
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
@@ -38,20 +40,19 @@ build_docker: .build_docker.mk
 	touch $@
 
 .PHONY: up_docker
-up_docker: build_docker ## Run WordPress on localhost:3010 and phpMyAdmin on localhost:3011
+up_docker: build_docker
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
-.DEFAULT_GOAL := dev
-.PHONY: dev
-dev: deps up_docker ## Run WordPress on localhost:3000 with livereload
+.PHONY: serve
+serve: deps up_docker ## Run WordPress on localhost:3000 with livereload and phpMyAdmin on localhost:3011
 	@$(GULP) --continue
 
-.PHONY: build_assets
-build_assets: ## Compile theme assets for production
+.PHONY: build
+build: ## Compile theme assets for production
 	@NODE_ENV=production $(GULP)
 
 .PHONY: create_project
-create_project: $(THEME_DIR)/vendor ## Install wp-coding-standards/wpcs
+create_project: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create_project wp-coding-standards/wpcs:dev-master --no-dev
 
 .PHONY: help
