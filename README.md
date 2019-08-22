@@ -123,8 +123,8 @@ make help
 │       └── webpack.prod.js                       # Production environment configuration file
 ├── js                                            # JavaScript source files
 │   └── app.js                                    # Main JavaScript file used as entry by Webpack
-├── sass                                          # Theme Sass files (edit those files to update your theme CSS)
-│   │                                             # This theme is built using [Bulma modular CSS framework](https://bulma.io)
+├── sass                                          # Theme Sass files 
+│   │                                             # This theme is built using Bulma
 │   ├── dev                                       # Dev style folder
 │   │   ├── _all.sass                             # Sass file to register all dev styles
 │   │   └── shame.sass                            # Here we put WIP style or dirty hacks
@@ -132,8 +132,10 @@ make help
 │   ├── libs                                      # Libraries style folder
 │   │   └── _all.sass                             # Sass file to register all libraries styles
 │   └── style.sass                                # Main Sass file used by as source by Gulp
-├── .tool-versions                                # Tells asdf which version to use locally for each language
-├── docker-compose.yml                            # Docker Compose file to define services, networks and volumes
+├── .tool-versions                                # Tells asdf which version to use locally 
+│                                                 # for each language
+├── docker-compose.yml                            # Docker Compose file to define services,
+│                                                 # networks and volumes
 ├── Dockerfile                                    # Docker container declaration
 ├── gulpfile.js                                   # Gulp configuration
 └── Makefile                                      # Defines commands for this project
