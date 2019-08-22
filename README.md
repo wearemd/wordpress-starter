@@ -72,7 +72,7 @@ Display a list of available commands.
 make help
 ```
 
-## 🗄️ Folders
+## 🗄️ Project structure
 ```
 .
 ├── app
