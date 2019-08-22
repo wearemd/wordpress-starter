@@ -124,7 +124,6 @@ make help
 ├── js                                            # JavaScript source files
 │   └── app.js                                    # Main JavaScript file used as entry by Webpack
 ├── sass                                          # Theme Sass files 
-│   │                                             # This theme is built using Bulma
 │   ├── dev                                       # Dev style folder
 │   │   ├── _all.sass                             # Sass file to register all dev styles
 │   │   └── shame.sass                            # Here we put WIP style or dirty hacks
