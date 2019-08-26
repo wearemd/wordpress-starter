@@ -83,7 +83,7 @@ make help
 │       ├── app.css                                # Minified, optimized and compiled style
 │       ├── fonts                                 # Fonts folder
 │       ├── functions.php                         # Specific theme customization
-│       │                                         # See: https://codex.wordpress.org/Functions_File_Explained
+│       │                                         # See codex.wordpress.org/Functions_File_Explained
 │       ├── images                                # Images folder
 │       ├── index.php                             # Index page declaration
 │       ├── js                                    # Minified, optimized and compiled JavaScript
@@ -101,7 +101,7 @@ make help
 │           ├── components                        # Components templates folder
 │           │   ├── navbar-footer.twig            # Navbar footer template
 │           │   └── navbar.twig                   # Navbar template
-│           ├── dev                               # Dev templates folder
+│           ├── dev                               # Development templates folder
 │           │   └── lorem.twig                    # Lorem Ipsum template
 │           ├── index.twig                        # Index template
 │           ├── layouts                           # Layouts templates folder
@@ -124,9 +124,9 @@ make help
 │       └── webpack.prod.js                       # Production environment configuration file
 ├── js                                            # JavaScript source files
 │   └── app.js                                    # Main JavaScript file used as entry by Webpack
-├── sass                                          # Theme Sass files 
-│   ├── dev                                       # Dev style folder
-│   │   ├── _all.sass                             # Sass file to register all dev styles
+├── sass                                          # Theme Sass stylesheets 
+│   ├── dev                                       # Development style folder
+│   │   ├── _all.sass                             # Sass file to register all development styles
 │   │   └── shame.sass                            # Here we put WIP style or dirty hacks
 │   │                                             # See csswizardry.com/2013/04/shame-css/
 │   ├── libs                                      # Libraries style folder
