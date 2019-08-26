@@ -1,5 +1,5 @@
-# WordPress starter
-**A starter template for WordPress websites featuring Docker, Gulp and Webpack.**
+<h1 align="center">WordPress starter</h1>
+<p align="center"><b>WordPress starter</b> is a starter template for WordPress websites<br>featuring Docker, Gulp and Webpack.</p>
 
 ## ⚙️ Prerequisites
 - [**asdf**](https://github.com/asdf-vm/asdf)
