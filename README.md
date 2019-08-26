@@ -11,6 +11,7 @@
 - [**Yarn**](https://yarnpkg.com)
 
 ## 🥞 Stack
+- [**Babel**](https://babeljs.io)
 - [**Bulma**](https://bulma.io)
 - [**Gulp**](https://gulpjs.com)
 - [**Sass**](https://sass-lang.com)
@@ -131,13 +132,16 @@ make help
 │   ├── libs                                      # Libraries style folder
 │   │   └── _all.sass                             # Sass file to register all libraries styles
 │   └── style.sass                                # Main Sass file used by as source by Gulp
+├── .babelrc                                      # Tells Babel which presets and plugins to use 
 ├── .tool-versions                                # Tells asdf which version to use locally 
 │                                                 # for each language
 ├── docker-compose.yml                            # Docker Compose file to define services,
 │                                                 # networks and volumes
 ├── Dockerfile                                    # Docker container declaration
 ├── gulpfile.js                                   # Gulp configuration
-└── Makefile                                      # Defines commands for this project
+├── Makefile                                      # Defines commands for this project
+└── package.json                                  # Defines libraries and dependencies 
+                                                  # for JS packages, used by Yarn
 ```
 
 ## 🚨 [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) 
