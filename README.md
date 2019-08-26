@@ -17,6 +17,7 @@
 - [**Sass**](https://sass-lang.com)
 - [**Timber**](https://www.upstatement.com/timber)
 - [**Webpack**](https://webpack.js.org)
+- [**WordPress**](https://wordpress.org)
 
 ## ⚙️ Getting started
 **Step 1:** First rename the [`md-starter-theme`](https://github.com/wearemd/wordpress-starter/tree/master/app/wp-content/themes/md-starter-theme) folder using your **`theme-name`**.
