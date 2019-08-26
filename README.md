@@ -144,7 +144,8 @@ make help
 ├── Dockerfile                               # Docker container declaration
 ├── gulpfile.js                              # Gulp configuration
 ├── Makefile                                 # Defines commands for this project
-└── package.json                             # Defines libraries and dependencies for JS packages, used by Yarn
+└── package.json                             # Defines libraries and dependencies 
+                                             # for JS packages, used by Yarn
 ```
 
 ## 🚨 [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) 
