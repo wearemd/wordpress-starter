@@ -78,74 +78,73 @@ make help
 ```
 .
 ├── app
-│   ├── wp-cli.yml                                # WP-CLI configuration file
-│   └── wp-content/themes/md-starter-theme        # WordPress theme
-│       ├── 404.php                               # 404 page declaration
-│       ├── app.css                                # Minified, optimized and compiled style
-│       ├── fonts                                 # Fonts folder
-│       ├── functions.php                         # Specific theme customization
-│       │                                         # See codex.wordpress.org/Functions_File_Explained
-│       ├── images                                # Images folder
-│       ├── index.php                             # Index page declaration
-│       ├── js                                    # Minified, optimized and compiled JavaScript
-│       ├── languages                             # Languages folder
-│       ├── lib                                   # Specific theme customization
-│       │   ├── class-md-starter-theme.php        # Theme declaration and initialization
-│       │   ├── reset.php                         # Deactivate emoji 
-│       │   └── sanitize-wysiwyg.php              # Customize WISIWYG
-│       ├── page.php                              # Simple page declaration 
-│       ├── post-types                            # Post types folder 
-│       ├── screenshot.png                        # Screenshot of the theme
-│       ├── style.css                             # CSS declaration of the theme
-│       └── templates                             # Twig templates folder
-│           ├── 404.twig                          # 404 template
-│           ├── components                        # Components templates folder
-│           │   ├── navbar-footer.twig            # Navbar footer template
-│           │   └── navbar.twig                   # Navbar template
-│           ├── dev                               # Development templates folder
-│           │   └── lorem.twig                    # Lorem Ipsum template
-│           ├── index.twig                        # Index template
-│           ├── layouts                           # Layouts templates folder
-│           │   └── base.twig                     # Base layout template
-│           ├── page.twig                         # Simple page template
-│           └── single.twig                       # Single Post template
-│                                    
-├── gulp                                          # Gulp tasks and configuration
-│   ├── env                                       # Gulp configuration file per environment
-│   │   ├── dev.js                                # Development environment configuration file
-│   │   └── prod.js                               # Production environment configuration file
-│   ├── index.js                                  # Script to invoke correct environment and 
-│   │                                             # dinamically load tasks from tasks folder
-│   ├── tasks                                     # Gulp tasks folder
-│   │   ├── sass.js                               # Sass task declaration
-│   │   └── script.js                             # JavaScript task declaration
-│   └── webpack                                   # Webpack configuration files
-│       ├── webpack.common.js                     # Configuration shared between dev and prod environment
-│       ├── webpack.dev.js                        # Development environment configuration file
-│       └── webpack.prod.js                       # Production environment configuration file
-│ 
-├── js                                            # JavaScript source files
-│   └── app.js                                    # Main JavaScript file used as entry by Webpack
-│ 
-├── sass                                          # Theme Sass stylesheets 
-│   ├── dev                                       # Development style folder
-│   │   ├── _all.sass                             # Sass file to register all development styles
-│   │   └── shame.sass                            # Here we put WIP style or dirty hacks
-│   │                                             # See csswizardry.com/2013/04/shame-css/
-│   ├── libs                                      # Libraries style folder
-│   │   └── _all.sass                             # Sass file to register all libraries styles
-│   └── style.sass                                # Main Sass file used by as source by Gulp
-│ 
-├── .babelrc                                      # Tells Babel which presets and plugins to use 
-├── .tool-versions                                # Tells asdf which version to use locally 
-│                                                 # for each language
-├── docker-compose.yml                            # Docker Compose file to define services,
-│                                                 # networks and volumes
-├── Dockerfile                                    # Docker container declaration
-├── gulpfile.js                                   # Gulp configuration
-├── Makefile                                      # Defines commands for this project
-└── package.json                                  # Defines libraries and dependencies 
-                                                  # for JS packages, used by Yarn
+│   ├── wp-cli.yml                           # WP-CLI configuration file
+│   └── wp-content/themes/md-starter-theme   # WordPress theme
+│       ├── 404.php                          # 404 page declaration
+│       ├── app.css                          # Minified, optimized and compiled style
+│       ├── fonts                            # Fonts folder
+│       ├── functions.php                    # Specific theme customization
+│       │                                    # See codex.wordpress.org/Functions_File_Explained
+│       ├── images                           # Images folder
+│       ├── index.php                        # Index page declaration
+│       ├── js                               # Minified, optimized and compiled JavaScript
+│       ├── languages                        # Languages folder
+│       ├── lib                              # Specific theme customization
+│       │   ├── class-md-starter-theme.php   # Theme declaration and initialization
+│       │   ├── reset.php                    # Deactivate emoji 
+│       │   └── sanitize-wysiwyg.php         # Customize WISIWYG
+│       ├── page.php                         # Simple page declaration 
+│       ├── post-types                       # Post types folder 
+│       ├── screenshot.png                   # Screenshot of the theme
+│       ├── style.css                        # CSS declaration of the theme
+│       └── templates                        # Twig templates folder
+│           ├── 404.twig                     # 404 template
+│           ├── components                   # Components templates folder
+│           │   ├── navbar-footer.twig       # Navbar footer template
+│           │   └── navbar.twig              # Navbar template
+│           ├── dev                          # Development templates folder
+│           │   └── lorem.twig               # Lorem Ipsum template
+│           ├── index.twig                   # Index template
+│           ├── layouts                      # Layouts templates folder
+│           │   └── base.twig                # Base layout template
+│           ├── page.twig                    # Simple page template
+│           └── single.twig                  # Single Post template
+│
+├── gulp                                     # Gulp tasks and configuration
+│   ├── env                                  # Gulp configuration file per environment
+│   │   ├── dev.js                           # Development environment configuration file
+│   │   └── prod.js                          # Production environment configuration file
+│   ├── index.js                             # Script to invoke correct environment and 
+│   │                                        # dinamically load tasks from tasks folder
+│   ├── tasks                                # Gulp tasks folder
+│   │   ├── sass.js                          # Sass task declaration
+│   │   └── script.js                        # JavaScript task declaration
+│   └── webpack                              # Webpack configuration files
+│       ├── webpack.common.js                # Configuration shared between dev and prod environment
+│       ├── webpack.dev.js                   # Development environment configuration file
+│       └── webpack.prod.js                  # Production environment configuration file
+│
+├── js                                       # JavaScript source files
+│   └── app.js                               # Main JavaScript file used as entry by Webpack
+│
+├── sass                                     # Theme Sass stylesheets 
+│   ├── dev                                  # Development style folder
+│   │   ├── _all.sass                        # Sass file to register all development styles
+│   │   └── shame.sass                       # Here we put WIP style or dirty hacks
+│   │                                        # See csswizardry.com/2013/04/shame-css/
+│   ├── libs                                 # Libraries style folder
+│   │   └── _all.sass                        # Sass file to register all libraries styles
+│   └── style.sass                           # Main Sass file used by as source by Gulp
+│
+├── .babelrc                                 # Tells Babel which presets and plugins to use 
+├── .tool-versions                           # Tells asdf which version to use locally 
+│                                            # for each language
+├── docker-compose.yml                       # Docker Compose file to define services,
+│                                            # networks and volumes
+├── Dockerfile                               # Docker container declaration
+├── gulpfile.js                              # Gulp configuration
+├── Makefile                                 # Defines commands for this project
+└── package.json                             # Defines libraries and dependencies for JS packages, used by Yarn
 ```
 
 ## 🚨 [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) 
