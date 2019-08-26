@@ -123,8 +123,10 @@ make help
 │       ├── webpack.common.js                     # Configuration shared between dev and prod environment
 │       ├── webpack.dev.js                        # Development environment configuration file
 │       └── webpack.prod.js                       # Production environment configuration file
+│ 
 ├── js                                            # JavaScript source files
 │   └── app.js                                    # Main JavaScript file used as entry by Webpack
+│ 
 ├── sass                                          # Theme Sass stylesheets 
 │   ├── dev                                       # Development style folder
 │   │   ├── _all.sass                             # Sass file to register all development styles
@@ -133,6 +135,7 @@ make help
 │   ├── libs                                      # Libraries style folder
 │   │   └── _all.sass                             # Sass file to register all libraries styles
 │   └── style.sass                                # Main Sass file used by as source by Gulp
+│ 
 ├── .babelrc                                      # Tells Babel which presets and plugins to use 
 ├── .tool-versions                                # Tells asdf which version to use locally 
 │                                                 # for each language
