@@ -156,7 +156,7 @@ make help
 
 You are now able to lint PHP files using WordPress Coding standards, for example with `functions.php`:
 
-```bash
+```
 composer lint functions.php
 ```
 
