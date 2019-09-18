@@ -167,4 +167,4 @@ When you update the WordPress theme, don’t forget to **change the theme versio
 Contributions, issues and feature requests are welcome!
 
 ## 📝 License
-This project is [GNU GPL v3](LICENSE) licensed.
+WordPress starter is licensed under the [GNU General Public License v3.0](LICENSE).
