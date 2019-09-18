@@ -22,7 +22,7 @@
 ## ⚙️ Getting started
 **Step 1:** First rename the [`md-starter-theme`](https://github.com/wearemd/wordpress-starter/tree/master/app/wp-content/themes/md-starter-theme) folder using your **`theme-name`**.
 
-**Step 2:** Then rename every occurrence of `md-starter-theme` in the parent folder (except in `./README.md`) using your **`theme-name`**.
+**Step 2:** Then rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
 
 **Step 3:** You can now edit all informations related to your theme in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
 
