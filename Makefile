@@ -11,7 +11,7 @@ deps: node_modules $(THEME_DIR)/vendor
 
 node_modules: package.json yarn.lock
 	@yarn install
-	touch $@
+	@touch $@
 
 app/index.php:
 	@$(WPCLI) core download --locale=fr_FR --version=4.9.8
