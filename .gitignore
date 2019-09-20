@@ -25,6 +25,7 @@ app/readme.html
 
 # Front-end
 node_modules
+yarn-error.log*
 
 # Stuff
 .todo
