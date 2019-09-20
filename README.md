@@ -106,7 +106,7 @@ make help
 │           │   └── lorem.twig               # Lorem Ipsum template
 │           ├── index.twig                   # Index template
 │           ├── layouts                      # Layouts templates folder
-│           │   └── base.twig                # Base layout template
+│           │   └── default.twig             # Base layout template
 │           ├── page.twig                    # Simple page template
 │           └── single.twig                  # Single Post template
 │
