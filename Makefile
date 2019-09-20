@@ -44,7 +44,7 @@ up_docker: build_docker
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
 .PHONY: serve
-serve: deps up_docker ## Run WordPress on localhost:3000 with livereload and phpMyAdmin on localhost:3011
+serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, phpMyAdmin on localhost:3011 and make WordPress back-office accessible at localhost:3010/wp-admin
 	@$(GULP) --continue
 
 .PHONY: build
