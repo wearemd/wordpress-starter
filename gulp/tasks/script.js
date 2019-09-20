@@ -8,7 +8,7 @@ gulp.task('script', function() {
   return gulp.src('./js/app.js')
     .pipe(webpack({
       watch: isDev,
-      config: isDev ? require('../webpack/webpack.dev.js') : require('../webpack/webpack.prod.js')
+      config: isDev ? require('../webpack/dev.js') : require('../webpack/prod.js')
     }))
     .pipe(gulp.dest(config.theme_path + '/js/'));
 });

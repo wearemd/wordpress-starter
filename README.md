@@ -120,9 +120,9 @@ make help
 │   │   ├── sass.js                          # Sass task declaration
 │   │   └── script.js                        # JavaScript task declaration
 │   └── webpack                              # Webpack configuration files
-│       ├── webpack.common.js                # Configuration shared between dev and prod environment
-│       ├── webpack.dev.js                   # Development environment configuration file
-│       └── webpack.prod.js                  # Production environment configuration file
+│       ├── common.js                        # Configuration shared between dev and prod environment
+│       ├── dev.js                           # Development environment configuration file
+│       └── prod.js                          # Production environment configuration file
 │
 ├── js                                       # JavaScript source files
 │   └── app.js                               # Main JavaScript file used as entry by Webpack
