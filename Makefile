@@ -56,5 +56,5 @@ create_project: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create_project wp-coding-standards/wpcs:dev-master --no-dev
 
 .PHONY: help
-help: ## Print this help
+help: ## Display a list of available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
