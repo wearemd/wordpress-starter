@@ -48,7 +48,7 @@ serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, phpMyA
 	@$(GULP) --continue
 
 .PHONY: build
-build: ## Compile theme assets for production
+build: ## Build everything with Webpack and Gulp production environment to WordPress theme directory 
 	@NODE_ENV=production $(GULP)
 
 .PHONY: create_project

@@ -61,7 +61,7 @@ make
 💡 This command will also install dependencies on first run and when `package.json` or `yarn.lock` files are updated.
 
 ### Build
-Compile theme assets for production.
+Build everything with Webpack and Gulp production environment to WordPress theme directory.
 
 ```
 make build
