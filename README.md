@@ -118,7 +118,7 @@ make help
 │   │   ├── sass.js                          # Sass task declaration
 │   │   └── script.js                        # JavaScript task declaration
 │   └── webpack                              # Webpack configuration files
-│       ├── common.js                        # Configuration shared between dev and prod environment
+│       ├── common.js                        # Configuration shared between dev and prod environments
 │       ├── dev.js                           # Development environment configuration file
 │       └── prod.js                          # Production environment configuration file
 │
@@ -130,7 +130,7 @@ make help
 │   │   ├── _all.sass                        # Sass file to register all development stylesheets
 │   │   └── shame.sass                       # Here we put WIP style or dirty hacks
 │   │                                        # See csswizardry.com/2013/04/shame-css/
-│   ├── libs                                 # Libraries stylesheets folder
+│   ├── libs                                 # Libraries style folder
 │   │   └── _all.sass                        # Sass file to register all libraries stylesheets
 │   └── style.sass                           # Main Sass file used as source by Gulp
 │
