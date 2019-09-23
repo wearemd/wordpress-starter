@@ -127,11 +127,11 @@ make help
 │
 ├── sass                                     # Theme Sass stylesheets 
 │   ├── dev                                  # Development style folder
-│   │   ├── _all.sass                        # Sass file to register all development styles
+│   │   ├── _all.sass                        # Sass file to register all development stylesheets
 │   │   └── shame.sass                       # Here we put WIP style or dirty hacks
 │   │                                        # See csswizardry.com/2013/04/shame-css/
-│   ├── libs                                 # Libraries styles folder
-│   │   └── _all.sass                        # Sass file to register all libraries styles
+│   ├── libs                                 # Libraries stylesheets folder
+│   │   └── _all.sass                        # Sass file to register all libraries stylesheets
 │   └── style.sass                           # Main Sass file used as source by Gulp
 │
 ├── .babelrc                                 # Tells Babel which presets and plugins to use 
