@@ -146,7 +146,7 @@ make help
                                              # for JS packages, used by Yarn
 ```
 
-## 🚨 [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) 
+## 🚨 [WordPress coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
 
 **Step 1:** Run `make create_project` to install `wp-coding-standards/wpcs`.
 
