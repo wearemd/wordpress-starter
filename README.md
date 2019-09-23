@@ -93,27 +93,27 @@ make help
 │       │   └── sanitize-wysiwyg.php         # Customize WISIWYG
 │       ├── page.php                         # Simple page declaration 
 │       ├── post-types                       # Post types folder 
-│       ├── screenshot.png                   # Screenshot of the theme
-│       ├── style.css                        # CSS declaration of the theme
+│       ├── screenshot.png                   # Theme screenshot
+│       ├── style.css                        # Theme CSS declaration
 │       └── templates                        # Twig templates folder
-│           ├── 404.twig                     # 404 template
+│           ├── 404.twig                     # 404 error template
 │           ├── components                   # Components templates folder
 │           │   ├── navbar-footer.twig       # Navbar footer template
 │           │   └── navbar.twig              # Navbar template
 │           ├── dev                          # Development templates folder
-│           │   └── lorem.twig               # Lorem Ipsum template
+│           │   └── lorem.twig               # Lorem ipsum template
 │           ├── index.twig                   # Index template
-│           ├── layouts                      # Layouts templates folder
+│           ├── layouts                      # Layout templates folder
 │           │   └── default.twig             # Default layout template
 │           ├── page.twig                    # Simple page template
-│           └── single.twig                  # Single Post template
+│           └── single.twig                  # Single post template
 │
 ├── gulp                                     # Gulp tasks and configuration
 │   ├── env                                  # Gulp configuration file per environment
 │   │   ├── dev.js                           # Development environment configuration file
 │   │   └── prod.js                          # Production environment configuration file
-│   ├── index.js                             # Script to invoke correct environment and 
-│   │                                        # dinamically load tasks from tasks folder
+│   ├── index.js                             # Script to invoke correct environment 
+│   │                                        # and dynamically load tasks from tasks folder
 │   ├── tasks                                # Gulp tasks folder
 │   │   ├── sass.js                          # Sass task declaration
 │   │   └── script.js                        # JavaScript task declaration
@@ -130,9 +130,9 @@ make help
 │   │   ├── _all.sass                        # Sass file to register all development styles
 │   │   └── shame.sass                       # Here we put WIP style or dirty hacks
 │   │                                        # See csswizardry.com/2013/04/shame-css/
-│   ├── libs                                 # Libraries style folder
+│   ├── libs                                 # Libraries styles folder
 │   │   └── _all.sass                        # Sass file to register all libraries styles
-│   └── style.sass                           # Main Sass file used by as source by Gulp
+│   └── style.sass                           # Main Sass file used as source by Gulp
 │
 ├── .babelrc                                 # Tells Babel which presets and plugins to use 
 ├── .tool-versions                           # Tells asdf which version to use locally 
