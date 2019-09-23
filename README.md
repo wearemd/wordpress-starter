@@ -48,11 +48,9 @@
 
 ## ⌨️ Commands
 ### Serve
-* Run WordPress on [localhost:3000](http://localhost:3000) with livereload
-* Run phpMyAdmin on [localhost:3011](http://localhost:3011)
-* Make WordPress back-office accessible at [localhost:3010/wp-admin](http://localhost:3010/wp-admin)
-  * Username: `admin`
-  * Password: `password`
+- Run WordPress on [localhost:3000](http://localhost:3000) with livereload
+- Run WordPress back-office on [localhost:3010/wp-admin](http://localhost:3010/wp-admin) (username: **admin**, password: **password**)
+- Run phpMyAdmin on [localhost:3011](http://localhost:3011)
 
 ```
 make
@@ -61,7 +59,7 @@ make
 💡 This command will also install dependencies on first run and when `package.json` or `yarn.lock` files are updated.
 
 ### Build
-Build everything with Webpack and Gulp production environment to WordPress theme directory.
+Build everything using Webpack and Gulp production environment to WordPress theme directory.
 
 ```
 make build
@@ -106,7 +104,7 @@ make help
 │           │   └── lorem.twig               # Lorem Ipsum template
 │           ├── index.twig                   # Index template
 │           ├── layouts                      # Layouts templates folder
-│           │   └── default.twig             # Base layout template
+│           │   └── default.twig             # Default layout template
 │           ├── page.twig                    # Simple page template
 │           └── single.twig                  # Single Post template
 │

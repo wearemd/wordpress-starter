@@ -44,11 +44,11 @@ up_docker: build_docker
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
 .PHONY: serve
-serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, phpMyAdmin on localhost:3011 and make WordPress back-office accessible at localhost:3010/wp-admin
+serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, WordPress back-office on localhost:3010/wp-admin and phpMyAdmin on localhost:3011
 	@$(GULP) --continue
 
 .PHONY: build
-build: ## Build everything with Webpack and Gulp production environment to WordPress theme directory 
+build: ## Build everything using Webpack and Gulp production environment to WordPress theme directory
 	@NODE_ENV=production $(GULP)
 
 .PHONY: create_project
