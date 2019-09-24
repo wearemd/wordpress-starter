@@ -91,21 +91,21 @@ make help
 │       │   ├── class-md-starter-theme.php   # Theme declaration and initialization
 │       │   ├── reset.php                    # Deactivate emoji 
 │       │   └── sanitize-wysiwyg.php         # Customize WISIWYG
-│       ├── page.php                         # Simple page declaration 
+│       ├── page.php                         # Page declaration 
 │       ├── post-types                       # Post types folder 
 │       ├── screenshot.png                   # Theme screenshot
 │       ├── style.css                        # Theme CSS declaration
 │       └── templates                        # Twig templates folder
 │           ├── 404.twig                     # 404 error template
 │           ├── components                   # Components templates folder
-│           │   ├── navbar-footer.twig       # Navbar footer template
-│           │   └── navbar.twig              # Navbar template
+│           │   ├── navbar-footer.twig       # Navbar footer component
+│           │   └── navbar.twig              # Navbar component
 │           ├── dev                          # Development templates folder
-│           │   └── lorem.twig               # Lorem ipsum template
+│           │   └── lorem.twig               # Lorem ipsum partial
 │           ├── index.twig                   # Index template
 │           ├── layouts                      # Layout templates folder
 │           │   └── default.twig             # Default layout template
-│           ├── page.twig                    # Simple page template
+│           ├── page.twig                    # Page template
 │           └── single.twig                  # Single post template
 │
 ├── gulp                                     # Gulp tasks and configuration
