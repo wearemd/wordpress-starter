@@ -20,11 +20,11 @@
 - [**WordPress**](https://wordpress.org)
 
 ## ⚙️ Getting started
-**Step 1:** First rename the [`md-starter-theme` folder](https://github.com/wearemd/wordpress-starter/tree/master/app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
+**Step 1:** Rename the [`md-starter-theme` folder](https://github.com/wearemd/wordpress-starter/tree/master/app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
 
-**Step 2:** Then rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
+**Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
 
-**Step 3:** You can now edit all informations related to your theme in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
+**Step 3:** Edit all informations related to your theme in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
 
 ```css
 /**
@@ -36,9 +36,9 @@
  */
 ```
 
-**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
+**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
 
-**Step 5:** Finally run the following command to get everything ready:
+**Step 5:** Run the following command to get everything ready:
 
 ```
 make setup
