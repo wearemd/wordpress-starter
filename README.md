@@ -178,8 +178,8 @@ make help
                                              # for JS packages, used by Yarn
 ```
 
-## 🔖 Versioning
-When you update the WordPress theme, don’t forget to **change the theme version number in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5) before deploying**. This version number will append to CSS/JS files to bust browser cache on those assets.
+## 🍱 Cache busting
+Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5).
 
 ## 🤜🤛 Contributing
 Contributions, issues and feature requests are welcome!
