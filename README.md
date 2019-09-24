@@ -38,13 +38,17 @@
 
 **Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set `--locale` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
 
-**Step 5:** Finally run `make setup` to get everything ready:
+**Step 5:** Finally run the following command to get everything ready:
 - Docker containers
 - WordPress download
 - WordPress configuration
 - Etc.
 
-**Your WordPress is ready to be themed**, well done fella 👊
+```
+make setup
+```
+
+**Your WordPress is ready to be themed!**
 
 ### WordPress Coding Standards (optional)
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
