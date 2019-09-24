@@ -47,7 +47,7 @@ serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, WordPr
 	@$(GULP) --continue
 
 .PHONY: build
-build: ## Build everything using Webpack and Gulp production environment to WordPress theme directory
+build: deps ## Build everything using Webpack and Gulp production environment to WordPress theme directory
 	@NODE_ENV=production $(GULP)
 
 .PHONY: install_wpcs
