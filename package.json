@@ -1,6 +1,6 @@
 {
   "name": "wordpress-starter",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A starter template for WordPress websites featuring Docker, Gulp and Webpack",
   "main": "index.js",
   "author": "awea <aweaoftheworld@gmail.com>",
