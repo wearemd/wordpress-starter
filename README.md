@@ -148,7 +148,7 @@ make help
 
 ## 🚨 [WordPress coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
 
-**Step 1:** Run `make create_project` to install `wp-coding-standards/wpcs`.
+**Step 1:** Run `make install_wpcs` to install `wp-coding-standards/wpcs`.
 
 **Step 2:** Move to your theme folder and run `composer config-set` to set path for `wpcs`.
 
