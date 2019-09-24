@@ -70,6 +70,13 @@ composer lint functions.php
 ```
 
 ## ⌨️ Commands
+### Setup
+Get everything ready (Docker containers, WordPress download and configuration).
+
+```
+make setup
+```
+
 ### Serve
 - Run WordPress on [localhost:3000](http://localhost:3000) with livereload
 - Run WordPress back-office on [localhost:3010/wp-admin](http://localhost:3010/wp-admin) (username: **admin**, password: **password**)

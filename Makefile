@@ -24,7 +24,7 @@ $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
 .PHONY: setup
-setup: up_docker deps app/index.php app/wp-config.php
+setup: up_docker deps app/index.php app/wp-config.php ## Get everything ready (Docker containers, WordPress download and configuration)
 	@$(WPCLI) theme activate md-starter-theme
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
