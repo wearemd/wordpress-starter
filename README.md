@@ -82,14 +82,16 @@ make setup
 - Run WordPress back-office on [localhost:3010/wp-admin](http://localhost:3010/wp-admin) (username: **admin**, password: **password**)
 - Run phpMyAdmin on [localhost:3011](http://localhost:3011)
 
+💡 This command will also **install dependencies** on first run and when `package.json` or `yarn.lock` files are updated.
+
 ```
 make
 ```
 
-💡 This command will also install dependencies on first run and when `package.json` or `yarn.lock` files are updated.
-
 ### Build
 Build everything using Webpack and Gulp production environment to WordPress theme directory.
+
+💡 This command will also **install dependencies** on first run and when `package.json` or `yarn.lock` files are updated.
 
 ```
 make build
