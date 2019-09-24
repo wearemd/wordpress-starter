@@ -63,10 +63,10 @@ make install_wpcs
 composer config-set
 ```
 
-**Step 4:** You are now able to lint PHP files, for example with `functions.php`:
+**Step 4:** You are now able to lint any PHP file:
 
 ```
-composer lint functions.php
+composer lint [filename].php
 ```
 
 ## ⌨️ Commands
