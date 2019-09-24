@@ -38,11 +38,7 @@
 
 **Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set `--locale` in [`Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17). See the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/).
 
-**Step 5:** Finally run the following command to get everything ready:
-- Docker containers
-- WordPress download
-- WordPress configuration
-- Etc.
+**Step 5:** Finally run the following command to get everything ready (Docker containers, WordPress download and configuration):
 
 ```
 make setup
