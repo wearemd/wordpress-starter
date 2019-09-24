@@ -1,5 +1,3 @@
-.DEFAULT_GOAL := serve
-
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
 
@@ -43,6 +41,7 @@ build_docker: .build_docker.mk
 up_docker: build_docker
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
+.DEFAULT_GOAL := serve
 .PHONY: serve
 serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, WordPress back-office on localhost:3010/wp-admin and phpMyAdmin on localhost:3011
 	@$(GULP) --continue
