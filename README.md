@@ -36,7 +36,7 @@
  */
 ```
 
-**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L17) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
+**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L15) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
 
 **Step 5:** Run the following command to get everything ready:
 
