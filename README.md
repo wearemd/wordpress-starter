@@ -20,11 +20,11 @@
 - [**WordPress**](https://wordpress.org)
 
 ## ⚙️ Getting started
-**Step 1:** Rename the [`md-starter-theme` folder](https://github.com/wearemd/wordpress-starter/tree/master/app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
+**Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
 
 **Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
 
-**Step 3:** Edit all informations related to your theme in [`style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css):
+**Step 3:** Edit all informations related to your theme in [`style.css`](app/wp-content/themes/md-starter-theme/style.css):
 
 ```css
 /**
@@ -36,7 +36,7 @@
  */
 ```
 
-**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](https://github.com/wearemd/wordpress-starter/blob/master/Makefile#L15) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
+**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](Makefile#L15) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
 
 **Step 5:** Run the following command to get everything ready:
 
@@ -179,7 +179,7 @@ composer lint [filename].php
 ```
 
 ## 🍱 Cache busting
-Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](https://github.com/wearemd/wordpress-starter/blob/master/app/wp-content/themes/md-starter-theme/style.css#L5).
+Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
 
 ## 🤜🤛 Contributing
 Contributions, issues and feature requests are welcome!
