@@ -46,29 +46,6 @@ make setup
 
 **Your WordPress is ready to be themed!**
 
-## 🚨 Lint PHP files using WordPress Coding Standards *(optional)*
-Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
-
-**Step 1:** Install `wp-coding-standards/wpcs`:
-
-```
-make install_wpcs
-```
-
-**Step 2:** Move to your theme folder.
-
-**Step 3:** Set path for `wpcs`:
-
-```
-composer config-set
-```
-
-**Step 4:** You are now able to lint any PHP file:
-
-```
-composer lint [filename].php
-```
-
 ## ⌨️ Commands
 ### Setup
 Get everything ready (Docker containers, WordPress download and configuration).
@@ -176,6 +153,29 @@ make help
 ├── Makefile                                 # Defines commands for this project
 └── package.json                             # Defines libraries and dependencies 
                                              # for JS packages, used by Yarn
+```
+
+## 🚨 Lint PHP files using WordPress Coding Standards *(optional)*
+Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
+
+**Step 1:** Install `wp-coding-standards/wpcs`:
+
+```
+make install_wpcs
+```
+
+**Step 2:** Move to your theme folder.
+
+**Step 3:** Set path for `wpcs`:
+
+```
+composer config-set
+```
+
+**Step 4:** You are now able to lint any PHP file:
+
+```
+composer lint [filename].php
 ```
 
 ## 🍱 Cache busting
