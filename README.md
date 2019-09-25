@@ -12,6 +12,7 @@
 
 ## 🥞 Stack
 - [**Babel**](https://babeljs.io)
+- [**Browsersync**](https://www.browsersync.io)
 - [**Bulma**](https://bulma.io)
 - [**Gulp**](https://gulpjs.com)
 - [**Sass**](https://sass-lang.com)
