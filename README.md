@@ -155,7 +155,7 @@ make help
                                              # for JS packages, used by Yarn
 ```
 
-## 🚨 Lint PHP files using WordPress Coding Standards *(optional)*
+## 🚨 Lint PHP files using WordPress Coding Standards
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
 **Step 1:** Install `wp-coding-standards/wpcs`:
