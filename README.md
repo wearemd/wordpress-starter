@@ -6,7 +6,7 @@
 - [**Composer**](https://getcomposer.org)
 - [**Docker**](https://www.docker.com)
 - [**Docker Compose**](https://docs.docker.com/compose)
-- [**Make**](https://www.gnu.org/software/make)
+- [**Make**](https://www.gnu.org/software/make/)
 - [**Node.js**](https://nodejs.org)
 - [**Yarn**](https://yarnpkg.com)
 
