@@ -1,5 +1,5 @@
 .
-├── app                                    # 
+├── app                                    # 🦄
 │   ├── wp-content/themes/md-starter-theme # 
 │   │   ├── fonts                          # 
 │   │   │   └── .gitkeep                   # 
@@ -37,7 +37,7 @@
 │   └── wp-cli.yml                         # 
 │
 │
-├── gulp                                   # 
+├── gulp                                   # Gulp tasks and configuration
 │   ├── env                                # 
 │   │   ├── dev.js                         # 
 │   │   └── prod.js                        # 
@@ -51,11 +51,11 @@
 │   └── index.js                           # 
 │
 │
-├── js                                     # 
+├── js                                     # JavaScript source file
 │   └── app.js                             # 
 │
 │
-├── sass                                   # 
+├── sass                                   # Sass style
 │   ├── dev                                # 
 │   │   ├── _all.sass                      # 
 │   │   └── shame.sass                     # 
@@ -64,15 +64,15 @@
 │   └── style.sass                         # 
 │
 │
-├── .babelrc                               # 
-├── .gitignore                             # 
-├── .tool-versions                         # 
-├── docker-compose.yml                     # 
-├── Dockerfile                             # 
-├── dwp                                    # 
-├── gulpfile.js                            # 
-├── LICENSE                                # 
-├── Makefile                               # 
-├── package.json                           # 
-├── README.md                              # 
-└── yarn.lock                              # 
+├── .babelrc                               # Presets and plugins to use, used by Babel
+├── .gitignore                             # 🦄
+├── .tool-versions                         # Which version to use locally for each language, used by asdf
+├── docker-compose.yml                     # Services, networks and volumes, used by Docker Compose
+├── Dockerfile                             # Docker containers declaration
+├── dwp                                    # 🦄
+├── gulpfile.js                            # Gulp configuration
+├── LICENSE                                # License
+├── Makefile                               # Commands for this project
+├── package.json                           # Libraries and dependencies for JavaScript packages, used by Yarn
+├── README.md                              # Project documentation
+└── yarn.lock                              # 🦄
