@@ -51,6 +51,7 @@ make setup
 ### Setup
 ```bash
 # Get everything ready (Docker containers, WordPress download and configuration)
+
 make setup
 ```
 
@@ -61,6 +62,7 @@ make setup
 # - WordPress back-office at localhost:3010/wp-admin
 #   (username: admin, password: password)
 # - phpMyAdmin at localhost:3011
+
 make
 ```
 
@@ -69,6 +71,7 @@ make
 ### Build
 ```bash
 # Build WordPress theme for production use
+
 make build
 ```
 
@@ -77,6 +80,7 @@ make build
 ### Help
 ```bash
 # List available commands
+
 make help
 ```
 
