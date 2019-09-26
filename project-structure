@@ -1,78 +1,78 @@
 .
-├── app
-│   ├── wp-content/themes/md-starter-theme
-│   │   ├── fonts
-│   │   │   └── .gitkeep
-│   │   ├── images
-│   │   │   └── 404.gif
-│   │   ├── languages
-│   │   │   ├── mdstartertheme.mo
-│   │   │   └── mdstartertheme.po
-│   │   ├── lib
-│   │   │   ├── class-md-starter-theme.php
-│   │   │   ├── reset.php
-│   │   │   └── sanitize-wysiwyg.php
-│   │   ├── post-types
-│   │   │   └── .gitkeep
-│   │   ├── templates
-│   │   │   ├── components
-│   │   │   │   ├── navbar-footer.twig
-│   │   │   │   └── navbar.twig
-│   │   │   ├── dev
-│   │   │   │   └── lorem.twig
-│   │   │   ├── layouts
-│   │   │   │   └── default.twig
-│   │   │   ├── 404.twig
-│   │   │   ├── index.twig
-│   │   │   ├── page.twig
-│   │   │   └── single.twig
-│   │   ├── 404.php
-│   │   ├── composer.json
-│   │   ├── composer.lock
-│   │   ├── functions.php
-│   │   ├── index.php
-│   │   ├── page.php
-│   │   ├── screenshot.png
-│   │   └── style.css
-│   └── wp-cli.yml
+├── app                                    # 
+│   ├── wp-content/themes/md-starter-theme # 
+│   │   ├── fonts                          # 
+│   │   │   └── .gitkeep                   # 
+│   │   ├── images                         # 
+│   │   │   └── 404.gif                    # 
+│   │   ├── languages                      # 
+│   │   │   ├── mdstartertheme.mo          # 
+│   │   │   └── mdstartertheme.po          # 
+│   │   ├── lib                            # 
+│   │   │   ├── class-md-starter-theme.php # 
+│   │   │   ├── reset.php                  # 
+│   │   │   └── sanitize-wysiwyg.php       # 
+│   │   ├── post-types                     # 
+│   │   │   └── .gitkeep                   # 
+│   │   ├── templates                      # 
+│   │   │   ├── components                 # 
+│   │   │   │   ├── navbar-footer.twig     # 
+│   │   │   │   └── navbar.twig            # 
+│   │   │   ├── dev                        # 
+│   │   │   │   └── lorem.twig             # 
+│   │   │   ├── layouts                    # 
+│   │   │   │   └── default.twig           # 
+│   │   │   ├── 404.twig                   # 
+│   │   │   ├── index.twig                 # 
+│   │   │   ├── page.twig                  # 
+│   │   │   └── single.twig                # 
+│   │   ├── 404.php                        # 
+│   │   ├── composer.json                  # 
+│   │   ├── composer.lock                  # 
+│   │   ├── functions.php                  # 
+│   │   ├── index.php                      # 
+│   │   ├── page.php                       # 
+│   │   ├── screenshot.png                 # 
+│   │   └── style.css                      # 
+│   └── wp-cli.yml                         # 
 │
 │
-├── gulp
-│   ├── env
-│   │   ├── dev.js
-│   │   └── prod.js
-│   ├── tasks
-│   │   ├── sass.js
-│   │   └── script.js
-│   ├── webpack
-│   │   ├── common.js
-│   │   ├── dev.js
-│   │   └── prod.js
-│   └── index.js
+├── gulp                                   # 
+│   ├── env                                # 
+│   │   ├── dev.js                         # 
+│   │   └── prod.js                        # 
+│   ├── tasks                              # 
+│   │   ├── sass.js                        # 
+│   │   └── script.js                      # 
+│   ├── webpack                            # 
+│   │   ├── common.js                      # 
+│   │   ├── dev.js                         # 
+│   │   └── prod.js                        # 
+│   └── index.js                           # 
 │
 │
-├── js
-│   └── app.js
+├── js                                     # 
+│   └── app.js                             # 
 │
 │
-├── sass
-│   ├── dev
-│   │   ├── _all.sass
-│   │   └── shame.sass
-│   ├── libs
-│   │   └── _all.sass
-│   └── style.sass
+├── sass                                   # 
+│   ├── dev                                # 
+│   │   ├── _all.sass                      # 
+│   │   └── shame.sass                     # 
+│   ├── libs                               # 
+│   │   └── _all.sass                      # 
+│   └── style.sass                         # 
 │
 │
-├── .babelrc
-├── .gitignore
-├── .tool-versions
-├── docker-compose.yml
-├── Dockerfile
-├── dwp
-├── gulpfile.js
-├── LICENSE
-├── Makefile
-├── package.json
-├── README.md
-└── yarn.lock
+├── .babelrc                               # 
+├── .gitignore                             # 
+├── .tool-versions                         # 
+├── docker-compose.yml                     # 
+├── Dockerfile                             # 
+├── dwp                                    # 
+├── gulpfile.js                            # 
+├── LICENSE                                # 
+├── Makefile                               # 
+├── package.json                           # 
+├── README.md                              # 
+└── yarn.lock                              # 
