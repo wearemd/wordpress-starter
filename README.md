@@ -49,14 +49,14 @@ make setup
 
 ## ⌨️ Commands
 ### Setup
-```bash
+```makefile
 # Get everything ready (Docker containers, WordPress download and configuration)
 
 make setup
 ```
 
 ### Serve
-```bash
+```makefile
 # Serve:
 # - WordPress front-office at localhost:3000 with live reloading
 # - WordPress back-office at localhost:3010/wp-admin
@@ -69,7 +69,7 @@ make
 💡 This command will also **install dependencies** on first run and when `package.json` or `yarn.lock` files are updated.
 
 ### Build
-```bash
+```makefile
 # Build WordPress theme for production use
 
 make build
@@ -78,7 +78,7 @@ make build
 💡 This command will also **install dependencies** on first run and when `package.json` or `yarn.lock` files are updated.
 
 ### Help
-```bash
+```makefile
 # List available commands
 
 make help
