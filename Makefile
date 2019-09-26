@@ -43,11 +43,11 @@ up_docker: build_docker
 
 .DEFAULT_GOAL := serve
 .PHONY: serve
-serve: deps up_docker ## Run WordPress on localhost:3000 with livereload, WordPress back-office on localhost:3010/wp-admin and phpMyAdmin on localhost:3011
+serve: deps up_docker ## Serve WordPress front-office at localhost:3000 with live reloading, WordPress back-office at localhost:3010/wp-admin (username: admin, password: password) and phpMyAdmin at localhost:3011
 	@$(GULP) --continue
 
 .PHONY: build
-build: deps ## Build everything using Webpack and Gulp production environment to WordPress theme directory
+build: deps ## Build WordPress theme for production use
 	@NODE_ENV=production $(GULP)
 
 .PHONY: install_wpcs
@@ -55,5 +55,5 @@ install_wpcs: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 
 .PHONY: help
-help: ## Display a list of available commands
+help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
