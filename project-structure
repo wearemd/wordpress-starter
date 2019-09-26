@@ -35,6 +35,8 @@
 │   │   ├── screenshot.png
 │   │   └── style.css
 │   └── wp-cli.yml
+│
+│
 ├── gulp
 │   ├── env
 │   │   ├── dev.js
@@ -47,8 +49,12 @@
 │   │   ├── dev.js
 │   │   └── prod.js
 │   └── index.js
+│
+│
 ├── js
 │   └── app.js
+│
+│
 ├── sass
 │   ├── dev
 │   │   ├── _all.sass
@@ -56,6 +62,8 @@
 │   ├── libs
 │   │   └── _all.sass
 │   └── style.sass
+│
+│
 ├── .babelrc
 ├── .gitignore
 ├── .tool-versions
