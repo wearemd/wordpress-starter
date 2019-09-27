@@ -85,7 +85,7 @@ make help
 ```
 
 ## 🗄️ Project structure
-See [WIP project structure](project-structure)
+
 
 ## 🚨 Lint PHP files using WordPress Coding Standards
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
