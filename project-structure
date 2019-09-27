@@ -16,16 +16,16 @@
 │   │   │   └── .gitkeep                   # 🦄
 │   │   ├── templates                      # Twig templates
 │   │   │   ├── components                 # Components
-│   │   │   │   ├── navbar-footer.twig     # 
-│   │   │   │   └── navbar.twig            # 
+│   │   │   │   ├── navbar-footer.twig     # Footer navbar
+│   │   │   │   └── navbar.twig            # Main navbar
 │   │   │   ├── dev                        # Partials for development
-│   │   │   │   └── lorem.twig             # 
+│   │   │   │   └── lorem.twig             # Partial featuring text in lorem
 │   │   │   ├── layouts                    # Layouts
-│   │   │   │   └── default.twig           # 
-│   │   │   ├── 404.twig                   # 404 error page template
-│   │   │   ├── index.twig                 # Home page template
-│   │   │   ├── page.twig                  # Page template
-│   │   │   └── single.twig                # Single post template
+│   │   │   │   └── default.twig           # Default layout
+│   │   │   ├── 404.twig                   # 404 error page
+│   │   │   ├── index.twig                 # Home page
+│   │   │   ├── page.twig                  # Page
+│   │   │   └── single.twig                # Single post
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # 🦄
 │   │   ├── composer.lock                  # 🦄
