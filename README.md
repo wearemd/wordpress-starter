@@ -85,78 +85,7 @@ make help
 ```
 
 ## 🗄️ Project structure
-```
-.
-├── app
-│   ├── wp-cli.yml                           # WP-CLI configuration file
-│   └── wp-content/themes/md-starter-theme   # WordPress theme
-│       ├── 404.php                          # 404 page declaration
-│       ├── app.css                          # Minified, optimized and compiled style
-│       ├── fonts                            # Fonts folder
-│       ├── functions.php                    # Specific theme customization
-│       │                                    # See codex.wordpress.org/Functions_File_Explained
-│       ├── images                           # Images folder
-│       ├── index.php                        # Index page declaration
-│       ├── js                               # Minified, optimized and compiled JavaScript
-│       ├── languages                        # Languages folder
-│       ├── lib                              # Specific theme customization
-│       │   ├── class-md-starter-theme.php   # Theme declaration and initialization
-│       │   ├── reset.php                    # Deactivate emoji 
-│       │   └── sanitize-wysiwyg.php         # Customize WISIWYG
-│       ├── page.php                         # Page declaration 
-│       ├── post-types                       # Post types folder 
-│       ├── screenshot.png                   # Theme screenshot
-│       ├── style.css                        # Theme CSS declaration
-│       └── templates                        # Twig templates folder
-│           ├── 404.twig                     # 404 error template
-│           ├── components                   # Components templates folder
-│           │   ├── navbar-footer.twig       # Navbar footer component
-│           │   └── navbar.twig              # Navbar component
-│           ├── dev                          # Development templates folder
-│           │   └── lorem.twig               # Lorem ipsum partial
-│           ├── index.twig                   # Index template
-│           ├── layouts                      # Layout templates folder
-│           │   └── default.twig             # Default layout template
-│           ├── page.twig                    # Page template
-│           └── single.twig                  # Single post template
-│
-├── gulp                                     # Gulp tasks and configuration
-│   ├── env                                  # Gulp configuration file per environment
-│   │   ├── dev.js                           # Development environment configuration file
-│   │   └── prod.js                          # Production environment configuration file
-│   ├── index.js                             # Script to invoke correct environment 
-│   │                                        # and dynamically load tasks from tasks folder
-│   ├── tasks                                # Gulp tasks folder
-│   │   ├── sass.js                          # Sass task declaration
-│   │   └── script.js                        # JavaScript task declaration
-│   └── webpack                              # Webpack configuration files
-│       ├── common.js                        # Configuration shared between dev and prod environments
-│       ├── dev.js                           # Development environment configuration file
-│       └── prod.js                          # Production environment configuration file
-│
-├── js                                       # JavaScript source files
-│   └── app.js                               # Main JavaScript file used as entry by Webpack
-│
-├── sass                                     # Theme Sass stylesheets 
-│   ├── dev                                  # Development style folder
-│   │   ├── _all.sass                        # Sass file to register all development stylesheets
-│   │   └── shame.sass                       # Here we put WIP style or dirty hacks
-│   │                                        # See csswizardry.com/2013/04/shame-css/
-│   ├── libs                                 # Libraries style folder
-│   │   └── _all.sass                        # Sass file to register all libraries stylesheets
-│   └── style.sass                           # Main Sass file used as source by Gulp
-│
-├── .babelrc                                 # Tells Babel which presets and plugins to use 
-├── .tool-versions                           # Tells asdf which version to use locally 
-│                                            # for each language
-├── docker-compose.yml                       # Docker Compose file to define services,
-│                                            # networks and volumes
-├── Dockerfile                               # Docker container declaration
-├── gulpfile.js                              # Gulp configuration
-├── Makefile                                 # Defines commands for this project
-└── package.json                             # Defines libraries and dependencies 
-                                             # for JS packages, used by Yarn
-```
+See [WIP project structure](project-structure)
 
 ## 🚨 Lint PHP files using WordPress Coding Standards
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
