@@ -85,7 +85,100 @@ make help
 ```
 
 ## 🗄️ Project structure
-
+```
+.
+├── app                                    # WordPress site
+│   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
+│   │   ├── fonts                          # Font assets
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
+│   │   │
+│   │   ├── images                         # Image assets
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
+│   │   │
+│   │   ├── languages                      # Localization
+│   │   │   ├── mdstartertheme.mo          # Compiled theme localization
+│   │   │   └── mdstartertheme.po          # Theme localization
+│   │   │
+│   │   ├── lib                            # Theme features
+│   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
+│   │   │   ├── reset.php                  # Deactivating WordPress emoji-support
+│   │   │   └── sanitize-wysiwyg.php       # WordPress back-office WYSIWYG sanitization
+│   │   │
+│   │   ├── post-types                     # Post types
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
+│   │   │
+│   │   ├── templates                      # Twig templates
+│   │   │   ├── components                 # Components
+│   │   │   │   ├── navbar-footer.twig     # Footer navbar
+│   │   │   │   └── navbar.twig            # Main navbar
+│   │   │   │
+│   │   │   ├── dev                        # Partials for development
+│   │   │   │   └── lorem.twig             # Partial featuring text in lorem
+│   │   │   │
+│   │   │   ├── layouts                    # Layouts
+│   │   │   │   └── default.twig           # Default layout
+│   │   │   │
+│   │   │   ├── 404.twig                   # 404 error page
+│   │   │   ├── index.twig                 # Home page
+│   │   │   ├── page.twig                  # Page
+│   │   │   └── single.twig                # Single post
+│   │   │
+│   │   ├── 404.php                        # 404 error page declaration
+│   │   ├── composer.json                  # PHP dependencies, used by Composer
+│   │   ├── composer.lock                  # Tracking exact versions for PHP dependencies, used by Composer
+│   │   ├── functions.php                  # Changing WordPress default behavior
+│   │   ├── index.php                      # Home page declaration
+│   │   ├── page.php                       # Page declaration
+│   │   ├── screenshot.png                 # Theme screenshot, used in WordPress back-office
+│   │   └── style.css                      # Theme CSS declaration
+│   │
+│   └── wp-cli.yml                         # WP-CLI configuration
+│
+│
+├── gulp                                   # Gulp/Webpack configuration and tasks
+│   ├── env                                # Gulp configuration per environment
+│   │   ├── dev.js                         # Development environment
+│   │   └── prod.js                        # Production environment
+│   │
+│   ├── tasks                              # Gulp tasks
+│   │   ├── sass.js                        # Sass task declaration
+│   │   └── script.js                      # JavaScript task declaration
+│   │
+│   ├── webpack                            # Webpack configuration per environment
+│   │   ├── common.js                      # Shared between development and production environments
+│   │   ├── dev.js                         # Development environment
+│   │   └── prod.js                        # Production environment
+│   │
+│   └── index.js                           # Script to invoke proper environment and dynamically load Gulp tasks
+│
+│
+├── js                                     # JavaScript source files
+│   └── app.js                             # Main JavaScript file used as entry by Webpack
+│
+│
+├── sass                                   # Sass style
+│   ├── dev                                # WIP style for development
+│   │   └── shame.sass                     # WIP style or dirty hacks
+│   │
+│   ├── libs                               # Libraries
+│   │   └── _all.sass                      # File used to import all libraries (e.g. Bulma)
+│   │
+│   └── style.sass                         # Main Sass file used as source by Gulp
+│
+│
+├── .babelrc                               # Presets and plugins to use, used by Babel
+├── .gitignore                             # Files and folders ignored by Git
+├── .tool-versions                         # Which version to use locally for each language, used by asdf
+├── docker-compose.yml                     # Services, networks and volumes, used by Docker Compose
+├── Dockerfile                             # Docker containers declaration
+├── dwp                                    # Script to use WP-CLI inside a Docker container
+├── gulpfile.js                            # Gulp configuration
+├── LICENSE                                # License
+├── Makefile                               # Commands for this project
+├── package.json                           # JavaScript dependencies, used by Yarn
+├── README.md                              # Project documentation
+└── yarn.lock                              # Tracking exact versions for JavaScript dependencies, used by Yarn
+```
 
 ## 🚨 Lint PHP files using WordPress Coding Standards
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
