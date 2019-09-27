@@ -3,29 +3,38 @@
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
 │   │   │   └── .gitkeep                   # 🦄
+│   │   │
 │   │   ├── images                         # Image assets
 │   │   │   └── 404.gif                    # 🦄
+│   │   │
 │   │   ├── languages                      # 🚧 Languages
 │   │   │   ├── mdstartertheme.mo          # 🦄
 │   │   │   └── mdstartertheme.po          # 🦄
+│   │   │
 │   │   ├── lib                            # 🚧 Specific theme customization
 │   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
 │   │   │   ├── reset.php                  # 🚧 Deactivate emoji
 │   │   │   └── sanitize-wysiwyg.php       # 🚧 WordPress back-office WYSIWYG sanitization
+│   │   │
 │   │   ├── post-types                     # Post types
 │   │   │   └── .gitkeep                   # 🦄
+│   │   │
 │   │   ├── templates                      # Twig templates
 │   │   │   ├── components                 # Components
 │   │   │   │   ├── navbar-footer.twig     # Footer navbar
 │   │   │   │   └── navbar.twig            # Main navbar
+│   │   │   │
 │   │   │   ├── dev                        # Partials for development
 │   │   │   │   └── lorem.twig             # Partial featuring text in lorem
+│   │   │   │
 │   │   │   ├── layouts                    # Layouts
 │   │   │   │   └── default.twig           # Default layout
+│   │   │   │
 │   │   │   ├── 404.twig                   # 404 error page
 │   │   │   ├── index.twig                 # Home page
 │   │   │   ├── page.twig                  # Page
 │   │   │   └── single.twig                # Single post
+│   │   │
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # 🦄
 │   │   ├── composer.lock                  # 🦄
@@ -34,6 +43,7 @@
 │   │   ├── page.php                       # Page declaration
 │   │   ├── screenshot.png                 # 🚧 Theme screenshot, used in WordPress back-office
 │   │   └── style.css                      # Theme CSS declaration
+│   │
 │   └── wp-cli.yml                         # WP-CLI configuration
 │
 │
@@ -41,13 +51,16 @@
 │   ├── env                                # Gulp configuration per environment
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
+│   │
 │   ├── tasks                              # Gulp tasks
 │   │   ├── sass.js                        # Sass task declaration
 │   │   └── script.js                      # JavaScript task declaration
+│   │
 │   ├── webpack                            # Webpack configuration per environment
 │   │   ├── common.js                      # Shared between development and production environments
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
+│   │
 │   └── index.js                           # 🚧 Script to invoke proper (Gulp?) environment and dynamically load Gulp tasks
 │
 │
@@ -58,8 +71,10 @@
 ├── sass                                   # Sass style
 │   ├── dev                                # WIP style for development
 │   │   └── shame.sass                     # WIP style or dirty hacks
+│   │
 │   ├── libs                               # Libraries
 │   │   └── _all.sass                      # File used to import all libraries (e.g. Bulma)
+│   │
 │   └── style.sass                         # Main Sass file used as source by Gulp
 │
 │
