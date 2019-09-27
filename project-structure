@@ -2,10 +2,10 @@
 ├── app                                    # 🚧 Site
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
-│   │   │   └── .gitkeep                   # Empty file to add this folder to Git
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── images                         # Image assets
-│   │   │   └── .gitkeep                   # Empty file to add this folder to Git
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── languages                      # 🚧 Languages
 │   │   │   ├── mdstartertheme.mo          # Compiled version of the theme localization file
@@ -17,7 +17,7 @@
 │   │   │   └── sanitize-wysiwyg.php       # 🚧 WordPress back-office WYSIWYG sanitization
 │   │   │
 │   │   ├── post-types                     # Post types
-│   │   │   └── .gitkeep                   # Empty file to add this folder to Git
+│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── templates                      # Twig templates
 │   │   │   ├── components                 # Components
