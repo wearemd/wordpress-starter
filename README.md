@@ -125,7 +125,8 @@ make help
 │   │   │
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # PHP dependencies, used by Composer
-│   │   ├── composer.lock                  # Tracking exact versions for PHP dependencies, used by Composer
+│   │   ├── composer.lock                  # Tracking exact versions for PHP dependencies,
+│   │   │                                  # used by Composer
 │   │   ├── functions.php                  # Changing WordPress default behavior
 │   │   ├── index.php                      # Home page declaration
 │   │   ├── page.php                       # Page declaration
@@ -149,7 +150,8 @@ make help
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
 │   │
-│   └── index.js                           # Script to invoke proper environment and dynamically load Gulp tasks
+│   └── index.js                           # Script to invoke proper environment and dynamically load
+│                                          # Gulp tasks
 │
 │
 ├── js                                     # JavaScript source files
@@ -177,7 +179,8 @@ make help
 ├── Makefile                               # Commands for this project
 ├── package.json                           # JavaScript dependencies, used by Yarn
 ├── README.md                              # Project documentation
-└── yarn.lock                              # Tracking exact versions for JavaScript dependencies, used by Yarn
+└── yarn.lock                              # Tracking exact versions for JavaScript dependencies,
+                                           # used by Yarn
 ```
 
 ## 🚨 Lint PHP files using WordPress Coding Standards
