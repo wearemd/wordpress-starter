@@ -1,20 +1,20 @@
 .
 ├── app                                    # 🦄
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
-│   │   ├── fonts                          # 
+│   │   ├── fonts                          # Font assets
 │   │   │   └── .gitkeep                   # 
-│   │   ├── images                         # 
+│   │   ├── images                         # Image assets
 │   │   │   └── 404.gif                    # 
-│   │   ├── languages                      # 
+│   │   ├── languages                      # 🚧 Languages
 │   │   │   ├── mdstartertheme.mo          # 
 │   │   │   └── mdstartertheme.po          # 
-│   │   ├── lib                            # 
+│   │   ├── lib                            # 🚧 Specific theme customization
 │   │   │   ├── class-md-starter-theme.php # 
 │   │   │   ├── reset.php                  # 
 │   │   │   └── sanitize-wysiwyg.php       # 
-│   │   ├── post-types                     # 
+│   │   ├── post-types                     # Post types
 │   │   │   └── .gitkeep                   # 
-│   │   ├── templates                      # 
+│   │   ├── templates                      # Twig templates
 │   │   │   ├── components                 # 
 │   │   │   │   ├── navbar-footer.twig     # 
 │   │   │   │   └── navbar.twig            # 
@@ -26,28 +26,28 @@
 │   │   │   ├── index.twig                 # 
 │   │   │   ├── page.twig                  # 
 │   │   │   └── single.twig                # 
-│   │   ├── 404.php                        # 
-│   │   ├── composer.json                  # 
-│   │   ├── composer.lock                  # 
-│   │   ├── functions.php                  # 
-│   │   ├── index.php                      # 
-│   │   ├── page.php                       # 
-│   │   ├── screenshot.png                 # 
-│   │   └── style.css                      # 
+│   │   ├── 404.php                        # 404 error page declaration
+│   │   ├── composer.json                  # 🦄
+│   │   ├── composer.lock                  # 🦄
+│   │   ├── functions.php                  # 🚧 Specific theme customization
+│   │   ├── index.php                      # Home page declaration
+│   │   ├── page.php                       # Page declaration
+│   │   ├── screenshot.png                 # 🚧 Theme screenshot, used in WordPress back-office
+│   │   └── style.css                      # Theme CSS declaration
 │   └── wp-cli.yml                         # WP-CLI configuration
 │
 │
 ├── gulp                                   # 🚧 Gulp/Webpack configuration and tasks
 │   ├── env                                # Gulp configuration per environment
-│   │   ├── dev.js                         # 
-│   │   └── prod.js                        # 
+│   │   ├── dev.js                         # Development environment
+│   │   └── prod.js                        # Production environment
 │   ├── tasks                              # Gulp tasks
-│   │   ├── sass.js                        # 
-│   │   └── script.js                      # 
+│   │   ├── sass.js                        # Sass task declaration
+│   │   └── script.js                      # JavaScript task declaration
 │   ├── webpack                            # Webpack configuration per environment
-│   │   ├── common.js                      # 
-│   │   ├── dev.js                         # 
-│   │   └── prod.js                        # 
+│   │   ├── common.js                      # Shared between development and production environments
+│   │   ├── dev.js                         # Development environment
+│   │   └── prod.js                        # Production environment
 │   └── index.js                           # 🚧 Script to invoke proper (Gulp?) environment and dynamically load Gulp tasks
 │
 │
@@ -57,9 +57,9 @@
 │
 ├── sass                                   # Sass style
 │   ├── dev                                # WIP style for development
-│   │   └── shame.sass                     # 
+│   │   └── shame.sass                     # WIP style or dirty hacks
 │   ├── libs                               # Libraries
-│   │   └── _all.sass                      # 
+│   │   └── _all.sass                      # File used to import all libraries (e.g. Bulma)
 │   └── style.sass                         # Main Sass file used as source by Gulp
 │
 │
