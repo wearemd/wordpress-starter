@@ -37,7 +37,7 @@
 │   │   │
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # Libraries and dependencies for PHP packages, used by Composer
-│   │   ├── composer.lock                  # Tracking exact libraries and dependencies versions for PHP packages, used by Composer
+│   │   ├── composer.lock                  # 🚧 Tracking exact libraries and dependencies versions for PHP packages, used by Composer
 │   │   ├── functions.php                  # 🚧 Specific theme customization
 │   │   ├── index.php                      # Home page declaration
 │   │   ├── page.php                       # Page declaration
@@ -89,4 +89,4 @@
 ├── Makefile                               # Commands for this project
 ├── package.json                           # Libraries and dependencies for JavaScript packages, used by Yarn
 ├── README.md                              # Project documentation
-└── yarn.lock                              # Tracking exact libraries and dependencies versions for JavaScript packages, used by Yarn
+└── yarn.lock                              # 🚧 Tracking exact libraries and dependencies versions for JavaScript packages, used by Yarn
