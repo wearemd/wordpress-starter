@@ -67,7 +67,7 @@
 ├── .babelrc                               # Presets and plugins to use, used by Babel
 ├── .gitignore                             # 🦄
 ├── .tool-versions                         # Which version to use locally for each language, used by asdf
-├── docker-compose.yml                     # Services, networks and volumes, used by Docker Compose
+├── docker-compose.yml                     # 🚧 Services, networks and volumes, used by Docker Compose
 ├── Dockerfile                             # Docker containers declaration
 ├── dwp                                    # 🦄
 ├── gulpfile.js                            # Gulp configuration
