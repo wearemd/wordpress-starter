@@ -1,5 +1,5 @@
 .
-├── app                                    # 🚧 Site
+├── app                                    # WordPress site
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
@@ -7,14 +7,14 @@
 │   │   ├── images                         # Image assets
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
-│   │   ├── languages                      # 🚧 Languages
+│   │   ├── languages                      # Localization
 │   │   │   ├── mdstartertheme.mo          # Compiled theme localization
 │   │   │   └── mdstartertheme.po          # Theme localization
 │   │   │
-│   │   ├── lib                            # 🚧 Specific theme customization
+│   │   ├── lib                            # Theme features
 │   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
-│   │   │   ├── reset.php                  # 🚧 Deactivate emoji
-│   │   │   └── sanitize-wysiwyg.php       # 🚧 WordPress back-office WYSIWYG sanitization
+│   │   │   ├── reset.php                  # Deactivating WordPress emoji-support
+│   │   │   └── sanitize-wysiwyg.php       # WordPress back-office WYSIWYG sanitization
 │   │   │
 │   │   ├── post-types                     # Post types
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
@@ -36,18 +36,18 @@
 │   │   │   └── single.twig                # Single post
 │   │   │
 │   │   ├── 404.php                        # 404 error page declaration
-│   │   ├── composer.json                  # Libraries and dependencies for PHP packages, used by Composer
-│   │   ├── composer.lock                  # 🚧 Tracking exact libraries and dependencies versions for PHP packages, used by Composer
-│   │   ├── functions.php                  # 🚧 Specific theme customization
+│   │   ├── composer.json                  # PHP dependencies, used by Composer
+│   │   ├── composer.lock                  # Tracking exact versions for PHP dependencies, used by Composer
+│   │   ├── functions.php                  # Changing WordPress default behavior
 │   │   ├── index.php                      # Home page declaration
 │   │   ├── page.php                       # Page declaration
-│   │   ├── screenshot.png                 # 🚧 Theme screenshot, used in WordPress back-office
+│   │   ├── screenshot.png                 # Theme screenshot, used in WordPress back-office
 │   │   └── style.css                      # Theme CSS declaration
 │   │
 │   └── wp-cli.yml                         # WP-CLI configuration
 │
 │
-├── gulp                                   # 🚧 Gulp/Webpack configuration and tasks
+├── gulp                                   # Gulp/Webpack configuration and tasks
 │   ├── env                                # Gulp configuration per environment
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
@@ -61,7 +61,7 @@
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
 │   │
-│   └── index.js                           # 🚧 Script to invoke proper (Gulp?) environment and dynamically load Gulp tasks
+│   └── index.js                           # Script to invoke proper environment and dynamically load Gulp tasks
 │
 │
 ├── js                                     # JavaScript source files
@@ -81,12 +81,12 @@
 ├── .babelrc                               # Presets and plugins to use, used by Babel
 ├── .gitignore                             # Files and folders ignored by Git
 ├── .tool-versions                         # Which version to use locally for each language, used by asdf
-├── docker-compose.yml                     # 🚧 Services, networks and volumes, used by Docker Compose
+├── docker-compose.yml                     # Services, networks and volumes, used by Docker Compose
 ├── Dockerfile                             # Docker containers declaration
 ├── dwp                                    # Script to use WP-CLI inside a Docker container
 ├── gulpfile.js                            # Gulp configuration
 ├── LICENSE                                # License
 ├── Makefile                               # Commands for this project
-├── package.json                           # Libraries and dependencies for JavaScript packages, used by Yarn
+├── package.json                           # JavaScript dependencies, used by Yarn
 ├── README.md                              # Project documentation
-└── yarn.lock                              # 🚧 Tracking exact libraries and dependencies versions for JavaScript packages, used by Yarn
+└── yarn.lock                              # Tracking exact versions for JavaScript dependencies, used by Yarn
