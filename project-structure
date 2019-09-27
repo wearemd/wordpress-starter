@@ -8,8 +8,8 @@
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── languages                      # 🚧 Languages
-│   │   │   ├── mdstartertheme.mo          # Compiled version of the theme localization file
-│   │   │   └── mdstartertheme.po          # Theme localization file
+│   │   │   ├── mdstartertheme.mo          # Compiled theme localization
+│   │   │   └── mdstartertheme.po          # Theme localization
 │   │   │
 │   │   ├── lib                            # 🚧 Specific theme customization
 │   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
@@ -37,7 +37,7 @@
 │   │   │
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # Libraries and dependencies for PHP packages, used by Composer
-│   │   ├── composer.lock                  # Track exact libraries and dependencies versions for PHP packages, used by Composer
+│   │   ├── composer.lock                  # Tracking exact libraries and dependencies versions for PHP packages, used by Composer
 │   │   ├── functions.php                  # 🚧 Specific theme customization
 │   │   ├── index.php                      # Home page declaration
 │   │   ├── page.php                       # Page declaration
@@ -79,7 +79,7 @@
 │
 │
 ├── .babelrc                               # Presets and plugins to use, used by Babel
-├── .gitignore                             # List of files and folders ignored by Git
+├── .gitignore                             # Files and folders ignored by Git
 ├── .tool-versions                         # Which version to use locally for each language, used by asdf
 ├── docker-compose.yml                     # 🚧 Services, networks and volumes, used by Docker Compose
 ├── Dockerfile                             # Docker containers declaration
@@ -89,4 +89,4 @@
 ├── Makefile                               # Commands for this project
 ├── package.json                           # Libraries and dependencies for JavaScript packages, used by Yarn
 ├── README.md                              # Project documentation
-└── yarn.lock                              # Track exact libraries and dependencies versions for JavaScript packages, used by Yarn
+└── yarn.lock                              # Tracking exact libraries and dependencies versions for JavaScript packages, used by Yarn
