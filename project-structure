@@ -2,30 +2,30 @@
 ├── app                                    # 🦄
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
-│   │   │   └── .gitkeep                   # 
+│   │   │   └── .gitkeep                   # 🦄
 │   │   ├── images                         # Image assets
-│   │   │   └── 404.gif                    # 
+│   │   │   └── 404.gif                    # 🦄
 │   │   ├── languages                      # 🚧 Languages
-│   │   │   ├── mdstartertheme.mo          # 
-│   │   │   └── mdstartertheme.po          # 
+│   │   │   ├── mdstartertheme.mo          # 🦄
+│   │   │   └── mdstartertheme.po          # 🦄
 │   │   ├── lib                            # 🚧 Specific theme customization
-│   │   │   ├── class-md-starter-theme.php # 
-│   │   │   ├── reset.php                  # 
-│   │   │   └── sanitize-wysiwyg.php       # 
+│   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
+│   │   │   ├── reset.php                  # 🚧 Deactivate emoji
+│   │   │   └── sanitize-wysiwyg.php       # 🚧 WordPress back-office WYSIWYG sanitization
 │   │   ├── post-types                     # Post types
-│   │   │   └── .gitkeep                   # 
+│   │   │   └── .gitkeep                   # 🦄
 │   │   ├── templates                      # Twig templates
-│   │   │   ├── components                 # 
+│   │   │   ├── components                 # Components
 │   │   │   │   ├── navbar-footer.twig     # 
 │   │   │   │   └── navbar.twig            # 
-│   │   │   ├── dev                        # 
+│   │   │   ├── dev                        # Partials for development
 │   │   │   │   └── lorem.twig             # 
-│   │   │   ├── layouts                    # 
+│   │   │   ├── layouts                    # Layouts
 │   │   │   │   └── default.twig           # 
-│   │   │   ├── 404.twig                   # 
-│   │   │   ├── index.twig                 # 
-│   │   │   ├── page.twig                  # 
-│   │   │   └── single.twig                # 
+│   │   │   ├── 404.twig                   # 404 error page template
+│   │   │   ├── index.twig                 # Home page template
+│   │   │   ├── page.twig                  # Page template
+│   │   │   └── single.twig                # Single post template
 │   │   ├── 404.php                        # 404 error page declaration
 │   │   ├── composer.json                  # 🦄
 │   │   ├── composer.lock                  # 🦄
