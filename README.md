@@ -21,7 +21,7 @@
 - [**Webpack**](https://webpack.js.org)
 - [**WordPress**](https://wordpress.org)
 
-## ⚙️ Getting started
+## 🏁 Getting started
 **Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
 
 **Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
