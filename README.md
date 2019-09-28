@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600px" height="320px" src="README-header.gif" alt="">
+  <img width="600px" src="README-header.gif" alt="">
 </p>
 <p align="center">
   <strong>WordPress starter</strong> is a starter template for WordPress websites.
