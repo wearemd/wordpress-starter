@@ -20,6 +20,12 @@
 ## 📝 Table of contents
 - [**⚙️ Prerequisites**](#prerequisites)
 - [**🏁 Getting started**](#getting-started)
+- [**⌨️ Commands**](#commands)
+- [**🗄️ Project structure**](#project-structure)
+- [**🚨 Linting PHP files**](#linting-php-files)
+- [**🍱 Cache busting**](#cache-busting)
+- [**🤜🤛 Contributing**](#contributing)
+- [**📄 License**](#license)
 
 ## ⚙️ Prerequisites <a name="prerequisites"></a>
 - [**asdf**](https://github.com/asdf-vm/asdf)
@@ -57,7 +63,7 @@ make setup
 
 **Your WordPress is ready to be themed!**
 
-## ⌨️ Commands
+## ⌨️ Commands <a name="commands"></a>
 ### Setup
 ```makefile
 # Get everything ready (Docker containers, WordPress download and configuration)
@@ -94,7 +100,7 @@ make build
 make help
 ```
 
-## 🗄️ Project structure
+## 🗄️ Project structure <a name="project-structure"></a>
 ```
 .
 ├── app                                    # WORDPRESS SITE
@@ -194,7 +200,7 @@ make help
                                            # used by Yarn
 ```
 
-## 🚨 Lint PHP files using WordPress Coding Standards
+## 🚨 Linting PHP files <a name="linting-php-files"></a>
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
 **Step 1:** Install `wp-coding-standards/wpcs`:
@@ -217,11 +223,11 @@ composer config-set
 composer lint [filename].php
 ```
 
-## 🍱 Cache busting
+## 🍱 Cache busting <a name="cache-busting"></a>
 Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
 
-## 🤜🤛 Contributing
+## 🤜🤛 Contributing <a name="contributing"></a>
 Contributions, issues and feature requests are welcome!
 
-## 📄 License
+## 📄 License <a name="license"></a>
 WordPress starter is licensed under the [GNU General Public License v3.0](LICENSE).
