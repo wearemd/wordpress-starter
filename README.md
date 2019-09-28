@@ -17,7 +17,11 @@
 
 - - -
 
-## ⚙️ Prerequisites
+## 📝 Table of contents
+- [**⚙️ Prerequisites**](#prerequisites)
+- [**🏁 Getting started**](#getting-started)
+
+## ⚙️ Prerequisites <a name="prerequisites"></a>
 - [**asdf**](https://github.com/asdf-vm/asdf)
 - [**Composer**](https://getcomposer.org)
 - [**Docker**](https://www.docker.com)
@@ -26,7 +30,7 @@
 - [**Node.js**](https://nodejs.org)
 - [**Yarn**](https://yarnpkg.com)
 
-## 🏁 Getting started
+## 🏁 Getting started <a name="getting-started"></a>
 **Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
 
 **Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
