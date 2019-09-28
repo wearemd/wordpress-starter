@@ -14,6 +14,8 @@
   <b><a href="https://wordpress.org">WordPress</a></b>.
 </p>
 
+- - -
+
 ## ⚙️ Prerequisites
 - [**asdf**](https://github.com/asdf-vm/asdf)
 - [**Composer**](https://getcomposer.org)
