@@ -18,14 +18,16 @@
 - - -
 
 ## 📝 Table of contents
-- [**⚙️ Prerequisites**](#prerequisites)
-- [**🏁 Getting started**](#getting-started)
-- [**⌨️ Commands**](#commands)
-- [**🗄️ Project structure**](#project-structure)
-- [**🚨 Linting PHP files**](#linting-php-files)
-- [**🍱 Cache busting**](#cache-busting)
-- [**🤜🤛 Contributing**](#contributing)
-- [**📄 License**](#license)
+- [**Prerequisites**](#prerequisites)
+- [**Getting started**](#getting-started)
+- [**Commands**](#commands)
+- [**Project structure**](#project-structure)
+- [**Linting PHP files**](#linting-php-files)
+- [**Cache busting**](#cache-busting)
+- [**Contributing**](#contributing)
+- [**License**](#license)
+
+- - -
 
 ## ⚙️ Prerequisites <a name="prerequisites"></a>
 - [**asdf**](https://github.com/asdf-vm/asdf)
