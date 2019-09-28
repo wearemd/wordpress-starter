@@ -1,4 +1,5 @@
-<h1 align="center">WordPress starter</h1>
+<p align="center"><img width="200px" height="200px" src="README-header.jpg" alt=""></p>
+<h3 align="center">WordPress starter</h3>
 <p align="center"><strong>WordPress starter</strong> is a starter template for WordPress websites.</p>
 
 ## ⚙️ Prerequisites
@@ -178,6 +179,7 @@ make help
 ├── LICENSE                                # License
 ├── Makefile                               # Commands for this project
 ├── package.json                           # JavaScript dependencies, used by Yarn
+├── README-header.jpg                      # README header image
 ├── README.md                              # Project documentation
 └── yarn.lock                              # Tracking exact versions for JavaScript dependencies,
                                            # used by Yarn
