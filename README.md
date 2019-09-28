@@ -1,4 +1,4 @@
-<p align="center"><img width="200px" height="200px" src="README-header.jpg" alt=""></p>
+<p align="center"><img width="300px" height="160px" src="README-header.jpg" alt=""></p>
 <h3 align="center">WordPress starter</h3>
 <p align="center">
   <strong>WordPress starter</strong> is a starter template for WordPress websites.
