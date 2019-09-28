@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" height="160px" src="README-header.jpg" alt="">
+  <img width="600px" height="320px" src="README-header.gif" alt="">
 </p>
 <p align="center">
   <strong>WordPress starter</strong> is a starter template for WordPress websites.
@@ -201,7 +201,7 @@ make help
 ├── LICENSE                                # License
 ├── Makefile                               # Commands for this project
 ├── package.json                           # JavaScript dependencies, used by Yarn
-├── README-header.jpg                      # README header image
+├── README-header.gif                      # README header image
 ├── README.md                              # Project documentation
 └── yarn.lock                              # Tracking exact versions for JavaScript dependencies,
                                            # used by Yarn
