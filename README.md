@@ -87,7 +87,7 @@ make help
 ## 🗄️ Project structure
 ```
 .
-├── app                                    # WordPress site
+├── app                                    # WORDPRESS SITE
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
@@ -136,7 +136,7 @@ make help
 │   └── wp-cli.yml                         # WP-CLI configuration
 │
 │
-├── gulp                                   # Gulp/Webpack configuration and tasks
+├── gulp                                   # GULP/WEBPACK CONFIGURATION AND TASKS
 │   ├── env                                # Gulp configuration per environment
 │   │   ├── dev.js                         # Development environment
 │   │   └── prod.js                        # Production environment
@@ -154,11 +154,11 @@ make help
 │                                          # Gulp tasks
 │
 │
-├── js                                     # JavaScript source files
+├── js                                     # JAVASCRIPT SOURCE FILES
 │   └── app.js                             # Main JavaScript file used as entry by Webpack
 │
 │
-├── sass                                   # Sass style
+├── sass                                   # SASS STYLE
 │   ├── dev                                # WIP style for development
 │   │   └── shame.sass                     # WIP style or dirty hacks
 │   │
