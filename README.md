@@ -24,6 +24,7 @@
 - [**Project structure**](#project-structure)
 - [**Linting PHP files**](#linting-php-files)
 - [**Cache busting**](#cache-busting)
+- [**Authors**](#authors)
 - [**Contributing**](#contributing)
 - [**License**](#license)
 
@@ -233,6 +234,11 @@ composer lint [filename].php
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
 Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
+
+<a name="authors"></a>
+## ✍️ Authors
+- [**@Awea**](https://github.com/Awea) - Idea and initial work
+- [**@mmaayylliiss**](https://github.com/mmaayylliiss) - Design, code/documentation review
 
 <a name="contributing"></a>
 ## 🤜🤛 Contributing
