@@ -29,7 +29,8 @@
 
 - - -
 
-## ⚙️ Prerequisites <a name="prerequisites"></a>
+<a name="prerequisites"></a>
+## ⚙️ Prerequisites
 - [**asdf**](https://github.com/asdf-vm/asdf)
 - [**Composer**](https://getcomposer.org)
 - [**Docker**](https://www.docker.com)
@@ -38,7 +39,8 @@
 - [**Node.js**](https://nodejs.org)
 - [**Yarn**](https://yarnpkg.com)
 
-## 🏁 Getting started <a name="getting-started"></a>
+<a name="getting-started"></a>
+## 🏁 Getting started
 **Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
 
 **Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
@@ -65,7 +67,8 @@ make setup
 
 **Your WordPress is ready to be themed!**
 
-## ⌨️ Commands <a name="commands"></a>
+<a name="commands"></a>
+## ⌨️ Commands
 ### Setup
 ```makefile
 # Get everything ready (Docker containers, WordPress download and configuration)
@@ -102,7 +105,8 @@ make build
 make help
 ```
 
-## 🗄️ Project structure <a name="project-structure"></a>
+<a name="project-structure"></a>
+## 🗄️ Project structure
 ```
 .
 ├── app                                    # WORDPRESS SITE
@@ -202,7 +206,8 @@ make help
                                            # used by Yarn
 ```
 
-## 🚨 Linting PHP files <a name="linting-php-files"></a>
+<a name="linting-php-files"></a>
+## 🚨 Linting PHP files
 Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
 **Step 1:** Install `wp-coding-standards/wpcs`:
@@ -225,11 +230,14 @@ composer config-set
 composer lint [filename].php
 ```
 
-## 🍱 Cache busting <a name="cache-busting"></a>
+<a name="cache-busting"></a>
+## 🍱 Cache busting
 Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
 
-## 🤜🤛 Contributing <a name="contributing"></a>
+<a name="contributing"></a>
+## 🤜🤛 Contributing
 Contributions, issues and feature requests are welcome!
 
-## 📄 License <a name="license"></a>
+<a name="license"></a>
+## 📄 License
 WordPress starter is licensed under the [GNU General Public License v3.0](LICENSE).
