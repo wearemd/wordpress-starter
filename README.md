@@ -242,7 +242,7 @@ Our strategy for cache busting is to automatically append a `?ver=[version]` to 
 
 <a name="contributing"></a>
 ## 🤜🤛 Contributing
-Contributions, issues and feature requests are welcome!
+Contributions, issues and feature requests are welcome! See the list of [contributors](graphs/contributors) who participated in this project.
 
 <a name="license"></a>
 ## 📄 License
