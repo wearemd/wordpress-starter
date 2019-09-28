@@ -1,9 +1,9 @@
 <p align="center"><img width="200px" height="200px" src="README-header.jpg" alt=""></p>
 <h3 align="center">WordPress starter</h3>
-<p align="center"><strong>WordPress starter</strong> is a starter template for WordPress websites.</p>
-
-<h4 align="center">Stack</h4>
 <p align="center">
+  <strong>WordPress starter</strong> is a starter template for WordPress websites.
+  <br>
+  <b>Stack:</b>
   <b><a href="https://babeljs.io">Babel</a></b>,
   <b><a href="https://www.browsersync.io">Browsersync</a></b>,
   <b><a href="https://bulma.io">Bulma</a></b>,
@@ -11,7 +11,7 @@
   <b><a href="https://sass-lang.com">Sass</a></b>,
   <b><a href="https://www.upstatement.com/timber">Timber</a></b>,
   <b><a href="https://webpack.js.org">Webpack</a></b>,
-  <b><a href="https://wordpress.org">WordPress</a></b>
+  <b><a href="https://wordpress.org">WordPress</a></b>.
 </p>
 
 ## ⚙️ Prerequisites
