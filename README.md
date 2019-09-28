@@ -233,7 +233,7 @@ composer lint [filename].php
 
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
-Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in theme `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
+Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
 
 <a name="authors"></a>
 ## ✍️ Authors
