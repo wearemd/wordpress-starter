@@ -2,6 +2,18 @@
 <h3 align="center">WordPress starter</h3>
 <p align="center"><strong>WordPress starter</strong> is a starter template for WordPress websites.</p>
 
+<h4 align="center">Stack</h4>
+<p align="center">
+  <b><a href="https://babeljs.io">Babel</a></b>,
+  <b><a href="https://www.browsersync.io">Browsersync</a></b>,
+  <b><a href="https://bulma.io">Bulma</a></b>,
+  <b><a href="https://gulpjs.com">Gulp</a></b>,
+  <b><a href="https://sass-lang.com">Sass</a></b>,
+  <b><a href="https://www.upstatement.com/timber">Timber</a></b>,
+  <b><a href="https://webpack.js.org">Webpack</a></b>,
+  <b><a href="https://wordpress.org">WordPress</a></b>
+</p>
+
 ## ⚙️ Prerequisites
 - [**asdf**](https://github.com/asdf-vm/asdf)
 - [**Composer**](https://getcomposer.org)
@@ -10,16 +22,6 @@
 - [**Make**](https://www.gnu.org/software/make/)
 - [**Node.js**](https://nodejs.org)
 - [**Yarn**](https://yarnpkg.com)
-
-## 🥞 Stack
-- [**Babel**](https://babeljs.io)
-- [**Browsersync**](https://www.browsersync.io)
-- [**Bulma**](https://bulma.io)
-- [**Gulp**](https://gulpjs.com)
-- [**Sass**](https://sass-lang.com)
-- [**Timber**](https://www.upstatement.com/timber)
-- [**Webpack**](https://webpack.js.org)
-- [**WordPress**](https://wordpress.org)
 
 ## 🏁 Getting started
 **Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
