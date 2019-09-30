@@ -50,7 +50,7 @@ up_docker: build_docker
 ##   (username: admin, password: password) 
 ## - phpMyAdmin at http://localhost:3011
 .PHONY: serve
-serve: deps up_docker 
+serve: deps up_docker
 	@$(GULP) --continue
 
 ## Build WordPress theme for production use
