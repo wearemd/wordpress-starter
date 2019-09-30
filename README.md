@@ -80,10 +80,10 @@ make setup
 ### Serve
 ```makefile
 # Serve:
-# - WordPress front-office at localhost:3000 with live reloading
-# - WordPress back-office at localhost:3010/wp-admin
+# - WordPress front-office at http://localhost:3000 with live reloading
+# - WordPress back-office at http://localhost:3010/wp-admin
 #   (username: admin, password: password)
-# - phpMyAdmin at localhost:3011
+# - phpMyAdmin at http://localhost:3011
 
 make
 ```
