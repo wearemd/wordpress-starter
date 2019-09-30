@@ -72,7 +72,8 @@ make setup
 ## ⌨️ Commands
 ### Setup
 ```makefile
-# Get everything ready (Docker containers, WordPress download and configuration)
+# Get everything ready (Docker containers, WordPress download
+# and configuration)
 
 make setup
 ```
