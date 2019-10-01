@@ -66,7 +66,7 @@ install_wpcs: $(THEME_DIR)/vendor
 .PHONY: help
 help:
 	@printf "\033[38;2;166;204;112;1mwordpress-starter\033[0m $(shell git describe --tags --abbrev=0)\n"
-	@printf "A started template for WordPress websites using Make\n\n"
+	@printf "A starter template for WordPress websites using Make\n\n"
 	@printf "\033[38;2;255;204;102mUSAGE\033[0m\n"
 	@printf "    make <SUBCOMMAND>\n\n"
 	@printf "\033[38;2;255;204;102mSUBCOMMANDS\033[0m\n"
