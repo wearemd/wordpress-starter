@@ -72,19 +72,19 @@ make setup
 ## ⌨️ Commands
 ### Setup
 ```makefile
-# Get everything ready (Docker containers, WordPress download
-# and configuration)
+## Get everything ready (Docker containers, WordPress download
+## and configuration)
 
 make setup
 ```
 
 ### Serve
 ```makefile
-# Serve:
-# - WordPress front-office at http://localhost:3000 with live reloading
-# - WordPress back-office at http://localhost:3010/wp-admin
-#   (username: admin, password: password)
-# - phpMyAdmin at http://localhost:3011
+## Serve:
+## - WordPress front-office at http://localhost:3000 with live reloading
+## - WordPress back-office at http://localhost:3010/wp-admin
+##   (username: admin, password: password)
+## - phpMyAdmin at http://localhost:3011
 
 make
 ```
@@ -93,7 +93,7 @@ make
 
 ### Build
 ```makefile
-# Build WordPress theme for production use
+## Build WordPress theme for production use
 
 make build
 ```
@@ -102,7 +102,7 @@ make build
 
 ### Help
 ```makefile
-# List available commands
+## List available commands
 
 make help
 ```
