@@ -62,19 +62,27 @@ build: deps
 install_wpcs: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 
+define green-bold
+\033[38;2;166;204;112;1m$(1)\033[0m
+endef
+
+define orange
+\033[38;2;255;204;102m$(1)\033[0m\n
+endef
+
 ## List available commands
 .PHONY: help
 help:
-	@printf "\033[38;2;166;204;112;1mwordpress-starter\033[0m $(shell git describe --tags --abbrev=0)\n"
+	@printf "$(call green-bold,wordpress-starter) $(shell git describe --tags --abbrev=0)\n"
 	@printf "A starter template for WordPress websites using Make\n\n"
-	@printf "\033[38;2;255;204;102mUSAGE\033[0m\n"
+	@printf "$(call orange,USAGE)"
 	@printf "    make <SUBCOMMAND>\n\n"
-	@printf "\033[38;2;255;204;102mSUBCOMMANDS\033[0m\n"
+	@printf "$(call orange,SUBCOMMANDS)"
 	@awk '{ \
 		if ($$0 ~ /^.PHONY: [a-zA-Z\-\_0-9]+$$/) { \
 			helpCommand = substr($$0, index($$0, ":") + 2); \
 			if (helpMessage) { \
-				printf "    \033[38;2;166;204;112;1m%-8s\033[0m%s\n", \
+				printf "    $(call green-bold,%-8s)%s\n", \
 					helpCommand, helpMessage; \
 				helpMessage = ""; \
 			} \
