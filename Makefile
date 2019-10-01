@@ -21,7 +21,7 @@ app/wp-config.php:
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
-## Get everything ready (Docker containers, WordPress download 
+## Get everything ready (Docker containers, WordPress download
 ## and configuration)
 .PHONY: setup
 setup: up_docker deps app/index.php app/wp-config.php
@@ -45,9 +45,9 @@ up_docker: build_docker
 
 .DEFAULT_GOAL := serve
 ## Serve:
-## - WordPress front-office at http://localhost:3000 with live reloading 
-## - WordPress back-office at http://localhost:3010/wp-admin 
-##   (username: admin, password: password) 
+## - WordPress front-office at http://localhost:3000 with live reloading
+## - WordPress back-office at http://localhost:3010/wp-admin
+##   (username: admin, password: password)
 ## - phpMyAdmin at http://localhost:3011
 .PHONY: serve
 serve: deps up_docker
