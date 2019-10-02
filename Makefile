@@ -70,6 +70,10 @@ define title
 \033[38;2;255;204;102m$(1)\033[0m\n
 endef
 
+define link
+\033[38;2;119;168;217m$(1)\033[0m
+endef
+
 ## List available commands
 .PHONY: help
 help:
@@ -79,6 +83,11 @@ help:
 	@printf "    make <SUBCOMMAND>\n\n"
 	@printf "$(call title,SUBCOMMANDS)"
 	@awk '{ \
+		if (match($$0, "https?://[^ ]+")) { \
+		  url = substr($$0, RSTART, RLENGTH); \
+		  sub(url, "\033[38;2;119;168;217m"url"\033[0m", $$0);  \
+		}\
+		\
 		if ($$0 ~ /^.PHONY: [a-zA-Z\-\_0-9]+$$/) { \
 			helpCommand = substr($$0, index($$0, ":") + 2); \
 			if (helpMessage) { \
