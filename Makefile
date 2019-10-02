@@ -70,10 +70,6 @@ define title
 \033[38;2;255;204;102m$(1)\033[0m\n
 endef
 
-define link
-\033[38;2;119;168;217m$(1)\033[0m
-endef
-
 ## List available commands
 .PHONY: help
 help:
