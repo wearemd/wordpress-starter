@@ -73,7 +73,7 @@ endef
 ## List available commands
 .PHONY: help
 help:
-	@printf "$(call primary,wordpress-starter) $(shell git describe --tags --abbrev=0)\n"
+	@printf "$(call primary,wordpress-starter) $(shell git describe --tags --abbrev=0 2> /dev/null)\n"
 	@printf "A starter template for WordPress websites using Make\n\n"
 	@printf "$(call title,USAGE)"
 	@printf "    make <SUBCOMMAND>\n\n"
