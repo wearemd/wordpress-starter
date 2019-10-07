@@ -3,9 +3,9 @@
 # HOST_UID and HOST_USER are only here to prevent warnings with docker-compose
 export HOST_UID=$(id -u)
 export HOST_USER=$(whoami)
-export MYSQL_PWD=password
 
-while ! docker-compose exec -T mysqldb mysqladmin -s ping -h localhost -u root > /dev/null ; do
+# Inspired on: https://cweiske.de/tagebuch/docker-mysql-available.htm#connect
+while ! docker-compose exec -T mysqldb mysql --protocol TCP -u root -ppassword -e "show databases;" > /dev/null 2>&1; do
   sleep 0.5
 done
 
