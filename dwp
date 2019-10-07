@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
+# HOST_UID and HOST_USER are only here to prevent warnings with docker-compose
 export HOST_UID=$(id -u)
 export HOST_USER=$(whoami)
 export MYSQL_PWD=password
 
-# HOST_UID and HOST_USER are only here to prevent warnings with docker-compose
 while ! docker-compose exec -T mysqldb mysqladmin -s ping -h localhost -u root > /dev/null ; do
   sleep 0.5
 done
