@@ -33,7 +33,7 @@ Timber::$dirname = array( 'templates' );
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-class MD_Starter_Theme extends Timber {
+class Theme extends Timber {
 
 	/**
 	 * The name of the theme
@@ -214,4 +214,4 @@ class MD_Starter_Theme extends Timber {
 $wp_theme = wp_get_theme();
 
 // Run!
-new MD_Starter_Theme( 'md-starter-theme', $wp_theme->Version );
+new Theme( 'md-starter-theme', $wp_theme->Version );

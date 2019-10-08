@@ -16,4 +16,4 @@
  *
  * @link https://github.com/wearemd/wordpress-starter
  */
-require_once get_template_directory() . '/lib/class-md-starter-theme.php';
+require_once get_template_directory() . '/lib/theme.php';
