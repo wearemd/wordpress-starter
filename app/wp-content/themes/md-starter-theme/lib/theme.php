@@ -151,8 +151,6 @@ class Theme extends Timber {
 			/**
 			 * Make theme available for translation.
 			 * Translations can be filed in the /languages/ directory.
-			 * If you're building a theme based on md-starter-theme, use a find and replace
-			 * to change 'md-starter-theme' to the name of your theme in all the template files.
 			 */
 			load_theme_textdomain( 'md-starter-theme', get_template_directory() . '/languages' );
 	}
