@@ -247,4 +247,4 @@ Our strategy for cache busting is to automatically append a `?ver=[version]` to 
 
 <a name="license"></a>
 ## 📄 License
-WordPress starter is licensed under the [GNU General Public License v3.0](LICENSE).
+**WordPress starter** is licensed under the [GNU General Public License v3.0](LICENSE).
