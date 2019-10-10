@@ -124,9 +124,9 @@ make help
 │   │   │   └── mdstartertheme.po          # Theme localization
 │   │   │
 │   │   ├── lib                            # Theme features
-│   │   │   ├── class-md-starter-theme.php # Theme declaration and initialization
 │   │   │   ├── reset.php                  # Deactivating WordPress emoji-support
-│   │   │   └── sanitize-wysiwyg.php       # WordPress back-office WYSIWYG sanitization
+│   │   │   ├── sanitize-wysiwyg.php       # WordPress back-office WYSIWYG sanitization
+│   │   │   └── theme.php                  # Theme declaration and initialization
 │   │   │
 │   │   ├── post-types                     # Post types
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
