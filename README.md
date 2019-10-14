@@ -120,8 +120,8 @@ make help
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── languages                      # Localization
-│   │   │   ├── mdstartertheme.mo          # Compiled theme localization
-│   │   │   └── mdstartertheme.po          # Theme localization
+│   │   │   ├── theme.mo                   # Compiled theme localization
+│   │   │   └── theme.po                   # Theme localization
 │   │   │
 │   │   ├── lib                            # Theme features
 │   │   │   ├── reset.php                  # Deactivating WordPress emoji-support
