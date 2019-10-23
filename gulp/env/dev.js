@@ -4,7 +4,21 @@ var browserSync = require('browser-sync');
 gulp.task('browser-sync', function(done) {
   browserSync({
     proxy: "http://localhost:3010",
-    open: false
+    open: false,
+    middleware: [
+      // Redirect http://localhost:3000/wp-login to http://localhost:3010/wp-login 
+      // to prevent errors while editing WP settings (WP_SITEURL or WP_HOME) - @awea 20191023
+      function(req, res, next) {
+        if (req.url.includes('wp-login')) {
+          res.writeHead(302, {
+            'Location': 'http://localhost:3010/wp-login.php'
+          })
+          res.end()
+        } else {
+          next()
+        }
+      }
+    ]
   });
 
   done()
