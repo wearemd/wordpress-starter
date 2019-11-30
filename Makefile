@@ -90,8 +90,15 @@ help:
 			} \
 		}\
 		\
-		if ($$0 ~ /^.PHONY: [a-zA-Z\-\_0-9]+$$/) { \
+		if ($$0 ~ /^.PHONY: [a-zA-Z0-9]+$$/) { \
 			helpCommand = substr($$0, index($$0, ":") + 2); \
+			if (helpMessage) { \
+				printf "    $(call primary,%-8s)%s\n", \
+					helpCommand, helpMessage; \
+				helpMessage = ""; \
+			} \
+		} else if ($$0 ~ /^[a-zA-Z\-\_0-9.]+:/) { \
+			helpCommand = substr($$0, 0, index($$0, ":")); \
 			if (helpMessage) { \
 				printf "    $(call primary,%-8s)%s\n", \
 					helpCommand, helpMessage; \
