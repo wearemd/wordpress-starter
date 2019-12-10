@@ -6,12 +6,18 @@ gulp.task('browser-sync', function(done) {
     proxy: "http://localhost:3010",
     open: false,
     middleware: [
-      // Redirect http://localhost:3000/wp-login to http://localhost:3010/wp-login 
-      // to prevent errors while editing WP settings (WP_SITEURL or WP_HOME) - @awea 20191023
+      // Redirect http://localhost:3000/wp-login to http://localhost:3010/wp-login
+      // and http://localhost:3000/wp-admin to http://localhost:3010/wp-admin
+      // to prevent errors while editing WP settings (WP_SITEURL or WP_HOME) - @awea 20191210
       function(req, res, next) {
         if (req.url.includes('wp-login')) {
           res.writeHead(302, {
             'Location': 'http://localhost:3010/wp-login.php'
+          })
+          res.end()
+        } else if (req.url.includes('wp-admin')) {
+          res.writeHead(302, {
+            'Location': 'http://localhost:3010/wp-admin/'
           })
           res.end()
         } else {
