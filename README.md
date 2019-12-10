@@ -114,7 +114,7 @@ make help
 ├── app                                    # WORDPRESS SITE
 │   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
-│   │   │   └── .gitkeep                   # Tracking an empty directory within Git
+│   │   │   └── roboto                     # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
 │   │   ├── images                         # Image assets
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
@@ -186,6 +186,10 @@ make help
 ├── sass                                   # SASS STYLE
 │   ├── dev                                # WIP style for development
 │   │   └── shame.sass                     # WIP style or dirty hacks
+│   │
+│   ├── fonts                              # Fonts style
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   │   └── roboto.sass                    # @font-face style for Roboto
 │   │
 │   ├── libs                               # Libraries
 │   │   └── _all.sass                      # File used to import all libraries (e.g. Bulma)
