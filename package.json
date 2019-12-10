@@ -6,7 +6,7 @@
   "author": "awea <aweaoftheworld@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "bulma": "^0.7.1"
+    "bulma": "^0.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
