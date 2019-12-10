@@ -1,5 +1,5 @@
 {
-    "name": "md/md-starter-theme",
+    "name": "md-starter-theme",
     "require": {
         "timber/timber": "^1.9.1"
     },
