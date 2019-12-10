@@ -42,7 +42,7 @@
 
 <a name="getting-started"></a>
 ## 🏁 Getting started
-**Step 1:** Rename the [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) using your **`theme-name`**.
+**Step 1:** Rename [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) and [`md-starter-theme.pot` file](app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot) using your **`theme-name`**.
 
 **Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
 
