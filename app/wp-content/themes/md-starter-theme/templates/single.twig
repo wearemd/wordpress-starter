@@ -20,18 +20,20 @@
   {% if posts|length %}
     <section class="section">
       <div class="container is-fluid">
-        <div class="columns is-multiline">
+        <div class="columns">
           <div class="column">
-              <p class="title is-3">{{__('Articles suggérés', 'md-starter-theme')}}</p>
-              
-              <ul>
-                {% for post in posts %}
-                  <li class="title is-5">
-                    <a href="{{post.link}}">{{post.title}}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+            <p class="title is-5">{{__('Articles suggérés', 'md-starter-theme')}}</p>
           </div>
+        </div>
+
+        <div class="columns is-multiline">
+          {% for post in posts %}
+            <div class="column is-4">
+              <h3 class="title is-2">
+                <a href="{{post.link}}">{{post.title}}</a>
+              </h3>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </section>
