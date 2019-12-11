@@ -183,16 +183,48 @@ make help
 │   └── app.js                             # Main JavaScript file used as entry by Webpack
 │
 │
-├── sass                                   # SASS STYLE
-│   ├── dev                                # WIP style for development
+├── sass                                   # SASS STYLE (BASED ON BULMA)
+│   ├── base                               # Base style
+│   │   ├── _all.sass                      # Importing all stylesheets (plus minireset.css)
+│   │   ├── generic.sass                   # Style for generic elements (html, body, etc.)
+│   │   └── helpers.sass                   # Helper classes (modifiers)
+│   │
+│   ├── components                         # Components style
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   │   └── navbar.sass                    # Navbar style
+│   │
+│   ├── dev                                # Development utilities
 │   │   └── shame.sass                     # WIP style or dirty hacks
+│   │
+│   ├── elements                           # Elements style
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   |   ├── button.sass                    # Button style
+│   │   ├── container.sass                 # Container style
+│   │   ├── content.sass                   # Content style
+│   │   ├── icon.sass                      # Icon style
+│   │   └── title.sass                     # Style for title and subtitle
 │   │
 │   ├── fonts                              # Fonts style
 │   │   ├── _all.sass                      # Importing all stylesheets
 │   │   └── roboto.sass                    # @font-face style for Roboto
 │   │
-│   ├── libs                               # Libraries
-│   │   └── _all.sass                      # File used to import all libraries (e.g. Bulma)
+│   ├── grid                               # Grid style
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   │   └── columns.sass                   # Columns style
+│   │
+│   ├── layout                             # Layout style
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   │   ├── footer.sass                    # Footer style
+│   │   └── section.sass                   # Section style
+│   │
+│   ├── utilities                          # Utilities
+│   │   ├── _all.sass                      # Importing all stylesheets
+│   │   ├── animations.sass                # Animations
+│   │   ├── controls.sass                  # Style for controls
+│   │   ├── derived-variables.sass         # Derived variables
+│   │   ├── functions.sass                 # Functions
+│   │   ├── initial-variables.sass         # Initial variables
+│   │   └── mixins.sass                    # Mixins
 │   │
 │   └── style.sass                         # Main Sass file used as source by Gulp
 │
