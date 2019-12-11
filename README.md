@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600px" src="README-header.gif" alt="">
+  <img width="600px" src="documentation-images/README-header.gif" alt="">
 </p>
 <p align="center">
   <strong>WordPress starter</strong> is a starter template for WordPress websites.
@@ -159,6 +159,9 @@ make help
 │   │   └── style.css                      # Theme CSS declaration
 │   │
 │   └── wp-cli.yml                         # WP-CLI configuration
+│
+│
+├── documentation-images                   # PROJECT DOCUMENTATION IMAGES
 │
 │
 ├── gulp                                   # GULP/WEBPACK CONFIGURATION AND TASKS
