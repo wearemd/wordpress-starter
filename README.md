@@ -156,6 +156,7 @@ make help
 │   │   ├── index.php                      # Home page declaration
 │   │   ├── page.php                       # Page declaration
 │   │   ├── screenshot.png                 # Theme screenshot, used in WordPress back-office
+│   │   ├── single.php                     # Single post declaration
 │   │   └── style.css                      # Theme CSS declaration
 │   │
 │   └── wp-cli.yml                         # WP-CLI configuration
