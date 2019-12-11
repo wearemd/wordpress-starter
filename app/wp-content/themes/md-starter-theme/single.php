@@ -1,6 +1,6 @@
 <?php
 /**
- * Page
+ * Single
  *
  * Template used to display post
  *
