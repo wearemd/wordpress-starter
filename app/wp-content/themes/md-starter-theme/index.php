@@ -14,7 +14,7 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 $context = Timber::get_context();
-
+$context['is_home'] = true;
 $context['post'] = new TimberPost();
 
 $templates = array( 'index.twig' );
