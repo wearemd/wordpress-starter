@@ -226,7 +226,8 @@ make help
 │   │   ├── initial-variables.sass         # Initial variables
 │   │   └── mixins.sass                    # Mixins
 │   │
-│   └── style.sass                         # Main Sass file used as source by Gulp (its structure follows Bulma’s)
+│   └── style.sass                         # Main Sass file used as source by Gulp (its structure
+│                                          # follows Bulma’s)
 │
 │
 ├── .babelrc                               # Presets and plugins to use, used by Babel
