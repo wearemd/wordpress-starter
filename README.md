@@ -194,7 +194,8 @@ make help
 │   │   └── navbar.sass                    # Navbar style
 │   │
 │   ├── dev                                # Development utilities
-│   │   └── shame.sass                     # WIP style or dirty hacks
+│   │   ├── shame.sass                     # WIP style or dirty hacks
+│   │   └── structure.sass                 # Highlighting site structure (import commented by default)
 │   │
 │   ├── elements                           # Elements style
 │   │   ├── _all.sass                      # Importing all stylesheets

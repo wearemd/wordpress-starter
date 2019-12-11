@@ -1,0 +1,27 @@
+// 20191206 Highlighting site structure —Maylis
+=structure-spacing
+  padding-top: 3rem
+  padding-bottom: 3rem
+  margin-top: 1.5rem
+  margin-bottom: 1.5rem
+
+.wrapper
+  padding-left: 1.5rem
+  padding-right: 1.5rem
+
+.header,
+.footer
+  +structure-spacing
+  border: 2px solid red
+
+.section
+  +structure-spacing
+
+  &:nth-child(odd)
+    border: 2px solid green
+
+  &:nth-child(even)
+    border: 2px solid blue
+
+.container
+  border: 1px solid grey
