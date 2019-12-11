@@ -2,7 +2,7 @@
 /**
  * Page
  *
- * Template used to display default page (Legal notices, personal data)
+ * Template used to display post
  *
  * @package MD_Starter_Theme
  */
