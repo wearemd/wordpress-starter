@@ -244,7 +244,6 @@ make help
 ├── LICENSE                                # License
 ├── Makefile                               # Commands for this project
 ├── package.json                           # JavaScript dependencies, used by Yarn
-├── README-header.gif                      # README header image
 ├── README.md                              # Project documentation
 └── yarn.lock                              # Tracking exact versions for JavaScript dependencies,
                                            # used by Yarn
