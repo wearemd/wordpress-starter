@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MD starter theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-23 07:56+0000\n"
+"POT-Creation-Date: 2019-12-11 09:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,36 +15,36 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.3.1; wp-5.2.3"
 
-#: templates/components/navbar.twig:19
-msgid "Accueil"
+#: templates/index.twig:10
+msgid "Bienvenue !"
+msgstr ""
+
+#: templates/index.twig:12
+msgid ""
+"Page d’accueil présentant du contenu lorem ipsum en statique ainsi que les "
+"articles du blog."
+msgstr ""
+
+#: templates/index.twig:35
+msgid "Articles"
 msgstr ""
 
 #: templates/single.twig:25
 msgid "Articles suggérés"
 msgstr ""
 
-#: templates/index.twig:10
-msgid "Bienvenue !"
-msgstr ""
-
-#: templates/index.twig:35
-msgid "Derniers articles"
-msgstr ""
-
-#. Author URI of the theme
-msgid "https://wearemd.com"
-msgstr ""
-
-#. Author of the theme
-msgid "MD"
+#: templates/components/navbar.twig:19
+msgid "Accueil"
 msgstr ""
 
 #. Name of the theme
 msgid "MD starter theme"
 msgstr ""
 
-#: templates/index.twig:12
-msgid ""
-"Page d’accueil présentant du contenu lorem ipsum en statique ainsi que les "
-"trois derniers articles du blog."
+#. Author of the theme
+msgid "MD"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://wearemd.com"
 msgstr ""
