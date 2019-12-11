@@ -12,7 +12,7 @@ node_modules: package.json yarn.lock
 	@touch $@
 
 app/index.php:
-	@$(WPCLI) core download --locale=fr_FR --version=5.2.3
+	@$(WPCLI) core download --locale=fr_FR --version=5.3
 
 app/wp-config.php:
 	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR
