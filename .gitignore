@@ -5,6 +5,9 @@
 db
 
 # WordPress files
+*.po~
+*.pot~
+
 app/wp-admin/
 app/wp-content/*
 !app/wp-content/themes/
