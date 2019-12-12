@@ -143,12 +143,12 @@ make help
 │   │   │   ├── layouts                    # Layouts
 │   │   │   │   └── default.twig           # Default layout
 │   │   │   │
-│   │   │   ├── 404.twig                   # 404 error page
+│   │   │   ├── 404.twig                   # 404 error
 │   │   │   ├── index.twig                 # Home page
 │   │   │   ├── page.twig                  # Page
 │   │   │   └── single.twig                # Single post
 │   │   │
-│   │   ├── 404.php                        # 404 error page declaration
+│   │   ├── 404.php                        # 404 error declaration
 │   │   ├── composer.json                  # PHP dependencies, used by Composer
 │   │   ├── composer.lock                  # Tracking exact versions for PHP dependencies,
 │   │   │                                  # used by Composer
