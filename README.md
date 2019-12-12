@@ -137,7 +137,7 @@ make help
 │   │   │   │   ├── navbar-footer.twig     # Footer navbar
 │   │   │   │   └── navbar.twig            # Main navbar
 │   │   │   │
-│   │   │   ├── dev                        # Partials for development
+│   │   │   ├── dev                        # Development utilities
 │   │   │   │   └── lorem.twig             # Partial featuring text in lorem
 │   │   │   │
 │   │   │   ├── layouts                    # Layouts
