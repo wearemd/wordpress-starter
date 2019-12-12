@@ -120,8 +120,10 @@ make help
 │   │   │   └── .gitkeep                   # Tracking an empty directory within Git
 │   │   │
 │   │   ├── languages                      # Localization
-│   │   │   ├── fr_FR.mo                   # Compiled theme localization
-│   │   │   ├── fr_FR.po                   # Theme localization
+│   │   │   ├── en_US.mo                   # en_US theme localization (compiled)
+│   │   │   ├── en_US.po                   # en_US theme localization
+│   │   │   ├── fr_FR.mo                   # fr_FR theme localization (compiled)
+│   │   │   ├── fr_FR.po                   # fr_FR theme localization
 │   │   │   └── md-starter-theme.pot       # Theme localization template
 │   │   │
 │   │   ├── lib                            # Theme features
