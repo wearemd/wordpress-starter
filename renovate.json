@@ -1,4 +1,11 @@
 {
+  "enabledManagers": ["composer", "npm"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
   "extends": [
     "config:base"
   ]
