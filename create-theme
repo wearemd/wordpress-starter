@@ -1,0 +1,250 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+
+const replaceInFile = require('replace-in-file')
+const prompts = require('prompts')
+const slugify = require('@sindresorhus/slugify')
+const isUrl = require('is-url')
+
+const wpDefaultLocale = 'fr_FR'
+// The following list should be retrieved from https://translate.wordpress.org/
+// for an easier maintainability - @dauthier 20200305
+const wpAvailableLocales = [
+  {title: 'Afrikaans', value: 'af'},
+  {title: 'Akan', value: 'ak'},
+  {title: 'Albanian', value: 'sq'},
+  {title: 'Amharic', value: 'am'},
+  {title: 'Arabic', value: 'ar'},
+  {title: 'Armenian', value: 'hy'},
+  {title: 'Aromanian', value: 'rup_MK'},
+  {title: 'Assamese', value: 'as'},
+  {title: 'Azerbaijani', value: 'az'},
+  {title: 'Azerbaijani (Turkey)', value: 'az_TR'},
+  {title: 'Bashkir', value: 'ba'},
+  {title: 'Basque', value: 'eu'},
+  {title: 'Belarusian', value: 'bel'},
+  {title: 'Bengali', value: 'bn_BD'},
+  {title: 'Bosnian', value: 'bs_BA'},
+  {title: 'Bulgarian', value: 'bg_BG'},
+  {title: 'Burmese', value: 'my_MM'},
+  {title: 'Catalan', value: 'ca'},
+  {title: 'Catalan (Balear)', value: 'bal'},
+  {title: 'Chinese (China)', value: 'zh_CN'},
+  {title: 'Chinese (Hong Kong)', value: 'zh_HK'},
+  {title: 'Chinese (Taiwan)', value: 'zh_TW'},
+  {title: 'Corsican', value: 'co'},
+  {title: 'Croatian', value: 'hr'},
+  {title: 'Czech', value: 'cs_CZ'},
+  {title: 'Danish', value: 'da_DK'},
+  {title: 'Dhivehi', value: 'dv'},
+  {title: 'Dutch', value: 'nl_NL'},
+  {title: 'Dutch (Belgium)', value: 'nl_BE'},
+  {title: 'English', value: 'en_US'},
+  {title: 'English (Australia)', value: 'en_AU'},
+  {title: 'English (Canada)', value: 'en_CA'},
+  {title: 'English (UK)', value: 'en_GB'},
+  {title: 'Esperanto', value: 'eo'},
+  {title: 'Estonian', value: 'et'},
+  {title: 'Faroese', value: 'fo'},
+  {title: 'Finnish', value: 'fi'},
+  {title: 'French (Belgium)', value: 'fr_BE'},
+  {title: 'French (France)', value: 'fr_FR'},
+  {title: 'Frisian', value: 'fy'},
+  {title: 'Fulah', value: 'fuc'},
+  {title: 'Galician', value: 'gl_ES'},
+  {title: 'Georgian', value: 'ka_GE'},
+  {title: 'German', value: 'de_DE'},
+  {title: 'German (Switzerland)', value: 'de_CH'},
+  {title: 'Greek', value: 'el'},
+  {title: 'Guaraní', value: 'gn'},
+  {title: 'Gujarati', value: 'gu_IN'},
+  {title: 'Hawaiian', value: 'haw_US'},
+  {title: 'Hazaragi', value: 'haz'},
+  {title: 'Hebrew', value: 'he_IL'},
+  {title: 'Hindi', value: 'hi_IN'},
+  {title: 'Hungarian', value: 'hu_HU'},
+  {title: 'Icelandic', value: 'is_IS'},
+  {title: 'Ido', value: 'ido'},
+  {title: 'Indonesian', value: 'id_ID'},
+  {title: 'Irish', value: 'ga'},
+  {title: 'Italian', value: 'it_IT'},
+  {title: 'Japanese', value: 'ja'},
+  {title: 'Javanese', value: 'jv_ID'},
+  {title: 'Kannada', value: 'kn'},
+  {title: 'Kazakh', value: 'kk'},
+  {title: 'Khmer', value: 'km'},
+  {title: 'Kinyarwanda', value: 'kin'},
+  {title: 'Kirghiz', value: 'ky_KY'},
+  {title: 'Korean', value: 'ko_KR'},
+  {title: 'Kurdish (Sorani)', value: 'ckb'},
+  {title: 'Lao', value: 'lo'},
+  {title: 'Latvian', value: 'lv'},
+  {title: 'Limburgish', value: 'li'},
+  {title: 'Lingala', value: 'lin'},
+  {title: 'Lithuanian', value: 'lt_LT'},
+  {title: 'Luxembourgish', value: 'lb_LU'},
+  {title: 'Macedonian', value: 'mk_MK'},
+  {title: 'Malagasy', value: 'mg_MG'},
+  {title: 'Malay', value: 'ms_MY'},
+  {title: 'Malayalam', value: 'ml_IN'},
+  {title: 'Marathi', value: 'mr'},
+  {title: 'Mingrelian', value: 'xmf'},
+  {title: 'Mongolian', value: 'mn'},
+  {title: 'Montenegrin', value: 'me_ME'},
+  {title: 'Nepali', value: 'ne_NP'},
+  {title: 'Norwegian (Bokmål)', value: 'nb_NO'},
+  {title: 'Norwegian (Nynorsk)', value: 'nn_NO'},
+  {title: 'Oriya', value: 'ory'},
+  {title: 'Ossetic', value: 'os'},
+  {title: 'Pashto', value: 'ps'},
+  {title: 'Persian', value: 'fa_IR'},
+  {title: 'Persian (Afghanistan)', value: 'fa_AF'},
+  {title: 'Polish', value: 'pl_PL'},
+  {title: 'Portuguese (Brazil)', value: 'pt_BR'},
+  {title: 'Portuguese (Portugal)', value: 'pt_PT'},
+  {title: 'Punjabi', value: 'pa_IN'},
+  {title: 'Rohingya', value: 'rhg'},
+  {title: 'Romanian', value: 'ro_RO'},
+  {title: 'Russian', value: 'ru_RU'},
+  {title: 'Russian (Ukraine)', value: 'ru_UA'},
+  {title: 'Rusyn', value: 'rue'},
+  {title: 'Sakha', value: 'sah'},
+  {title: 'Sanskrit', value: 'sa_IN'},
+  {title: 'Sardinian', value: 'srd'},
+  {title: 'Scottish Gaelic', value: 'gd'},
+  {title: 'Serbian', value: 'sr_RS'},
+  {title: 'Sindhi', value: 'sd_PK'},
+  {title: 'Sinhala', value: 'si_LK'},
+  {title: 'Slovak', value: 'sk_SK'},
+  {title: 'Slovenian', value: 'sl_SI'},
+  {title: 'Somali', value: 'so_SO'},
+  {title: 'South Azerbaijani', value: 'azb'},
+  {title: 'Spanish (Argentina)', value: 'es_AR'},
+  {title: 'Spanish (Chile)', value: 'es_CL'},
+  {title: 'Spanish (Colombia)', value: 'es_CO'},
+  {title: 'Spanish (Mexico)', value: 'es_MX'},
+  {title: 'Spanish (Peru)', value: 'es_PE'},
+  {title: 'Spanish (Puerto Rico)', value: 'es_PR'},
+  {title: 'Spanish (Spain)', value: 'es_ES'},
+  {title: 'Spanish (Venezuela)', value: 'es_VE'},
+  {title: 'Sundanese', value: 'su_ID'},
+  {title: 'Swahili', value: 'sw'},
+  {title: 'Swedish', value: 'sv_SE'},
+  {title: 'Swiss German', value: 'gsw'},
+  {title: 'Tagalog', value: 'tl'},
+  {title: 'Tajik', value: 'tg'},
+  {title: 'Tamazight (Central Atlas)', value: 'tzm'},
+  {title: 'Tamil', value: 'ta_IN'},
+  {title: 'Tamil (Sri Lanka)', value: 'ta_LK'},
+  {title: 'Tatar', value: 'tt_RU'},
+  {title: 'Telugu', value: 'te'},
+  {title: 'Thai', value: 'th'},
+  {title: 'Tibetan', value: 'bo'},
+  {title: 'Tigrinya', value: 'tir'},
+  {title: 'Turkish', value: 'tr_TR'},
+  {title: 'Turkmen', value: 'tuk'},
+  {title: 'Uighur', value: 'ug_CN'},
+  {title: 'Ukrainian', value: 'uk'},
+  {title: 'Urdu', value: 'ur'},
+  {title: 'Uzbek', value: 'uz_UZ'},
+  {title: 'Vietnamese', value: 'vi'},
+  {title: 'Walloon', value: 'wa'},
+  {title: 'Welsh', value: 'cy'},
+  {title: 'Yoruba', value: 'yor'}
+]
+
+const questions = [
+  {
+    type: 'text',
+    name: 'themeName',
+    message: 'What will your theme name be?',
+    initial: 'MD starter theme',
+    validate: value => value.trim().length > 0
+  },
+  {
+    type: 'text',
+    name: 'authorName',
+    message: 'Who is the author of this theme (used in the style.css of the theme)?',
+    initial: 'MD',
+    validate: value => value.trim().length > 0
+  },
+  {
+    type: 'text',
+    name: 'authorURI',
+    message: 'Any website for the author of this theme?',
+    initial: 'https://wearemd.com',
+    validate: value => isUrl(value)
+  },
+  {
+    type: 'autocomplete',
+    name: 'wpLocale',
+    message: 'In which language would you like to download WordPress?',
+    choices: wpAvailableLocales,
+    initial: wpAvailableLocales.map(e => e.value).indexOf(wpDefaultLocale),
+    validate: value => wpAvailableLocales.includes(value)
+  }
+];
+
+(async () => {
+  const {themeName, authorName, authorURI, wpLocale} = await prompts(questions)
+
+  // Interrupt here if one of the value above is undefined
+  if ([themeName, authorName, authorURI, wpLocale].some(e => e == undefined)){
+    console.log(`❌ Theme creation aborted`)
+
+    return false
+  }
+
+  const themeNameSlug = slugify(themeName)
+
+  // Write all informations related to your theme in app/wp-content/themes/md-starter-theme/style.css:
+  const themeStyleCSS =
+    '/**\n' +
+    ` * Theme Name: ${themeName}\n` +
+    ` * Author: ${authorName}\n` +
+    ` * Author URI: ${authorURI}\n` +
+    ' * Version: 1.0.0\n' +
+    ` * Text Domain: ${themeNameSlug}\n` +
+    ' */\n'
+
+  fs.writeFileSync(path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme/style.css'), themeStyleCSS)
+
+  // Set default language used for this WordPress installation
+  await replaceInFile({
+    files: 'Makefile',
+    from: new RegExp(wpDefaultLocale, 'g'),
+    to: wpLocale
+  })
+
+  // Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
+  await replaceInFile({
+    files: [
+      '*',
+      '.*',
+      '**/*'
+    ],
+    ignore: [
+      'README.md',
+      'install.js',
+      '**/fonts/**',
+      '**/images/**',
+      'node_modules/**'
+    ],
+    from: /md-starter-theme/g,
+    to: themeNameSlug,
+  })
+
+  // Rename app/wp-content/themes/md-starter-theme and app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot using your **`theme-name`**.
+  fs.renameSync(
+    path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot'),
+    path.resolve(__dirname, `app/wp-content/themes/md-starter-theme/languages/${themeNameSlug}.pot`)
+  )
+  fs.renameSync(
+    path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme'),
+    path.resolve(__dirname, `app/wp-content/themes/${themeNameSlug}`)
+  )
+
+  console.log(`🏁 Your theme '${themeName}' is ready!`)
+})();

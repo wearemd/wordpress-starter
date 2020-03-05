@@ -21,6 +21,11 @@ app/wp-config.php:
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
 
+.PHONY: create-theme
+## Run an interactive prompt to create a new theme
+create-theme: node_modules
+	@create-theme
+
 ## Get everything ready (Docker containers, WordPress download
 ## and configuration)
 .PHONY: setup
@@ -62,6 +67,11 @@ build: deps
 install_wpcs: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 
+.PHONY: clean
+clean:
+	@docker-compose down
+	@sudo git clean -fdX
+
 define primary
 \033[38;2;166;204;112;1m$(1)\033[0m
 endef
@@ -93,20 +103,20 @@ help:
 		if ($$0 ~ /^.PHONY: [a-zA-Z0-9]+$$/) { \
 			helpCommand = substr($$0, index($$0, ":") + 2); \
 			if (helpMessage) { \
-				printf "    $(call primary,%-8s)%s\n", \
+				printf "    $(call primary,%-15s)%s\n", \
 					helpCommand, helpMessage; \
 				helpMessage = ""; \
 			} \
 		} else if ($$0 ~ /^[a-zA-Z\-\_0-9.]+:/) { \
 			helpCommand = substr($$0, 0, index($$0, ":")); \
 			if (helpMessage) { \
-				printf "    $(call primary,%-8s)%s\n", \
+				printf "    $(call primary,%-15s)%s\n", \
 					helpCommand, helpMessage; \
 				helpMessage = ""; \
 			} \
 		} else if ($$0 ~ /^##/) { \
 			if (helpMessage) { \
-				helpMessage = helpMessage "\n            " substr($$0, 3); \
+				helpMessage = helpMessage "\n                   " substr($$0, 3); \
 			} else { \
 				helpMessage = substr($$0, 3); \
 			} \
