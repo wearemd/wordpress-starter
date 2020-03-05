@@ -24,7 +24,7 @@ $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 .PHONY: create-theme
 ## Run an interactive prompt to create a new theme
 create-theme: node_modules
-	@create-theme
+	@./create-theme
 
 ## Get everything ready (Docker containers, WordPress download
 ## and configuration)
