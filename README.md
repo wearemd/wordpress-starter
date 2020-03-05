@@ -42,23 +42,11 @@
 
 <a name="getting-started"></a>
 ## 🏁 Getting started
-**Step 1:** Rename [`md-starter-theme` folder](app/wp-content/themes/md-starter-theme) and [`md-starter-theme.pot` file](app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot) using your **`theme-name`**.
+**Step 1:** Run the following command to create a new theme:
 
-**Step 2:** Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
-
-**Step 3:** Edit all informations related to your theme in [`style.css`](app/wp-content/themes/md-starter-theme/style.css):
-
-```css
-/**
- * Theme Name: MD starter theme
- * Author: MD
- * Author URI: https://wearemd.com
- * Version: 1.0.0
- * Text Domain: md-starter-theme
- */
 ```
-
-**Step 4 *(optional)***: WordPress will be downloaded in french by default. If you want your website to be in another language, set [`--locale` in `Makefile`](Makefile#L15) (see the [Complete List of WordPress Locale Codes](https://wpastra.com/docs/complete-list-wordpress-locale-codes/)).
+make create-theme
+```
 
 **Step 5:** Run the following command to get everything ready:
 
@@ -70,6 +58,13 @@ make setup
 
 <a name="commands"></a>
 ## ⌨️ Commands
+### Create theme
+```makefile
+## Run an interactive prompt to create a new theme
+
+make create-theme
+```
+
 ### Setup
 ```makefile
 ## Get everything ready (Docker containers, WordPress download
