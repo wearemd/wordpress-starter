@@ -38,6 +38,6 @@
     "type": "git"
   },
   "gulp": {
-    "theme_path": "./app/wp-content/themes/md-starter-theme"
+    "theme_path": "./app/wp-content/themes/md-starter"
   }
 }

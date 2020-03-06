@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MD starter theme\n"
+"Project-Id-Version: MD starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-11 09:04+0000\n"
 "PO-Revision-Date: 2019-12-11 09:05+0000\n"
-"Last-Translator: admin <admin@md-starter-theme.com>\n"
+"Last-Translator: admin <admin@md-starter.com>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
@@ -37,7 +37,7 @@ msgid "Accueil"
 msgstr ""
 
 #. Name of the theme
-msgid "MD starter theme"
+msgid "MD starter"
 msgstr ""
 
 #. Author of the theme

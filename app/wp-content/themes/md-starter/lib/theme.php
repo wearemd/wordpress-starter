@@ -1,6 +1,6 @@
 <?php
 /**
- * MD Starter Theme Class
+ * MD starter Class
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  * @package MD_Starter_Theme
@@ -152,7 +152,7 @@ class Theme extends Timber {
 			 * Make theme available for translation.
 			 * Translations can be filed in the /languages/ directory.
 			 */
-			load_theme_textdomain( 'md-starter-theme', get_template_directory() . '/languages' );
+			load_theme_textdomain( 'md-starter', get_template_directory() . '/languages' );
 	}
 
 
@@ -212,4 +212,4 @@ class Theme extends Timber {
 $wp_theme = wp_get_theme();
 
 // Run!
-new Theme( 'md-starter-theme', $wp_theme->Version );
+new Theme( 'md-starter', $wp_theme->Version );

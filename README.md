@@ -107,7 +107,7 @@ make help
 ```
 .
 ├── app                                    # WORDPRESS SITE
-│   ├── wp-content/themes/md-starter-theme # WordPress theme to customize
+│   ├── wp-content/themes/md-starter       # WordPress theme to customize
 │   │   ├── fonts                          # Font assets
 │   │   │   └── roboto                     # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
@@ -119,7 +119,7 @@ make help
 │   │   │   ├── en_US.po                   # en_US theme localization
 │   │   │   ├── fr_FR.mo                   # fr_FR theme localization (compiled)
 │   │   │   ├── fr_FR.po                   # fr_FR theme localization
-│   │   │   └── md-starter-theme.pot       # Theme localization template
+│   │   │   └── md-starter.pot             # Theme localization template
 │   │   │
 │   │   ├── lib                            # Theme features
 │   │   │   ├── reset.php                  # Deactivating WordPress emoji-support
@@ -273,7 +273,7 @@ composer lint [filename].php
 
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
-Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in `style.css`](app/wp-content/themes/md-starter-theme/style.css#L5).
+Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in `style.css`](app/wp-content/themes/md-starter/style.css#L5).
 
 <a name="authors"></a>
 ## ✍️ Authors
