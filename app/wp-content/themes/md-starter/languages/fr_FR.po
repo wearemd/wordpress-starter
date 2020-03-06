@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MD starter\n"
+"Project-Id-Version: MD Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-11 09:04+0000\n"
 "PO-Revision-Date: 2019-12-11 09:05+0000\n"
@@ -37,7 +37,7 @@ msgid "Accueil"
 msgstr ""
 
 #. Name of the theme
-msgid "MD starter"
+msgid "MD Starter"
 msgstr ""
 
 #. Author of the theme

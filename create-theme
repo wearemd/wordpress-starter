@@ -160,7 +160,7 @@ const questions = [
     type: 'text',
     name: 'themeName',
     message: 'What will your theme name be?',
-    initial: 'MD starter',
+    initial: 'MD Starter',
     validate: value => value.trim().length > 0
   },
   {
