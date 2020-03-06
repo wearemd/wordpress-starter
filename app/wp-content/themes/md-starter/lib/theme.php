@@ -1,6 +1,6 @@
 <?php
 /**
- * MD starter Class
+ * MD Starter Class
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  * @package MD_Starter_Theme
