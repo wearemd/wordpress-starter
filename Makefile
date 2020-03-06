@@ -1,7 +1,7 @@
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/dwp
 
-THEME_NAME := md-starter-theme
+THEME_NAME := md-starter
 THEME_DIR  := app/wp-content/themes/$(THEME_NAME)
 
 .PHONY: deps
@@ -16,7 +16,7 @@ app/index.php:
 
 app/wp-config.php:
 	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR
-	@$(WPCLI) core install --url=localhost:3010 --title=md-starter-theme --admin_user=admin --admin_password=password --admin_email=admin@md-starter-theme.com --skip-email
+	@$(WPCLI) core install --url=localhost:3010 --title=md-starter --admin_user=admin --admin_password=password --admin_email=admin@md-starter.com --skip-email
 
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 	@cd $(THEME_DIR); composer install
@@ -30,7 +30,7 @@ create-theme: node_modules
 ## and configuration)
 .PHONY: setup
 setup: up_docker deps app/index.php app/wp-config.php
-	@$(WPCLI) theme activate md-starter-theme
+	@$(WPCLI) theme activate md-starter
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu create "navbar_footer"

@@ -15,10 +15,10 @@ app/wp-content/themes/*
 app/wp-includes/
 
 # Don’t ignore current theme
-!app/wp-content/themes/md-starter-theme
-app/wp-content/themes/md-starter-theme/vendor
-app/wp-content/themes/md-starter-theme/js
-app/wp-content/themes/md-starter-theme/app.css
+!app/wp-content/themes/md-starter
+app/wp-content/themes/md-starter/vendor
+app/wp-content/themes/md-starter/js
+app/wp-content/themes/md-starter/app.css
 
 app/.htaccess
 app/*.log

@@ -160,7 +160,7 @@ const questions = [
     type: 'text',
     name: 'themeName',
     message: 'What will your theme name be?',
-    initial: 'MD starter theme',
+    initial: 'MD starter',
     validate: value => value.trim().length > 0
   },
   {
@@ -199,7 +199,7 @@ const questions = [
 
   const themeNameSlug = slugify(themeName)
 
-  // Write all informations related to your theme in app/wp-content/themes/md-starter-theme/style.css:
+  // Write all informations related to your theme in app/wp-content/themes/md-starter/style.css:
   const themeStyleCSS =
     '/**\n' +
     ` * Theme Name: ${themeName}\n` +
@@ -209,7 +209,7 @@ const questions = [
     ` * Text Domain: ${themeNameSlug}\n` +
     ' */\n'
 
-  fs.writeFileSync(path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme/style.css'), themeStyleCSS)
+  fs.writeFileSync(path.resolve(__dirname, 'app/wp-content/themes/md-starter/style.css'), themeStyleCSS)
 
   // Set default language used for this WordPress installation
   await replaceInFile({
@@ -218,7 +218,7 @@ const questions = [
     to: wpLocale
   })
 
-  // Rename every occurrence of `md-starter-theme` in the parent folder (except in `README.md`) using your **`theme-name`**.
+  // Rename every occurrence of `md-starter` in the parent folder (except in `README.md`) using your **`theme-name`**.
   await replaceInFile({
     files: [
       '*',
@@ -232,17 +232,17 @@ const questions = [
       '**/images/**',
       'node_modules/**'
     ],
-    from: /md-starter-theme/g,
+    from: /md-starter/g,
     to: themeNameSlug,
   })
 
-  // Rename app/wp-content/themes/md-starter-theme and app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot using your **`theme-name`**.
+  // Rename app/wp-content/themes/md-starter and app/wp-content/themes/md-starter/languages/md-starter.pot using your **`theme-name`**.
   fs.renameSync(
-    path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme/languages/md-starter-theme.pot'),
-    path.resolve(__dirname, `app/wp-content/themes/md-starter-theme/languages/${themeNameSlug}.pot`)
+    path.resolve(__dirname, 'app/wp-content/themes/md-starter/languages/md-starter.pot'),
+    path.resolve(__dirname, `app/wp-content/themes/md-starter/languages/${themeNameSlug}.pot`)
   )
   fs.renameSync(
-    path.resolve(__dirname, 'app/wp-content/themes/md-starter-theme'),
+    path.resolve(__dirname, 'app/wp-content/themes/md-starter'),
     path.resolve(__dirname, `app/wp-content/themes/${themeNameSlug}`)
   )
 

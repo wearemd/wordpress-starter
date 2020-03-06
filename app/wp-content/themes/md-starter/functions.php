@@ -1,6 +1,6 @@
 <?php
 /**
- * MD Starter Theme functions and definitions
+ * MD starter functions and definitions
  *
  * PHP version 7.2.10
  *
