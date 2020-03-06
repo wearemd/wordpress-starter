@@ -9,8 +9,8 @@ const slugify = require('@sindresorhus/slugify')
 const isUrl = require('is-url')
 
 const wpDefaultLocale = 'en_US'
-// The following list should be retrieved from https://translate.wordpress.org/
-// for an easier maintainability - @dauthier 20200305
+// The following list should be retrieved from https://translate.wordpress.org
+// for maintainability - @awea 20200305
 const wpAvailableLocales = [
   {title: 'Afrikaans', value: 'af'},
   {title: 'Akan', value: 'ak'},
@@ -190,7 +190,7 @@ const questions = [
 (async () => {
   const {themeName, authorName, authorURI, wpLocale} = await prompts(questions)
 
-  // Interrupt here if one of the value above is undefined
+  // Interrupt here if one of the values above is undefined
   if ([themeName, authorName, authorURI, wpLocale].some(e => e == undefined)){
     console.log(`✖ Theme creation aborted`)
 
@@ -199,7 +199,7 @@ const questions = [
 
   const themeNameSlug = slugify(themeName)
 
-  // Write all informations related to your theme in app/wp-content/themes/md-starter/style.css:
+  // Write all informations related to the theme in app/wp-content/themes/md-starter/style.css:
   const themeStyleCSS =
     '/**\n' +
     ` * Theme Name: ${themeName}\n` +
@@ -211,14 +211,14 @@ const questions = [
 
   fs.writeFileSync(path.resolve(__dirname, 'app/wp-content/themes/md-starter/style.css'), themeStyleCSS)
 
-  // Set default language used for this WordPress installation
+  // Set default language for this WordPress installation
   await replaceInFile({
     files: 'Makefile',
     from: new RegExp(wpDefaultLocale, 'g'),
     to: wpLocale
   })
 
-  // Rename every occurrence of `md-starter` in the parent folder (except in `README.md`) using your **`theme-name`**.
+  // Rename all `md-starter` occurrences in the parent folder
   await replaceInFile({
     files: [
       '*',
@@ -236,7 +236,8 @@ const questions = [
     to: themeNameSlug,
   })
 
-  // Rename app/wp-content/themes/md-starter and app/wp-content/themes/md-starter/languages/md-starter.pot using your **`theme-name`**.
+  // Rename app/wp-content/themes/md-starter
+  // and app/wp-content/themes/md-starter/languages/md-starter.pot
   fs.renameSync(
     path.resolve(__dirname, 'app/wp-content/themes/md-starter/languages/md-starter.pot'),
     path.resolve(__dirname, `app/wp-content/themes/md-starter/languages/${themeNameSlug}.pot`)
