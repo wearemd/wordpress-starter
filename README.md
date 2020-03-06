@@ -260,7 +260,7 @@ Follow these steps if you want to lint PHP files using [WordPress Coding Standar
 **Step 1:** Install `wp-coding-standards/wpcs`:
 
 ```
-make install_wpcs
+make install-wpcs
 ```
 
 **Step 2:** Move to your theme folder.
