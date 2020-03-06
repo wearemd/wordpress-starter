@@ -8,7 +8,7 @@ const prompts = require('prompts')
 const slugify = require('@sindresorhus/slugify')
 const isUrl = require('is-url')
 
-const wpDefaultLocale = 'fr_FR'
+const wpDefaultLocale = 'en_US'
 // The following list should be retrieved from https://translate.wordpress.org/
 // for an easier maintainability - @dauthier 20200305
 const wpAvailableLocales = [
