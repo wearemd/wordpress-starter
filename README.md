@@ -137,7 +137,7 @@ make help
 │   │   │
 │   │   ├── templates                  # Twig templates
 │   │   │   ├── components             # Components
-│   │   │   │   ├── navbar-footer.twig # Footer navbar
+│   │   │   │   ├── nav-footer.twig    # Footer navbar
 │   │   │   │   └── navbar.twig        # Main navbar
 │   │   │   │
 │   │   │   ├── dev                    # Development utilities
