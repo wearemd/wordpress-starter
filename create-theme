@@ -227,7 +227,7 @@ const questions = [
     ],
     ignore: [
       'README.md',
-      'install.js',
+      'create-theme',
       '**/fonts/**',
       '**/images/**',
       'node_modules/**'
