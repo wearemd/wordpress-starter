@@ -1,5 +1,5 @@
 GULP  := $(PWD)/node_modules/.bin/gulp
-WPCLI := $(PWD)/dwp
+WPCLI := $(PWD)/bin/dwp
 
 THEME_NAME := md-starter
 THEME_DIR  := app/wp-content/themes/$(THEME_NAME)
@@ -24,7 +24,7 @@ $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
 .PHONY: create-theme
 ## Run an interactive prompt to create a new theme
 create-theme: node_modules
-	@./create-theme
+	@bin/create-theme
 
 ## Get everything ready (Docker containers, WordPress download
 ## and configuration)
