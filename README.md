@@ -48,6 +48,12 @@
 make create-theme
 ```
 
+The prompt will ask you to enter some informations related to the theme, then choose the site language. The MD Starter theme is currently available in two languages:
+- `en_US` (selected by default)
+- `fr_FR`
+
+If the desired language is not in the list, feel free to [contribute to the project](#contributing) by adding a [language](app/wp-content/themes/md-starter/languages).
+
 **Step 5:** Run the following command to get everything ready:
 
 ```
