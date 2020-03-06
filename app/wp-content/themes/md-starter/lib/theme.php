@@ -117,8 +117,8 @@ class Theme extends Timber {
 	 */
 	public function add_to_context( $context ) {
 		// Handle menus (see: https://timber.github.io/docs/guides/menus/).
-		$context['navbar']        = new \Timber\Menu( 'navbar' );
-		$context['navbar_footer'] = new \Timber\Menu( 'navbar-footer' );
+		$context['navbar']     = new \Timber\Menu( 'navbar' );
+		$context['nav_footer'] = new \Timber\Menu( 'navbar-footer' );
 
 		return $context;
 	}

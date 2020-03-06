@@ -1,4 +1,4 @@
-{% if navbar_footer %}
+{% if nav_footer %}
   <ul>
     <li>
       <a href="{{site.url}}">
@@ -6,7 +6,7 @@
       </a>
     </li>
 
-    {% for item in navbar_footer %}
+    {% for item in nav_footer %}
       <li>
         <a href="{{item.link}}">
           {{item.title}}
