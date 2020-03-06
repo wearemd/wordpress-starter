@@ -165,7 +165,7 @@ make help
 │   └── wp-cli.yml                     # WP-CLI configuration
 │
 │
-├── bin                                # PROJECT BINARIES
+├── bin                                # BINARIES
 │    ├── create-theme                  # Script to create a new theme
 │    └── dwp                           # Script to use WP-CLI inside a Docker container
 │
