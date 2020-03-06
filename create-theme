@@ -159,28 +159,28 @@ const questions = [
   {
     type: 'text',
     name: 'themeName',
-    message: 'What will your theme name be?',
+    message: 'Theme name',
     initial: 'MD Starter',
     validate: value => value.trim().length > 0
   },
   {
     type: 'text',
     name: 'authorName',
-    message: 'Who is the author of this theme (used in the style.css of the theme)?',
+    message: 'Theme author name',
     initial: 'MD',
     validate: value => value.trim().length > 0
   },
   {
     type: 'text',
     name: 'authorURI',
-    message: 'Any website for the author of this theme?',
+    message: 'Theme author website',
     initial: 'https://wearemd.com',
     validate: value => isUrl(value)
   },
   {
     type: 'autocomplete',
     name: 'wpLocale',
-    message: 'In which language would you like to download WordPress?',
+    message: 'Site language',
     choices: wpAvailableLocales,
     initial: wpAvailableLocales.map(e => e.value).indexOf(wpDefaultLocale),
     validate: value => wpAvailableLocales.includes(value)
