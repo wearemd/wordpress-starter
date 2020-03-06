@@ -12,10 +12,10 @@ node_modules: package.json yarn.lock
 	@touch $@
 
 app/index.php:
-	@$(WPCLI) core download --locale=fr_FR --version=5.3
+	@$(WPCLI) core download --locale=en_US --version=5.3
 
 app/wp-config.php:
-	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=fr_FR
+	@$(WPCLI) core config --dbname=wordpress --dbuser=root --dbpass=password --dbhost=mysqldb --locale=en_US
 	@$(WPCLI) core install --url=localhost:3010 --title=md-starter --admin_user=admin --admin_password=password --admin_email=admin@md-starter.com --skip-email
 
 $(THEME_DIR)/vendor: $(THEME_DIR)/composer.json $(THEME_DIR)/composer.lock
