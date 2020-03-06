@@ -165,6 +165,11 @@ make help
 │   └── wp-cli.yml                     # WP-CLI configuration
 │
 │
+├── bin                                # PROJECT BINARIES
+│    ├── create-theme                  # Script to create a new theme
+│    └── dwp                           # Script to use WP-CLI inside a Docker container
+│
+│
 ├── documentation-images               # PROJECT DOCUMENTATION IMAGES
 │
 │
@@ -241,16 +246,14 @@ make help
 ├── .babelrc                           # Presets and plugins to use, used by Babel
 ├── .gitignore                         # Files and folders ignored by Git
 ├── .tool-versions                     # Which version to use locally for each language, used by asdf
-├── create-theme                       # ??????
 ├── docker-compose.yml                 # Services, networks and volumes, used by Docker Compose
 ├── Dockerfile                         # Docker containers declaration
-├── dwp                                # Script to use WP-CLI inside a Docker container
 ├── gulpfile.js                        # Gulp configuration
 ├── LICENSE                            # License
 ├── Makefile                           # Commands for this project
 ├── package.json                       # JavaScript dependencies, used by Yarn
 ├── README.md                          # Project documentation
-├── renovate.json                      # ??????
+├── renovate.json                      # Renovate bot configuration
 └── yarn.lock                          # Tracking exact versions for JavaScript dependencies,
                                        # used by Yarn
 ```
