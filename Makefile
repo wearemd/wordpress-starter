@@ -29,7 +29,7 @@ create-theme: node_modules
 ## Get everything ready (Docker containers, WordPress download
 ## and configuration)
 .PHONY: setup
-setup: up_docker deps app/index.php app/wp-config.php
+setup: up-docker deps app/index.php app/wp-config.php
 	@$(WPCLI) theme activate md-starter
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
@@ -37,15 +37,15 @@ setup: up_docker deps app/index.php app/wp-config.php
 	@$(WPCLI) menu item add-post navbar_footer 2
 	@$(WPCLI) rewrite structure '/%year%/%monthnum%/%day%/%postname%/' --hard
 
-.PHONY: build_docker
-build_docker: .build_docker.mk
+.PHONY: build-docker
+build-docker: .build-docker.mk
 
-.build_docker.mk: Dockerfile docker-compose.yml
+.build-docker.mk: Dockerfile docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
 	touch $@
 
-.PHONY: up_docker
-up_docker: build_docker
+.PHONY: up-docker
+up-docker: build-docker
 	@HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose up -d
 
 .DEFAULT_GOAL := serve
@@ -55,7 +55,7 @@ up_docker: build_docker
 ##   (username: admin, password: password)
 ## - phpMyAdmin at http://localhost:3011
 .PHONY: serve
-serve: deps up_docker
+serve: deps up-docker
 	@$(GULP) --continue
 
 ## Build WordPress theme for production use
@@ -63,8 +63,8 @@ serve: deps up_docker
 build: deps
 	@NODE_ENV=production $(GULP)
 
-.PHONY: install_wpcs
-install_wpcs: $(THEME_DIR)/vendor
+.PHONY: install-wpcs
+install-wpcs: $(THEME_DIR)/vendor
 	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 
 .PHONY: clean
