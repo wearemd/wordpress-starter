@@ -112,150 +112,150 @@ make help
 ## 🗄️ Project structure
 ```
 .
-├── app                                # WORDPRESS SITE
-│   ├── wp-content/themes/md-starter   # WordPress theme to customize
-│   │   ├── fonts                      # Font assets
-│   │   │   └── roboto                 # Roboto from Google Fonts (TTF, WOFF, WOFF2)
+├── app                              # WORDPRESS SITE
+│   ├── wp-content/themes/md-starter # WordPress theme to customize
+│   │   ├── fonts                    # Font assets
+│   │   │   └── roboto               # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
-│   │   ├── images                     # Image assets
-│   │   │   └── .gitkeep               # Tracking an empty directory within Git
+│   │   ├── images                   # Image assets
+│   │   │   └── .gitkeep             # Tracking an empty directory within Git
 │   │   │
-│   │   ├── languages                  # Localization
-│   │   │   ├── en_US.mo               # en_US theme localization (compiled)
-│   │   │   ├── en_US.po               # en_US theme localization
-│   │   │   ├── fr_FR.mo               # fr_FR theme localization (compiled)
-│   │   │   ├── fr_FR.po               # fr_FR theme localization
-│   │   │   └── md-starter.pot         # Theme localization template
+│   │   ├── languages                # Localization
+│   │   │   ├── en_US.mo             # en_US theme localization (compiled)
+│   │   │   ├── en_US.po             # en_US theme localization
+│   │   │   ├── fr_FR.mo             # fr_FR theme localization (compiled)
+│   │   │   ├── fr_FR.po             # fr_FR theme localization
+│   │   │   └── md-starter.pot       # Theme localization template
 │   │   │
-│   │   ├── lib                        # Theme features
-│   │   │   ├── reset.php              # Deactivating WordPress emoji-support
-│   │   │   ├── sanitize-wysiwyg.php   # WordPress back-office WYSIWYG sanitization
-│   │   │   └── theme.php              # Theme declaration and initialization
+│   │   ├── lib                      # Theme features
+│   │   │   ├── reset.php            # Deactivating WordPress emoji-support
+│   │   │   ├── sanitize-wysiwyg.php # WordPress back-office WYSIWYG sanitization
+│   │   │   └── theme.php            # Theme declaration and initialization
 │   │   │
-│   │   ├── post-types                 # Post types
-│   │   │   └── .gitkeep               # Tracking an empty directory within Git
+│   │   ├── post-types               # Post types
+│   │   │   └── .gitkeep             # Tracking an empty directory within Git
 │   │   │
-│   │   ├── templates                  # Twig templates
-│   │   │   ├── components             # Components
-│   │   │   │   ├── nav-footer.twig    # Footer navbar
-│   │   │   │   └── navbar.twig        # Main navbar
+│   │   ├── templates                # Twig templates
+│   │   │   ├── components           # Components
+│   │   │   │   ├── nav-footer.twig  # Footer navbar
+│   │   │   │   └── navbar.twig      # Main navbar
 │   │   │   │
-│   │   │   ├── dev                    # Development utilities
-│   │   │   │   └── lorem.twig         # Partial featuring text in lorem
+│   │   │   ├── dev                  # Development utilities
+│   │   │   │   └── lorem.twig       # Partial featuring text in lorem
 │   │   │   │
-│   │   │   ├── layouts                # Layouts
-│   │   │   │   └── default.twig       # Default layout
+│   │   │   ├── layouts              # Layouts
+│   │   │   │   └── default.twig     # Default layout
 │   │   │   │
-│   │   │   ├── 404.twig               # 404 error
-│   │   │   ├── index.twig             # Home page
-│   │   │   ├── page.twig              # Page
-│   │   │   └── single.twig            # Single post
+│   │   │   ├── 404.twig             # 404 error
+│   │   │   ├── index.twig           # Home page
+│   │   │   ├── page.twig            # Page
+│   │   │   └── single.twig          # Single post
 │   │   │
-│   │   ├── 404.php                    # 404 error declaration
-│   │   ├── composer.json              # PHP dependencies, used by Composer
-│   │   ├── composer.lock              # Tracking exact versions for PHP dependencies,
-│   │   │                              # used by Composer
-│   │   ├── functions.php              # Changing WordPress default behavior
-│   │   ├── index.php                  # Home page declaration
-│   │   ├── page.php                   # Page declaration
-│   │   ├── screenshot.png             # Theme screenshot, used in WordPress back-office
-│   │   ├── single.php                 # Single post declaration
-│   │   └── style.css                  # Theme CSS declaration
+│   │   ├── 404.php                  # 404 error declaration
+│   │   ├── composer.json            # PHP dependencies, used by Composer
+│   │   ├── composer.lock            # Tracking exact versions for PHP dependencies,
+│   │   │                            # used by Composer
+│   │   ├── functions.php            # Changing WordPress default behavior
+│   │   ├── index.php                # Home page declaration
+│   │   ├── page.php                 # Page declaration
+│   │   ├── screenshot.png           # Theme screenshot, used in WordPress back-office
+│   │   ├── single.php               # Single post declaration
+│   │   └── style.css                # Theme CSS declaration
 │   │
-│   └── wp-cli.yml                     # WP-CLI configuration
+│   └── wp-cli.yml                   # WP-CLI configuration
 │
 │
-├── bin                                # BINARIES
-│    ├── create-theme                  # Script to create a new theme
-│    └── dwp                           # Script to use WP-CLI inside a Docker container
+├── bin                              # BINARIES
+│    ├── create-theme                # Script to create a new theme
+│    └── dwp                         # Script to use WP-CLI inside a Docker container
 │
 │
-├── documentation-images               # PROJECT DOCUMENTATION IMAGES
+├── documentation-images             # PROJECT DOCUMENTATION IMAGES
 │
 │
-├── gulp                               # GULP/WEBPACK CONFIGURATION AND TASKS
-│   ├── env                            # Gulp configuration per environment
-│   │   ├── dev.js                     # Development environment
-│   │   └── prod.js                    # Production environment
+├── gulp                             # GULP/WEBPACK CONFIGURATION AND TASKS
+│   ├── env                          # Gulp configuration per environment
+│   │   ├── dev.js                   # Development environment
+│   │   └── prod.js                  # Production environment
 │   │
-│   ├── tasks                          # Gulp tasks
-│   │   ├── sass.js                    # Sass task declaration
-│   │   └── script.js                  # JavaScript task declaration
+│   ├── tasks                        # Gulp tasks
+│   │   ├── sass.js                  # Sass task declaration
+│   │   └── script.js                # JavaScript task declaration
 │   │
-│   ├── webpack                        # Webpack configuration per environment
-│   │   ├── common.js                  # Shared between development and production environments
-│   │   ├── dev.js                     # Development environment
-│   │   └── prod.js                    # Production environment
+│   ├── webpack                      # Webpack configuration per environment
+│   │   ├── common.js                # Shared between development and production environments
+│   │   ├── dev.js                   # Development environment
+│   │   └── prod.js                  # Production environment
 │   │
-│   └── index.js                       # Script to invoke proper environment and dynamically load
-│                                      # Gulp tasks
+│   └── index.js                     # Script to invoke proper environment and dynamically load
+│                                    # Gulp tasks
 │
 │
-├── js                                 # JAVASCRIPT SOURCE FILES
-│   └── app.js                         # Main JavaScript file used as entry by Webpack
+├── js                               # JAVASCRIPT SOURCE FILES
+│   └── app.js                       # Main JavaScript file used as entry by Webpack
 │
 │
-├── sass                               # SASS STYLE (BASED ON BULMA)
-│   ├── base                           # Base style
-│   │   ├── _all.sass                  # Importing all stylesheets (plus minireset.css)
-│   │   ├── generic.sass               # Style for generic elements (html, body, etc.)
-│   │   └── helpers.sass               # Helper classes (modifiers)
+├── sass                             # SASS STYLE (BASED ON BULMA)
+│   ├── base                         # Base style
+│   │   ├── _all.sass                # Importing all stylesheets (plus minireset.css)
+│   │   ├── generic.sass             # Style for generic elements (html, body, etc.)
+│   │   └── helpers.sass             # Helper classes (modifiers)
 │   │
-│   ├── components                     # Components style
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   │   └── navbar.sass                # Navbar style
+│   ├── components                   # Components style
+│   │   ├── _all.sass                # Importing all stylesheets
+│   │   └── navbar.sass              # Navbar style
 │   │
-│   ├── dev                            # Development utilities
-│   │   ├── shame.sass                 # WIP style or dirty hacks
-│   │   └── structure.sass             # Highlighting site structure (import commented by default)
+│   ├── dev                          # Development utilities
+│   │   ├── shame.sass               # WIP style or dirty hacks
+│   │   └── structure.sass           # Highlighting site structure (import commented by default)
 │   │
-│   ├── elements                       # Elements style
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   |   ├── button.sass                # Button style
-│   │   ├── container.sass             # Container style
-│   │   ├── content.sass               # Content style
-│   │   ├── icon.sass                  # Icon style
-│   │   └── title.sass                 # Style for title and subtitle
+│   ├── elements                     # Elements style
+│   │   ├── _all.sass                # Importing all stylesheets
+│   |   ├── button.sass              # Button style
+│   │   ├── container.sass           # Container style
+│   │   ├── content.sass             # Content style
+│   │   ├── icon.sass                # Icon style
+│   │   └── title.sass               # Style for title and subtitle
 │   │
-│   ├── fonts                          # Fonts style
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   │   └── roboto.sass                # @font-face style for Roboto
+│   ├── fonts                        # Fonts style
+│   │   ├── _all.sass                # Importing all stylesheets
+│   │   └── roboto.sass              # @font-face style for Roboto
 │   │
-│   ├── grid                           # Grid style
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   │   └── columns.sass               # Columns style
+│   ├── grid                         # Grid style
+│   │   ├── _all.sass                # Importing all stylesheets
+│   │   └── columns.sass             # Columns style
 │   │
-│   ├── layout                         # Layout style
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   │   ├── footer.sass                # Footer style
-│   │   └── section.sass               # Section style
+│   ├── layout                       # Layout style
+│   │   ├── _all.sass                # Importing all stylesheets
+│   │   ├── footer.sass              # Footer style
+│   │   └── section.sass             # Section style
 │   │
-│   ├── utilities                      # Utilities
-│   │   ├── _all.sass                  # Importing all stylesheets
-│   │   ├── animations.sass            # Animations
-│   │   ├── controls.sass              # Style for controls
-│   │   ├── derived-variables.sass     # Derived variables
-│   │   ├── functions.sass             # Functions
-│   │   ├── initial-variables.sass     # Initial variables
-│   │   └── mixins.sass                # Mixins
+│   ├── utilities                    # Utilities
+│   │   ├── _all.sass                # Importing all stylesheets
+│   │   ├── animations.sass          # Animations
+│   │   ├── controls.sass            # Style for controls
+│   │   ├── derived-variables.sass   # Derived variables
+│   │   ├── functions.sass           # Functions
+│   │   ├── initial-variables.sass   # Initial variables
+│   │   └── mixins.sass              # Mixins
 │   │
-│   └── style.sass                     # Main Sass file used as source by Gulp (its structure
-│                                      # follows Bulma’s)
+│   └── style.sass                   # Main Sass file used as source by Gulp (its structure
+│                                    # follows Bulma’s)
 │
 │
-├── .babelrc                           # Presets and plugins to use, used by Babel
-├── .gitignore                         # Files and folders ignored by Git
-├── .tool-versions                     # Which version to use locally for each language, used by asdf
-├── docker-compose.yml                 # Services, networks and volumes, used by Docker Compose
-├── Dockerfile                         # Docker containers declaration
-├── gulpfile.js                        # Gulp configuration
-├── LICENSE                            # License
-├── Makefile                           # Commands for this project
-├── package.json                       # JavaScript dependencies, used by Yarn
-├── README.md                          # Project documentation
-├── renovate.json                      # Renovate bot configuration
-└── yarn.lock                          # Tracking exact versions for JavaScript dependencies,
-                                       # used by Yarn
+├── .babelrc                         # Presets and plugins to use, used by Babel
+├── .gitignore                       # Files and folders ignored by Git
+├── .tool-versions                   # Which version to use locally for each language, used by asdf
+├── docker-compose.yml               # Services, networks and volumes, used by Docker Compose
+├── Dockerfile                       # Docker containers declaration
+├── gulpfile.js                      # Gulp configuration
+├── LICENSE                          # License
+├── Makefile                         # Commands for this project
+├── package.json                     # JavaScript dependencies, used by Yarn
+├── README.md                        # Project documentation
+├── renovate.json                    # Renovate bot configuration
+└── yarn.lock                        # Tracking exact versions for JavaScript dependencies,
+                                     # used by Yarn
 ```
 
 <a name="linting-php-files"></a>
