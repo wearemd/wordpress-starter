@@ -241,6 +241,7 @@ make help
 ├── .babelrc                           # Presets and plugins to use, used by Babel
 ├── .gitignore                         # Files and folders ignored by Git
 ├── .tool-versions                     # Which version to use locally for each language, used by asdf
+├── create-theme                       # ??????
 ├── docker-compose.yml                 # Services, networks and volumes, used by Docker Compose
 ├── Dockerfile                         # Docker containers declaration
 ├── dwp                                # Script to use WP-CLI inside a Docker container
@@ -249,6 +250,7 @@ make help
 ├── Makefile                           # Commands for this project
 ├── package.json                       # JavaScript dependencies, used by Yarn
 ├── README.md                          # Project documentation
+├── renovate.json                      # ??????
 └── yarn.lock                          # Tracking exact versions for JavaScript dependencies,
                                        # used by Yarn
 ```
