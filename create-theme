@@ -247,5 +247,5 @@ const questions = [
     path.resolve(__dirname, `app/wp-content/themes/${themeNameSlug}`)
   )
 
-  console.log(`🏁 Your theme '${themeName}' is ready!`)
+  console.log(`🏁 Your theme ${themeName} is ready!`)
 })();
