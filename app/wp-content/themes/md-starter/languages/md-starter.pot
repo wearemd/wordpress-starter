@@ -16,25 +16,24 @@ msgstr ""
 "X-Loco-Version: 2.3.1; wp-5.2.3"
 
 #: templates/index.twig:10
-msgid "Bienvenue !"
+msgid "Welcome!"
 msgstr ""
 
 #: templates/index.twig:12
 msgid ""
-"Page d’accueil présentant du contenu lorem ipsum en statique ainsi que les "
-"articles du blog."
+"Home page featuring static lorem ipsum content and posts from the blog."
 msgstr ""
 
 #: templates/index.twig:35
-msgid "Articles"
+msgid "Posts"
 msgstr ""
 
 #: templates/single.twig:25
-msgid "Articles suggérés"
+msgid "Related posts"
 msgstr ""
 
 #: templates/components/navbar.twig:19
-msgid "Accueil"
+msgid "Home"
 msgstr ""
 
 #. Name of the theme

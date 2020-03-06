@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MD Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-11 09:04+0000\n"
-"PO-Revision-Date: 2019-12-12 08:22+0000\n"
+"PO-Revision-Date: 2020-03-06 12:00+0000\n"
 "Last-Translator: admin <admin@md-starter.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -15,36 +15,34 @@ msgstr ""
 "X-Loco-Version: 2.3.1; wp-5.3"
 
 #: templates/index.twig:10
-msgid "Bienvenue !"
-msgstr "Welcome!"
+msgid "Welcome!"
+msgstr ""
 
 #: templates/index.twig:12
 msgid ""
-"Page d’accueil présentant du contenu lorem ipsum en statique ainsi que les "
-"articles du blog."
-msgstr ""
 "Home page featuring static lorem ipsum content and posts from the blog."
+msgstr ""
 
 #: templates/index.twig:35
-msgid "Articles"
-msgstr "Posts"
+msgid "Posts"
+msgstr ""
 
 #: templates/single.twig:25
-msgid "Articles suggérés"
-msgstr "Related posts"
+msgid "Related posts"
+msgstr ""
 
 #: templates/components/navbar.twig:19
-msgid "Accueil"
-msgstr "Home"
+msgid "Home"
+msgstr ""
 
 #. Name of the theme
 msgid "MD Starter"
-msgstr "MD Starter"
+msgstr ""
 
 #. Author of the theme
 msgid "MD"
-msgstr "MD"
+msgstr ""
 
 #. Author URI of the theme
 msgid "https://wearemd.com"
-msgstr "https://wearemd.com"
+msgstr ""
