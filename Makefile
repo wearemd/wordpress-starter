@@ -33,8 +33,8 @@ setup: up-docker deps app/index.php app/wp-config.php
 	@$(WPCLI) theme activate md-starter
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu item add-post navbar 2
-	@$(WPCLI) menu create "navbar_footer"
-	@$(WPCLI) menu item add-post navbar_footer 2
+	@$(WPCLI) menu create "nav_footer"
+	@$(WPCLI) menu item add-post nav_footer 2
 	@$(WPCLI) rewrite structure '/%year%/%monthnum%/%day%/%postname%/' --hard
 
 .PHONY: build-docker
