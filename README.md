@@ -54,7 +54,7 @@ The prompt will ask you to enter some informations related to the theme, then ch
 
 If the desired language is not in the list, feel free to [contribute to the project](#contributing) by adding a [language](app/wp-content/themes/md-starter/languages).
 
-**Step 5:** Run the following command to get everything ready:
+**Step 2:** Run the following command to get everything ready:
 
 ```
 make setup
