@@ -180,7 +180,7 @@ const questions = [
   {
     type: 'autocomplete',
     name: 'wpLocale',
-    message: 'Site language',
+    message: 'Choose site language',
     choices: wpAvailableLocales,
     initial: wpAvailableLocales.map(e => e.value).indexOf(wpDefaultLocale),
     validate: value => wpAvailableLocales.includes(value)
