@@ -209,7 +209,7 @@ const questions = [
     ` * Text Domain: ${themeNameSlug}\n` +
     ' */\n'
 
-  fs.writeFileSync(path.resolve(__dirname, 'app/wp-content/themes/md-starter/style.css'), themeStyleCSS)
+  fs.writeFileSync(path.resolve(__dirname, '../app/wp-content/themes/md-starter/style.css'), themeStyleCSS)
 
   // Set default language for this WordPress installation
   await replaceInFile({
@@ -227,7 +227,7 @@ const questions = [
     ],
     ignore: [
       'README.md',
-      'create-theme',
+      'bin/create-theme',
       '**/fonts/**',
       '**/images/**',
       'node_modules/**'
@@ -239,12 +239,12 @@ const questions = [
   // Rename app/wp-content/themes/md-starter
   // and app/wp-content/themes/md-starter/languages/md-starter.pot
   fs.renameSync(
-    path.resolve(__dirname, 'app/wp-content/themes/md-starter/languages/md-starter.pot'),
-    path.resolve(__dirname, `app/wp-content/themes/md-starter/languages/${themeNameSlug}.pot`)
+    path.resolve(__dirname, '../app/wp-content/themes/md-starter/languages/md-starter.pot'),
+    path.resolve(__dirname, `../app/wp-content/themes/md-starter/languages/${themeNameSlug}.pot`)
   )
   fs.renameSync(
-    path.resolve(__dirname, 'app/wp-content/themes/md-starter'),
-    path.resolve(__dirname, `app/wp-content/themes/${themeNameSlug}`)
+    path.resolve(__dirname, '../app/wp-content/themes/md-starter'),
+    path.resolve(__dirname, `../app/wp-content/themes/${themeNameSlug}`)
   )
 
   console.log(`🏁 Your theme ${themeName} is ready!`)
