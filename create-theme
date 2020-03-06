@@ -192,7 +192,7 @@ const questions = [
 
   // Interrupt here if one of the value above is undefined
   if ([themeName, authorName, authorURI, wpLocale].some(e => e == undefined)){
-    console.log(`❌ Theme creation aborted`)
+    console.log(`✖ Theme creation aborted`)
 
     return false
   }
