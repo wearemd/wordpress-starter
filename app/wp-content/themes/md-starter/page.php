@@ -4,7 +4,7 @@
  *
  * Template used to display default page (Legal notices, personal data)
  *
- * @package MD_Starter_Theme
+ * @package MD_Starter
  */
 
 $context         = Timber::get_context();

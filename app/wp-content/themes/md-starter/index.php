@@ -2,7 +2,7 @@
 /**
  * Index
  *
- * @package MD_Starter_Theme
+ * @package MD_Starter
  * @file    index.php
  */
 

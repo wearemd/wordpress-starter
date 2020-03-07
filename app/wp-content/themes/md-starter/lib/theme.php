@@ -3,7 +3,7 @@
  * MD Starter Class
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
- * @package MD_Starter_Theme
+ * @package MD_Starter
  */
 
 // Include autoload from Composer.
@@ -29,7 +29,7 @@ Timber::$dirname = array( 'templates' );
 
 
 /**
- * Class MD_Starter_Theme
+ * Class MD_Starter
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */

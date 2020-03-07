@@ -4,7 +4,7 @@
  *
  * PHP version 7.2.10
  *
- * @package MD_Starter_Theme
+ * @package MD_Starter
  * @since   1.0.0
  * @link    https://github.com/wearemd/wordpress-starter
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License

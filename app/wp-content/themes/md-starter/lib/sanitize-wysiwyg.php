@@ -2,7 +2,7 @@
 /**
  * Sanitize WYSIWYG
  *
- * @package MD_Starter_Theme
+ * @package MD_Starter
  */
 
 /**
