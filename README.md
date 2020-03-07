@@ -48,13 +48,13 @@
 make create-theme
 ```
 
-The prompt will ask you to enter some informations related to the theme, then choose the site language. The MD Starter theme is currently available in two languages:
+The prompt will ask you to enter some informations related to your theme, then to choose the site language. The starter theme is currently available in two languages:
 - `en_US` (selected by default)
 - `fr_FR`
 
 If the desired language is not in the list, feel free to [contribute to the project](#contributing) by adding a [language](app/wp-content/themes/md-starter/languages).
 
-**Step 2:** Run the following command to get everything ready:
+**Step 2:** Run the following command to complete the installation:
 
 ```
 make setup
@@ -141,7 +141,7 @@ make help
 │   │   │   │   └── navbar.twig      # Main navbar
 │   │   │   │
 │   │   │   ├── dev                  # Development utilities
-│   │   │   │   └── lorem.twig       # Partial featuring text in lorem
+│   │   │   │   └── lorem.twig       # Partial featuring static lorem ipsum content
 │   │   │   │
 │   │   │   ├── layouts              # Layouts
 │   │   │   │   └── default.twig     # Default layout
@@ -153,8 +153,7 @@ make help
 │   │   │
 │   │   ├── 404.php                  # 404 error declaration
 │   │   ├── composer.json            # PHP dependencies, used by Composer
-│   │   ├── composer.lock            # Tracking exact versions for PHP dependencies,
-│   │   │                            # used by Composer
+│   │   ├── composer.lock            # Tracking exact versions for PHP dependencies, used by Composer
 │   │   ├── functions.php            # Changing WordPress default behavior
 │   │   ├── index.php                # Home page declaration
 │   │   ├── page.php                 # Page declaration
