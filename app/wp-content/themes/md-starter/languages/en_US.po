@@ -19,14 +19,14 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#. Name of the theme
+#. Theme name
 msgid "MD Starter"
 msgstr ""
 
-#. Author of the theme
+#. Theme author name
 msgid "MD"
 msgstr ""
 
-#. Author URI of the theme
+#. Theme author website
 msgid "https://wearemd.com"
 msgstr ""
