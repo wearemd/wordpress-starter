@@ -22,6 +22,7 @@
 - [**Getting started**](#getting-started)
 - [**Commands**](#commands)
 - [**Project structure**](#project-structure)
+- [**Layout structure**](#layout-structure)
 - [**Linting PHP files**](#linting-php-files)
 - [**Cache busting**](#cache-busting)
 - [**Authors**](#authors)
@@ -256,6 +257,34 @@ make help
 └── yarn.lock                        # Tracking exact versions for JavaScript dependencies,
                                      # used by Yarn
 ```
+
+<a name="layout-structure"></a>
+## 🖥 Layout structure
+The starter comes with a simple layout, structured like the following:
+```pug
+// Wrapper
+.wrapper
+  // Header
+  header.header
+    nav.navbar
+      .container
+        …
+
+  // Main
+  main.main
+    // Section (repeatable)
+    section.section
+      .container
+        …
+
+  // Footer
+  footer.footer
+    .container
+      …
+```
+
+### Highlighting site structure
+There is also a **Sass utility allowing to highlight the site structure** (pretty useful in development). Simply uncomment [`@import "dev/structure.sass"` in `style.sass`](sass/style.sass#L40) if you want to use it.
 
 <a name="linting-php-files"></a>
 ## 🚨 Linting PHP files
