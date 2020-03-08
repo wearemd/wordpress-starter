@@ -3,17 +3,21 @@
 {% block html_class "page" %}
 
 {% block content %}
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="content is-medium">
-            <h1 class="title is-1">{{post.title}}</h1> 
-            
-            {{post.content}}
+  <!--Main-->
+  <main class="main">
+    <!--Section-->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="content is-medium">
+              <h1 class="title is-1">{{post.title}}</h1>
+
+              {{post.content}}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 {% endblock %}

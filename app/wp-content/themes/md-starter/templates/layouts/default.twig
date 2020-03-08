@@ -15,23 +15,29 @@
     <link rel="shortcut icon" href="{{ site.theme.link }}/images/favicon/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <header class="header">
-      {% include "components/navbar.twig" with {'navbar': navbar.get_items} %}
-    </header>
+    <!--Wrapper-->
+    <div class="wrapper">
+      <!--Header-->
+      <header class="header">
+        {% include "components/navbar.twig" with {'navbar': navbar.get_items} %}
+      </header>
 
-    {% block content %}
-      Sorry, no content
-    {% endblock %}
+      {# Main #}
+      {% block content %}
+        Sorry, no content
+      {% endblock %}
 
-    <footer class="footer">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            {% include "components/nav-footer.twig" with {'nav_footer': nav_footer.get_items}%}
+      <!--Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              {% include "components/nav-footer.twig" with {'nav_footer': nav_footer.get_items}%}
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     {{function('wp_footer')}}
   </body>

@@ -3,48 +3,54 @@
 {% block html_class "home" %}
 
 {% block content %}
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title is-1">{{__('Welcome!', 'md-starter')}}</h1>
-          <p class="title is-4">
-            {{__('Home page featuring static lorem ipsum content and posts from the blog.', 'md-starter')}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="content is-medium">
-            {% include "dev/lorem.twig" %}
+  <!--Main-->
+  <main class="main">
+    <!--Section-->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h1 class="title is-1">{{__('Welcome!', 'md-starter')}}</h1>
+            <p class="title is-4">
+              {{__('Home page featuring static lorem ipsum content and posts from the blog.', 'md-starter')}}
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <p class="title is-5">{{__('Posts', 'md-starter')}}</p>
+    <!--Section-->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="content is-medium">
+              {% include "dev/lorem.twig" %}
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="columns is-multiline">
-        {% for post in posts %}
-          <div class="column is-4">
-            <h3 class="title is-2">
-              <a href="{{post.link}}">{{post.title}}</a>
-            </h3>
+    <!--Section-->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p class="title is-5">{{__('Posts', 'md-starter')}}</p>
           </div>
-        {% endfor %}
+        </div>
+
+        <div class="columns is-multiline">
+          {% for post in posts %}
+            <div class="column is-4">
+              <h3 class="title is-2">
+                <a href="{{post.link}}">{{post.title}}</a>
+              </h3>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 {% endblock %}
