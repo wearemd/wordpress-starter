@@ -10,9 +10,11 @@
   <b><a href="https://bulma.io">Bulma</a></b>,
   <b><a href="https://gulpjs.com">Gulp</a></b>,
   <b><a href="https://sass-lang.com">Sass</a></b>,
+  <br>
   <b><a href="https://www.upstatement.com/timber">Timber</a></b>,
   <b><a href="https://webpack.js.org">Webpack</a></b>,
-  <b><a href="https://wordpress.org">WordPress</a></b>.
+  <b><a href="https://wordpress.org">WordPress</a></b>,
+  <b><a href="https://wp-cli.org">WP-CLI</a></b>.
 </p>
 
 - - -
