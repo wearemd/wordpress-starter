@@ -197,7 +197,8 @@ const questions = [
     return false
   }
 
-  const themeNameSlug = slugify(themeName)
+  const themeNameKebabCase = slugify(themeName)
+  const themeNameSnakeCase = slugify(themeName, {separator: '_'})
 
   // Write all informations related to the theme in app/wp-content/themes/md-starter/style.css:
   const themeStyleCSS =
@@ -206,7 +207,7 @@ const questions = [
     ` * Author: ${authorName}\n` +
     ` * Author URI: ${authorURI}\n` +
     ' * Version: 1.0.0\n' +
-    ` * Text Domain: ${themeNameSlug}\n` +
+    ` * Text Domain: ${themeNameKebabCase}\n` +
     ' */\n'
 
   fs.writeFileSync(path.resolve(__dirname, '../app/wp-content/themes/md-starter/style.css'), themeStyleCSS)
@@ -218,33 +219,44 @@ const questions = [
     to: wpLocale
   })
 
+  const globFiles = [
+    '*',
+    '.*',
+    '**/*'
+  ]
+  const globIgnores = [
+    'README.md',
+    'bin/create-theme',
+    '**/fonts/**',
+    '**/images/**',
+    'node_modules/**'
+  ]
+
   // Rename all `md-starter` occurrences in the parent folder
   await replaceInFile({
-    files: [
-      '*',
-      '.*',
-      '**/*'
-    ],
-    ignore: [
-      'README.md',
-      'bin/create-theme',
-      '**/fonts/**',
-      '**/images/**',
-      'node_modules/**'
-    ],
+    files: globFiles,
+    ignore: globIgnores,
     from: /md-starter/g,
-    to: themeNameSlug,
+    to: themeNameKebabCase,
+  })
+
+  // Rename all `md_starter` occurrences in the parent folder
+  await replaceInFile({
+    files: globFiles,
+    ignore: globIgnores,
+    from: /md_starter/g,
+    to: themeNameSnakeCase,
   })
 
   // Rename app/wp-content/themes/md-starter
   // and app/wp-content/themes/md-starter/languages/md-starter.pot
   fs.renameSync(
     path.resolve(__dirname, '../app/wp-content/themes/md-starter/languages/md-starter.pot'),
-    path.resolve(__dirname, `../app/wp-content/themes/md-starter/languages/${themeNameSlug}.pot`)
+    path.resolve(__dirname, `../app/wp-content/themes/md-starter/languages/${themeNameKebabCase}.pot`)
   )
   fs.renameSync(
     path.resolve(__dirname, '../app/wp-content/themes/md-starter'),
-    path.resolve(__dirname, `../app/wp-content/themes/${themeNameSlug}`)
+    path.resolve(__dirname, `../app/wp-content/themes/${themeNameKebabCase}`)
   )
 
   console.log(`🏁 Your theme ${themeName} is ready!`)
