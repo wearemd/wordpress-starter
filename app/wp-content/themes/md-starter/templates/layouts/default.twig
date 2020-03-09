@@ -4,6 +4,13 @@
     <meta charset="{{ site.charset }}">
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- OG meta tags -->
+    <meta property="og:title" content="{{ current_title() }}">
+    <meta property="og:description" content="{{ current_description() }}">
+    <meta property="og:image" content="{{ current_thumbnail() }}">
+    <meta property="og:url" content="{{ current_url() }}">
+
     <title>
       {% if wp_title %}
         {{ wp_title }} - {{ site.name }}

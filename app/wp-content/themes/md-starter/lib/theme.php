@@ -4,8 +4,10 @@ require_once get_template_directory() . '/vendor/autoload.php';
 
 // Documentation: https://github.com/timber/timber
 use Timber\Timber as Timber;
-use \Twig_SimpleFunction as Twig_SimpleFunction;
-use \Twig\Environment as Twig_Environment;
+use Twig_SimpleFunction as Twig_SimpleFunction;
+use Twig\Environment as Twig_Environment;
+use Timber\Helper;
+use Timber\URLHelper;
 
 // Declare templates location
 Timber::$dirname = array( 'templates' );
@@ -47,6 +49,69 @@ class Theme extends Timber
             )
         );
 
+        // Return the current title
+        // If none found use the site name
+        $twig->addFunction(
+            new Twig_Function(
+                'current_title',
+                function(){
+                    $title = Helper::get_wp_title();
+
+                    if (!$title){
+                        $title = get_bloginfo('name');
+                    }
+
+                    return $title;
+                }
+            )
+        );
+
+        // Return the current description
+        // If none found use the site description
+        $twig->addFunction(
+            new Twig_Function(
+                'current_description',
+                function () {
+                    $description = get_the_excerpt();
+
+                    if (is_home() || empty($description)) {
+                        $description = get_bloginfo('description');
+                    }
+
+                    return $description;
+                }
+            )
+        );
+
+        // Return the current thumbnail
+        // If none found use `/images/ui/og-image.png`
+        $twig->addFunction(
+            new Twig_Function(
+                'current_thumbnail',
+                function () {
+                    $protocol = (isset($_SERVER['HTTPS']) ? "https" : "http");
+                    $default_thumbnail = get_template_directory_uri()."/images/ui/og-image.png";
+                    $thumbnail = get_the_post_thumbnail_url();
+
+                    if (is_home() || !$thumbnail) {
+                        $thumbnail = $default_thumbnail;
+                    }
+
+                    return $protocol.":".$thumbnail;
+                }
+            )
+        );
+
+        // Return the current url
+        $twig->addFunction(
+            new Twig_Function(
+                'current_url',
+                function () {
+                    return URLHelper::get_current_url( );
+                }
+            )
+        );
+
         return $twig;
     }
 
@@ -82,6 +147,10 @@ class Theme extends Timber
         // Make theme available for translation.
         // Translations can be filed in the /languages/ directory
         load_theme_textdomain('md-starter', get_template_directory() . '/languages');
+
+        // Enable Support for Featured Image
+        // Documentation: https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+        add_theme_support('post-thumbnails');
     }
 
     public function enqueue_style()
