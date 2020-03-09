@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Index template used to display homepage
- */
-
 use Timber\Timber;
 
 if (! class_exists('Timber')) {
