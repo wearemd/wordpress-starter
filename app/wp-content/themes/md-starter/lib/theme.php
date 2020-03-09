@@ -32,7 +32,7 @@ class Theme extends Timber
 
     private function load_dependencies()
     {
-        include_once get_template_directory() . '/lib/reset.php';
+        include_once get_template_directory() . '/lib/disable_wp_emoji.php';
         include_once get_template_directory() . '/lib/sanitize-wysiwyg.php';
     }
 
