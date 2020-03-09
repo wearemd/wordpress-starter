@@ -1,10 +1,7 @@
 <?php
+
 /**
- * Single
- *
- * Template used to display post
- *
- * @package MD_Starter
+ * Single template used to display post
  */
 
 $context          = Timber::get_context();
@@ -15,7 +12,9 @@ $context['post']  = $post;
 // current post. If none are found the same query will be done without the categories parameter - @awea 20191211
 $related_posts_query = [
     'post__not_in' => array($post->ID),
-    'category__in' => array_map(function($c){ return $c->ID; }, $post->categories),
+    'category__in' => array_map(function ($c) {
+        return $c->ID;
+    }, $post->categories),
     'posts_per_page' => 3,
     'orderby' => array(
         'date' => 'desc'
@@ -30,4 +29,4 @@ if (count($posts) == 0) {
 
 $context['posts'] = $posts;
 
-Timber::render( [ 'single.twig' ], $context );
+Timber::render([ 'single.twig' ], $context);

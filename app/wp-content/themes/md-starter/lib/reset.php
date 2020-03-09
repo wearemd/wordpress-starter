@@ -1,15 +1,4 @@
 <?php
-/**
- * Reset
- *
- * PHP version 7.2.10
- *
- * @category Reset
- * @package  MD_Starter
- * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
- * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
- * @link     http://19h47.fr
- */
 
 /**
  * Deactivate wp-emoji
@@ -18,11 +7,12 @@
  * @see https://smartcatdesign.net/articles/stop-loading-wp-emoji-release-min-js-wordpress-site/
  * @return void
  */
-function md_starter_disable_wp_emoji() {
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+function md_starter_disable_wp_emoji()
+{
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
 }
 
-if ( ! is_admin() ) {
-	add_action( 'init', 'md_starter_disable_wp_emoji' );
+if (! is_admin()) {
+    add_action('init', 'md_starter_disable_wp_emoji');
 }

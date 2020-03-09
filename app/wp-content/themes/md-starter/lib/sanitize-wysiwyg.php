@@ -1,9 +1,4 @@
 <?php
-/**
- * Sanitize WYSIWYG
- *
- * @package MD_Starter
- */
 
 /**
  * Customize TinyMCE
@@ -11,11 +6,10 @@
  * Remove classes, styles and all unwanted tag attributes during paste process
  *
  * @see https://sundari-webdesign.com/wordpress-removing-classes-styles-and-tag-attributes-from-pasted-content/
- * @param  arr $in Array.
- * @return arr $in
  */
-function customize_tinymce( $in ) {
-	$in['paste_preprocess'] = "function(pl,o){
+function customize_tinymce(array $in): array
+{
+    $in['paste_preprocess'] = "function(pl,o){
 		// remove the following tags completely:
 		o.content = o.content.replace(/<\/*(a|applet|area|article|aside|audio|base|basefont|bdi|bdo|body|button|canvas|command|datalist|details|embed|figcaption|figure|font|footer|frame|frameset|head|header|hgroup|hr|html|iframe|img|keygen|li|link|map|mark|menu|meta|meter|nav|noframes|noscript|object|optgroup|output|param|progress|rp|rt|ruby|script|section|source|span|style|summary|time|title|track|u|video|wbr)[^>]*>/gi,'');
 		// remove all attributes from these tags:
@@ -39,6 +33,6 @@ function customize_tinymce( $in ) {
 		o.content = o.content.replace(/(<p>)+/gi,'<p>');
 	}";
 
-	return $in;
+    return $in;
 }
-add_filter( 'tiny_mce_before_init', 'customize_tinymce' );
+add_filter('tiny_mce_before_init', 'customize_tinymce');
