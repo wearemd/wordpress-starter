@@ -90,7 +90,7 @@ class Theme extends Timber
                 'current_thumbnail',
                 function () {
                     $protocol = (isset($_SERVER['HTTPS']) ? "https" : "http");
-                    $default_thumbnail = get_template_directory_uri()."/images/ui/og-image.png";
+                    $default_thumbnail = get_template_directory_uri()."/images/og-image.png";
                     $thumbnail = get_the_post_thumbnail_url();
 
                     if (is_home() || !$thumbnail) {
