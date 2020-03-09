@@ -36,3 +36,4 @@ yarn-error.log*
 .todo
 *.mk
 wpcs
+*.cache
