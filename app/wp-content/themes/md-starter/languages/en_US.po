@@ -18,15 +18,3 @@ msgstr ""
 #: templates/components/navbar.twig:19
 msgid "Home"
 msgstr ""
-
-#. Theme name
-msgid "MD Starter"
-msgstr ""
-
-#. Theme author name
-msgid "MD"
-msgstr ""
-
-#. Theme author website
-msgid "https://wearemd.com"
-msgstr ""
