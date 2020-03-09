@@ -121,7 +121,8 @@ make help
 │   │   │   └── roboto               # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
 │   │   ├── images                   # Image assets
-│   │   │   └── .gitkeep             # Tracking an empty directory within Git
+│   │   │   └── ui                   # Tracking an empty directory within Git
+│   │   │       └── og-image.png     # OpenGraph default image
 │   │   │
 │   │   ├── languages                # Localization
 │   │   │   ├── en_US.mo             # en_US theme localization (compiled)
