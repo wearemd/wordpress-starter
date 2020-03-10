@@ -121,7 +121,7 @@ make help
 │   │   │   └── roboto               # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
 │   │   ├── images                   # Image assets
-│   │   │   └── og-image.png         # OpenGraph default image
+│   │   │   └── og-image.jpg         # Image for og:image meta tag (placeholder by default)
 │   │   │
 │   │   ├── languages                # Localization
 │   │   │   ├── en_US.mo             # en_US theme localization (compiled)
