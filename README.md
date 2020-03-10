@@ -131,7 +131,7 @@ make help
 │   │   │   └── md-starter.pot       # Theme localization template
 │   │   │
 │   │   ├── lib                      # Theme features
-│   │   │   ├── disable_wp_emoji.php # Deactivating WordPress emoji-support sanitization
+│   │   │   ├── disable_wp_emoji.php # Disabling WordPress emoji
 │   │   │   └── theme.php            # Theme declaration and initialization
 │   │   │
 │   │   ├── post-types               # Post types
