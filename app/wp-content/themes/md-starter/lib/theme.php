@@ -133,15 +133,11 @@ class Theme extends Timber
     }
 
 
-    /**
-     * After setup
-     *
-     * Sets up theme defaults and registers support for various WordPress features.
-     *
-     * Note that this function is hooked into the after_setup_theme hook, which
-     * runs before the init hook. The init hook is too late for some features, such
-     * as indicating support for post thumbnails.
-     */
+    // After setup
+    // Sets up theme defaults and registers support for various WordPress features.
+    // Note that this function is hooked into the after_setup_theme hook, which
+    // runs before the init hook. The init hook is too late for some features, such
+    // as indicating support for post thumbnails.
     public function after_setup()
     {
         // Make theme available for translation.
@@ -180,10 +176,8 @@ class Theme extends Timber
     }
 
 
-    /**
-     * The name of the theme used to uniquely identify it within the context of
-     * WordPress and to define internationalization functionality.
-     */
+    // The name of the theme used to uniquely identify it within the context of
+    // WordPress and to define internationalization functionality.
     public function get_theme_name(): string
     {
         return $this->theme_name;
