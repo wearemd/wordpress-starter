@@ -1,3 +1,23 @@
+html
+  font-size: 16px
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  min-width: 320px
+  background-color: #f1f1f1
+
+body
+  color: $grey-darker
+  font-family: "Roboto", sans-serif
+  line-height: 1.5
+
 // Inline
 a
+  font-weight: 700
+  color: lighten($primary, 10%)
   transition: color .2s, background-color .2s
+
+  // Hover state
+  +hover
+    color: darken($primary, 10%)
+    background-color: invert($primary)
