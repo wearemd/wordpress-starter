@@ -90,7 +90,6 @@ class Theme extends Timber
             new Twig_Function(
                 'current_thumbnail',
                 function () {
-                    $protocol = (isset($_SERVER['HTTPS']) ? "https" : "http");
                     $default_thumbnail = get_template_directory_uri()."/images/og-image.jpg";
                     $thumbnail = get_the_post_thumbnail_url();
 
@@ -98,7 +97,7 @@ class Theme extends Timber
                         $thumbnail = $default_thumbnail;
                     }
 
-                    return $protocol.":".$thumbnail;
+                    return $thumbnail;
                 }
             )
         );
