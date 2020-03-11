@@ -5,11 +5,11 @@
     <meta name="description" content="{{ current_description() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      {% if wp_title %}
+      {%- if wp_title -%}
         {{ wp_title }} - {{ site.name }}
-      {% else %}
+      {%- else -%}
         {{ site.name }}
-      {% endif %}
+      {%- endif -%}
     </title>
 
     <!-- OG meta tags -->
