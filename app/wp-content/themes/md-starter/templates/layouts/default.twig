@@ -27,7 +27,9 @@
     <div class="wrapper">
       <!-- Header -->
       <header class="header">
-        {% include "components/navbar.twig" with {'navbar': navbar.get_items} %}
+        <div class="container">
+          {% include "components/navbar.twig" with {'navbar': navbar.get_items} %}
+        </div>
       </header>
 
       {# Main #}

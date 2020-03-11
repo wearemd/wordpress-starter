@@ -267,9 +267,8 @@ The starter comes with a simple layout, structured like the following:
 .wrapper
   // Header
   header.header
-    nav.navbar
-      .container
-        …
+    .container
+      …
 
   // Main
   main.main

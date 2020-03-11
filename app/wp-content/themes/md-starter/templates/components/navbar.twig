@@ -1,33 +1,25 @@
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand">
-      <div class="navbar-item">
-        <a href="{{site.url}}">
-          {{site.name}}
-        </a>
-      </div>
-
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-end">
-        <a href="{{site.url}}" class="navbar-item {{is_active(is_home)}}">
-          {{__('Home', 'md-starter')}}
-        </a>
-
-        {% if navbar %}
-          {% for item in navbar %}
-            <a href="{{item.link}}" class="navbar-item {{is_active(item.current)}}">
-              {{item.title}}
-            </a>
-          {% endfor %}
-        {% endif %}
-      </div>
-    </div>
+<nav>
+  <div>
+    <a href="{{site.url}}">
+      {{site.name}}
+    </a>
   </div>
+
+  <ul>
+    <li>
+      <a href="{{site.url}}" class="{{is_active(is_home)}}">
+        {{__('Home', 'md-starter')}}
+      </a>
+    </li>
+
+    {% if navbar %}
+      {% for item in navbar %}
+        <li>
+          <a href="{{item.link}}" class="{{is_active(item.current)}}">
+            {{item.title}}
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
 </nav>
