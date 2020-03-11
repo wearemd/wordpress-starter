@@ -235,7 +235,6 @@ make help
 │   ├── utilities                    # Utilities
 │   │   ├── _all.sass                # Importing all stylesheets
 │   │   ├── animations.sass          # Some basic animations
-│   │   ├── functions.sass           # Functions
 │   │   ├── mixins.sass              # A few useful mixins
 │   │   └── variables.sass           # Variables for colors, typography, etc.
 │   │
