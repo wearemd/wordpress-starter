@@ -32,9 +32,14 @@ create-theme: node_modules
 setup: up-docker deps app/index.php app/wp-config.php
 	@$(WPCLI) theme activate md-starter
 	@$(WPCLI) menu create "navbar"
+	@# Display the Sample page in navbar
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu create "nav_footer"
+	@# Display the Sample page in nav_footer
 	@$(WPCLI) menu item add-post nav_footer 2
+	@# Publish and display the Privacy Policy page in nav_footer
+	@$(WPCLI) post update 3 --post_status=publish
+	@$(WPCLI) menu item add-post nav_footer 3
 	@$(WPCLI) rewrite structure '/%year%/%monthnum%/%day%/%postname%/' --hard
 
 .PHONY: build-docker
