@@ -281,7 +281,7 @@ The starter comes with a simple layout, structured like the following:
 ```
 
 ### Highlighting site structure
-There is also a **Sass utility allowing to highlight the site structure** (pretty useful in development). Simply uncomment [`@import "dev/structure.sass"` in `style.sass`](sass/style.sass#L40) if you want to use it.
+There is also a **Sass utility allowing to highlight the site structure** (pretty useful in development). Simply uncomment [`@import "dev/structure.sass"` in `style.sass`](sass/style.sass#L51) if you want to use it.
 
 <a name="linting-php-files"></a>
 ## 🚨 Linting PHP files
