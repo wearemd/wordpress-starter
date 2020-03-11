@@ -7,8 +7,8 @@
   <b>Stack:</b>
   <b><a href="https://babeljs.io">Babel</a></b>,
   <b><a href="https://www.browsersync.io">Browsersync</a></b>,
-  <b><a href="https://bulma.io">Bulma</a></b>,
   <b><a href="https://gulpjs.com">Gulp</a></b>,
+  <b><a href="https://jgthms.com/minireset.css/">minireset.css</a></b>,
   <b><a href="https://sass-lang.com">Sass</a></b>,
   <br>
   <b><a href="https://www.upstatement.com/timber">Timber</a></b>,
