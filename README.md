@@ -196,7 +196,7 @@ make help
 │   └── app.js                       # Main JavaScript file used as entry by Webpack
 │
 │
-├── sass                             # SASS STYLE
+├── sass                             # SASS STYLE (STRUCTURE INSPIRED BY BULMA https://bulma.io)
 │   ├── base                         # Base style
 │   │   ├── _all.sass                # Importing all stylesheets
 │   │   ├── generic.sass             # Style for generic elements (html, body, etc.)
