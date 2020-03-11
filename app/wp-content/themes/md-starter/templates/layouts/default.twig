@@ -2,7 +2,7 @@
 <html class="{% block html_class %}{% endblock %}" {{ site.language_attributes }}>
   <head>
     <meta charset="{{ site.charset }}">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ current_description() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       {% if wp_title %}
