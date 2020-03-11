@@ -33,13 +33,13 @@ setup: up-docker deps app/index.php app/wp-config.php
 	@$(WPCLI) theme activate md-starter
 	@$(WPCLI) menu create "navbar"
 	@$(WPCLI) menu create "nav_footer"
-	@# Display the Home page in navbar and nav_footer
+	@# Display the home page in navbar and nav_footer
 	@$(WPCLI) menu item add-custom navbar Home http://localhost:3010
 	@$(WPCLI) menu item add-custom nav_footer Home http://localhost:3010
-	@# Display the Sample page in navbar and nav_footer
+	@# Display the sample page in navbar and nav_footer
 	@$(WPCLI) menu item add-post navbar 2
 	@$(WPCLI) menu item add-post nav_footer 2
-	@# Publish and display the Privacy Policy page in nav_footer
+	@# Publish and display the privacy policy page in nav_footer
 	@$(WPCLI) post update 3 --post_status=publish
 	@$(WPCLI) menu item add-post nav_footer 3
 	@$(WPCLI) rewrite structure '/%year%/%monthnum%/%day%/%postname%/' --hard
