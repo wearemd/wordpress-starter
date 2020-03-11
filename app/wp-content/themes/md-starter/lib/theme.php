@@ -139,7 +139,7 @@ class Theme extends Timber
         $sizes = explode('x', self::POST_THUMBNAIL_SIZE);
         $width = intval($sizes[0]);
         $height = intval($sizes[1]);
-        set_post_thumbnail_size($width, $height);
+        set_post_thumbnail_size($width, $height, true);
     }
 
     // After setup
