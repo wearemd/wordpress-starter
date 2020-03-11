@@ -14,7 +14,3 @@ msgstr ""
 #: templates/single.twig:25
 msgid "Related posts"
 msgstr ""
-
-#: templates/components/navbar.twig:19
-msgid "Home"
-msgstr ""

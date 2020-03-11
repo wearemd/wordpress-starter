@@ -1,12 +1,6 @@
 {% if nav_footer %}
   <nav>
     <ul>
-      <li>
-        <a href="{{site.url}}">
-          {{__('Home', 'md-starter')}}
-        </a>
-      </li>
-
       {% for item in nav_footer %}
         <li>
           <a href="{{item.link}}">

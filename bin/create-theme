@@ -248,6 +248,17 @@ const questions = [
     to: themeNameSnakeCase,
   })
 
+  // Since there is no `add-home` command we need to give a name to the menu
+  // entry and this name is manually translated for now.
+  // By default it will be `Home` for every language - @dauthier 20200311
+  if (wpLocale.startsWith('fr_')){
+    await replaceInFile({
+      files: 'Makefile',
+      from: /Home/g,
+      to: 'Accueil'
+    })
+  }
+
   // Rename app/wp-content/themes/md-starter
   // and app/wp-content/themes/md-starter/languages/md-starter.pot
   fs.renameSync(
