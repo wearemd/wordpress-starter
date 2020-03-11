@@ -1,17 +1,19 @@
 {% if nav_footer %}
-  <ul>
-    <li>
-      <a href="{{site.url}}">
-        {{__('Home', 'md-starter')}}
-      </a>
-    </li>
-
-    {% for item in nav_footer %}
+  <nav>
+    <ul>
       <li>
-        <a href="{{item.link}}">
-          {{item.title}}
+        <a href="{{site.url}}">
+          {{__('Home', 'md-starter')}}
         </a>
       </li>
-    {% endfor %}
-  </ul>
+
+      {% for item in nav_footer %}
+        <li>
+          <a href="{{item.link}}">
+            {{item.title}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 {% endif %}
