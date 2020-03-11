@@ -14,6 +14,7 @@ Timber::$dirname = array( 'templates' );
 
 class Theme extends Timber
 {
+    const POST_THUMBNAIL_SIZE = '1280x640';
     private $theme_name;
     private $theme_version;
 
@@ -130,8 +131,16 @@ class Theme extends Timber
         add_action('wp_enqueue_scripts', array( $this, 'enqueue_style' ));
         add_action('wp_enqueue_scripts', array( $this, 'enqueue_scripts' ));
         add_action('after_setup_theme', array( $this, 'after_setup' ));
+        $this->set_post_thumbnail_size();
     }
 
+    private function set_post_thumbnail_size()
+    {
+        $sizes = explode('x', self::POST_THUMBNAIL_SIZE);
+        $width = intval($sizes[0]);
+        $height = intval($sizes[1]);
+        set_post_thumbnail_size($width, $height);
+    }
 
     // After setup
     // Sets up theme defaults and registers support for various WordPress features.
