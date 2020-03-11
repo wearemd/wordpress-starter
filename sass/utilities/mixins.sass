@@ -14,3 +14,24 @@
   right: $offset
   bottom: $offset
   left: $offset
+
+// Responsiveness (imported from Bulma but simpler)
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet), print
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content
+
+=fullhd
+  @media screen and (min-width: $fullhd)
+    @content
