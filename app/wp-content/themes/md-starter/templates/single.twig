@@ -10,11 +10,9 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <div class="content is-medium">
-              <h1 class="title is-1">{{post.title}}</h1>
+            <h1>{{post.title}}</h1>
 
-              {{post.content}}
-            </div>
+            {{post.content}}
           </div>
         </div>
       </div>
@@ -26,14 +24,14 @@
         <div class="container">
           <div class="columns">
             <div class="column">
-              <p class="title is-5">{{__('Related posts', 'md-starter')}}</p>
+              <h4>{{__('Related posts', 'md-starter')}}</h4>
             </div>
           </div>
 
-          <div class="columns is-multiline">
+          <div class="columns">
             {% for post in posts %}
-              <div class="column is-4">
-                <h3 class="title is-2">
+              <div class="column">
+                <h3>
                   <a href="{{post.link}}">{{post.title}}</a>
                 </h3>
               </div>
