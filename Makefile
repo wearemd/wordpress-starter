@@ -42,7 +42,7 @@ build-docker: .build-docker.mk
 
 .build-docker.mk: Dockerfile docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
-	touch $@
+	@touch $@
 
 .PHONY: up-docker
 up-docker: build-docker
