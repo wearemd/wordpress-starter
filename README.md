@@ -211,6 +211,7 @@ make help
 │   │
 │   ├── elements                     # Elements style
 │   │   ├── _all.sass                # Importing all stylesheets
+│   │   ├── content.sass             # Handling WYSIWYG generated content
 │   │   └── title.sass               # Title style
 │   │
 │   ├── fonts                        # Fonts style

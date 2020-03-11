@@ -1,0 +1,17 @@
+// Handling WYSIWYG generated content, where only HTML tags are available
+.content
+  // Inline
+  a
+    text-decoration: none
+
+  // Block
+  ul,
+  ol
+    margin-left: 1em
+
+  ul
+    list-style: square
+
+  li
+    &:not(:last-child)
+      margin-bottom: .5rem
