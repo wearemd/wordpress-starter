@@ -51,7 +51,7 @@
 make create-theme
 ```
 
-The prompt will ask you to enter some informations related to your theme, then to choose the site language. The starter theme is currently available in two languages:
+The prompt will ask you to enter some informations related to your theme, then to choose the site language. The [starter theme](app/wp-content/themes/md-starter) is currently available in two languages:
 - `en_US` (selected by default)
 - `fr_FR`
 
