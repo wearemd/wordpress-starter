@@ -10,7 +10,10 @@ gulp.task('browser-sync', function(done) {
       // and http://localhost:3000/wp-admin to http://localhost:3010/wp-admin
       // to prevent errors while editing WP settings (WP_SITEURL or WP_HOME) - @awea 20191210
       function(req, res, next) {
-        if (req.url.includes('wp-login')) {
+        if (
+          req.url.includes('wp-login') 
+          && !req.url.includes('action=logout')
+        ) {
           res.writeHead(302, {
             'Location': 'http://localhost:3010/wp-login.php'
           })
