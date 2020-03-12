@@ -116,7 +116,7 @@ make help
 ```
 .
 ├── app                              # WORDPRESS SITE
-│   ├── wp-content/themes/md-starter # WordPress theme to customize
+│   ├── wp-content/themes/md-starter # Starter theme
 │   │   ├── fonts                    # Font assets
 │   │   │   └── roboto               # Roboto from Google Fonts (TTF, WOFF, WOFF2)
 │   │   │
@@ -140,7 +140,7 @@ make help
 │   │   ├── templates                # Twig templates
 │   │   │   ├── components           # Components
 │   │   │   │   ├── nav-footer.twig  # Footer nav
-│   │   │   │   └── navbar.twig      # Main navbar
+│   │   │   │   └── navbar.twig      # Navbar (main nav)
 │   │   │   │
 │   │   │   ├── dev                  # Development utilities
 │   │   │   │   └── lorem.twig       # Partial featuring static lorem ipsum content
