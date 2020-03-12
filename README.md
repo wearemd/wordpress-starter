@@ -63,7 +63,7 @@ If the desired language is not in the list, feel free to [contribute to the proj
 make setup
 ```
 
-**Your WordPress is ready to be themed!**
+**Your WordPress is ready to be customized!**
 
 <a name="commands"></a>
 ## ⌨️ Commands
