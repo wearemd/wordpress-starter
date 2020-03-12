@@ -97,7 +97,7 @@ class Theme extends Timber
                         $thumbnail = $default_thumbnail;
                     }
 
-                    return $thumbnail;
+                    return $thumbnail."?ver=".$this->get_theme_version();
                 }
             )
         );
