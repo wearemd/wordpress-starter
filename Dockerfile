@@ -12,11 +12,13 @@ RUN apt-get install -y \
   mariadb-client \
   libpng-dev \
   libjpeg-dev \
-  libonig-dev
+  libonig-dev \
+  libzip-dev
 
 RUN docker-php-ext-install gd \
  && docker-php-ext-install mbstring \
- && docker-php-ext-install mysqli
+ && docker-php-ext-install mysqli \
+ && docker-php-ext-install zip
 
 # Install wp-cli && dependencies
 RUN apt-get install -y less
