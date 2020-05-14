@@ -5,7 +5,7 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "2.2.1"
+        "wp-coding-standards/wpcs": "2.3.0"
     },
     "scripts": {
         "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",
