@@ -8,6 +8,11 @@
         "squizlabs/php_codesniffer": "*",
         "wp-coding-standards/wpcs": "2.3.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Theme\\": "lib/"
+        }
+    },
     "scripts": {
         "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",
         "lint": "vendor/bin/phpcs --standard=WordPress"

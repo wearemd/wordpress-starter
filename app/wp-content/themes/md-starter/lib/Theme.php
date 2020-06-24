@@ -1,13 +1,13 @@
 <?php
 
-// Include autoload from Composer.
-require_once get_template_directory().'/vendor/autoload.php';
+namespace Theme;
 
 // Documentation: https://github.com/timber/timber
 use Timber\Helper;
 use Timber\Timber as Timber;
 use Timber\URLHelper;
 use Twig\Environment as Twig_Environment;
+use Twig_SimpleFunction as Twig_SimpleFunction;
 
 // Declare templates location
 Timber::$dirname = ['templates'];
@@ -54,7 +54,7 @@ class Theme extends Timber
     {
         // Handle menu active.
         $twig->addFunction(
-            new Twig_Function(
+            new Twig_SimpleFunction(
                 'is_active',
                 function ($is_active) {
                     return $is_active ? 'is-active' : '';
@@ -65,7 +65,7 @@ class Theme extends Timber
         // Return the current title
         // If none found use the site name
         $twig->addFunction(
-            new Twig_Function(
+            new Twig_SimpleFunction(
                 'current_title',
                 function () {
                     $title = Helper::get_wp_title();
@@ -82,7 +82,7 @@ class Theme extends Timber
         // Return the current description
         // If none found use the site description
         $twig->addFunction(
-            new Twig_Function(
+            new Twig_SimpleFunction(
                 'current_description',
                 function () {
                     $description = get_the_excerpt();
@@ -99,7 +99,7 @@ class Theme extends Timber
         // Return the current thumbnail
         // If none found use `/images/og-image.jpg`
         $twig->addFunction(
-            new Twig_Function(
+            new Twig_SimpleFunction(
                 'current_thumbnail',
                 function () {
                     $default_thumbnail = get_template_directory_uri().'/images/og-image.jpg';
@@ -116,7 +116,7 @@ class Theme extends Timber
 
         // Return the current url
         $twig->addFunction(
-            new Twig_Function(
+            new Twig_SimpleFunction(
                 'current_url',
                 function () {
                     return URLHelper::get_current_url();
@@ -189,6 +189,3 @@ class Theme extends Timber
         set_post_thumbnail_size($width, $height, true);
     }
 }
-
-$wp_theme = wp_get_theme();
-new Theme('md-starter', $wp_theme->Version);
