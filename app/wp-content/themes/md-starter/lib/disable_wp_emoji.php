@@ -9,6 +9,6 @@ function md_starter_disable_wp_emoji()
     remove_action('wp_print_styles', 'print_emoji_styles');
 }
 
-if (! is_admin()) {
+if (!is_admin()) {
     add_action('init', 'md_starter_disable_wp_emoji');
 }

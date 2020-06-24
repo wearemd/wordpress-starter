@@ -1,16 +1,16 @@
 <?php
+
 // Include autoload from Composer.
-require_once get_template_directory() . '/vendor/autoload.php';
+require_once get_template_directory().'/vendor/autoload.php';
 
 // Documentation: https://github.com/timber/timber
-use Timber\Timber as Timber;
-use Twig_SimpleFunction as Twig_SimpleFunction;
-use Twig\Environment as Twig_Environment;
 use Timber\Helper;
+use Timber\Timber as Timber;
 use Timber\URLHelper;
+use Twig\Environment as Twig_Environment;
 
 // Declare templates location
-Timber::$dirname = array( 'templates' );
+Timber::$dirname = ['templates'];
 
 class Theme extends Timber
 {
@@ -20,22 +20,34 @@ class Theme extends Timber
 
     public function __construct(string $theme_name, string $theme_version)
     {
-        $this->theme_name    = $theme_name;
+        $this->theme_name = $theme_name;
         $this->theme_version = $theme_version;
 
         $this->setup();
         $this->load_dependencies();
 
-        add_filter('timber_context', array( $this, 'add_to_context' ));
-        add_filter('timber/twig', array( $this, 'add_to_twig' ));
+        add_filter('timber_context', [$this, 'add_to_context']);
+        add_filter('timber/twig', [$this, 'add_to_twig']);
 
         parent::__construct();
     }
 
-
-    private function load_dependencies()
+    public function setup()
     {
-        include_once get_template_directory() . '/lib/disable_wp_emoji.php';
+        add_action('wp_enqueue_scripts', [$this, 'enqueue_style']);
+        add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
+        add_action('after_setup_theme', [$this, 'after_setup']);
+        $this->set_post_thumbnail_size();
+    }
+
+    public function add_to_context(array $context)
+    {
+        // Handle menus
+        // See: https://timber.github.io/docs/guides/menus/
+        $context['navbar'] = new \Timber\Menu('navbar');
+        $context['nav_footer'] = new \Timber\Menu('nav-footer');
+
+        return $context;
     }
 
     public function add_to_twig(Twig_Environment $twig)
@@ -55,10 +67,10 @@ class Theme extends Timber
         $twig->addFunction(
             new Twig_Function(
                 'current_title',
-                function(){
+                function () {
                     $title = Helper::get_wp_title();
 
-                    if (!$title){
+                    if (!$title) {
                         $title = get_bloginfo('name');
                     }
 
@@ -90,14 +102,14 @@ class Theme extends Timber
             new Twig_Function(
                 'current_thumbnail',
                 function () {
-                    $default_thumbnail = get_template_directory_uri()."/images/og-image.jpg";
+                    $default_thumbnail = get_template_directory_uri().'/images/og-image.jpg';
                     $thumbnail = get_the_post_thumbnail_url();
 
                     if (is_home() || !$thumbnail) {
                         $thumbnail = $default_thumbnail;
                     }
 
-                    return $thumbnail."?ver=".$this->get_theme_version();
+                    return $thumbnail.'?ver='.$this->get_theme_version();
                 }
             )
         );
@@ -107,38 +119,12 @@ class Theme extends Timber
             new Twig_Function(
                 'current_url',
                 function () {
-                    return URLHelper::get_current_url( );
+                    return URLHelper::get_current_url();
                 }
             )
         );
 
         return $twig;
-    }
-
-    public function add_to_context(array $context)
-    {
-        // Handle menus
-        // See: https://timber.github.io/docs/guides/menus/
-        $context['navbar']     = new \Timber\Menu('navbar');
-        $context['nav_footer'] = new \Timber\Menu('nav-footer');
-
-        return $context;
-    }
-
-    public function setup()
-    {
-        add_action('wp_enqueue_scripts', array( $this, 'enqueue_style' ));
-        add_action('wp_enqueue_scripts', array( $this, 'enqueue_scripts' ));
-        add_action('after_setup_theme', array( $this, 'after_setup' ));
-        $this->set_post_thumbnail_size();
-    }
-
-    private function set_post_thumbnail_size()
-    {
-        $sizes = explode('x', self::POST_THUMBNAIL_SIZE);
-        $width = intval($sizes[0]);
-        $height = intval($sizes[1]);
-        set_post_thumbnail_size($width, $height, true);
     }
 
     // After setup
@@ -150,32 +136,39 @@ class Theme extends Timber
     {
         // Make theme available for translation.
         // Translations can be filed in the /languages/ directory
-        load_theme_textdomain('md-starter', get_template_directory() . '/languages');
+        load_theme_textdomain('md-starter', get_template_directory().'/languages');
 
         // Enable Support for Featured Image
         // Documentation: https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
         add_theme_support('post-thumbnails');
     }
 
+    public function enqueue_scripts()
+    {
+        wp_enqueue_script(
+            'app-script',
+            get_template_directory_uri().'/js/app.js',
+            [],
+            $this->get_theme_version(),
+            true
+        );
+    }
+
     public function enqueue_style()
     {
         wp_enqueue_style(
             'app-style',
-            get_template_directory_uri() . '/app.css',
+            get_template_directory_uri().'/app.css',
             [],
             $this->get_theme_version()
         );
     }
 
-    public function enqueue_scripts()
+    // The name of the theme used to uniquely identify it within the context of
+    // WordPress and to define internationalization functionality.
+    public function get_theme_name(): string
     {
-        wp_enqueue_script(
-            'app-script',
-            get_template_directory_uri() . '/js/app.js',
-            [],
-            $this->get_theme_version(),
-            true
-        );
+        return $this->theme_name;
     }
 
     public function get_theme_version(): string
@@ -183,12 +176,17 @@ class Theme extends Timber
         return $this->theme_version;
     }
 
-
-    // The name of the theme used to uniquely identify it within the context of
-    // WordPress and to define internationalization functionality.
-    public function get_theme_name(): string
+    private function load_dependencies()
     {
-        return $this->theme_name;
+        include_once get_template_directory().'/lib/disable_wp_emoji.php';
+    }
+
+    private function set_post_thumbnail_size()
+    {
+        $sizes = explode('x', self::POST_THUMBNAIL_SIZE);
+        $width = intval($sizes[0]);
+        $height = intval($sizes[1]);
+        set_post_thumbnail_size($width, $height, true);
     }
 }
 
