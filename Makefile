@@ -70,10 +70,6 @@ serve: deps up-docker
 build: deps
 	@NODE_ENV=production $(GULP)
 
-.PHONY: install-wpcs
-install-wpcs: $(THEME_DIR)/vendor
-	@cd $(THEME_DIR); composer create-project wp-coding-standards/wpcs:dev-master --no-dev
-
 .PHONY: clean
 clean:
 	@docker-compose down

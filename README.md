@@ -25,7 +25,6 @@
 - [**Commands**](#commands)
 - [**Project structure**](#project-structure)
 - [**Layout structure**](#layout-structure)
-- [**Linting PHP files**](#linting-php-files)
 - [**Cache busting**](#cache-busting)
 - [**Authors**](#authors)
 - [**Contributing**](#contributing)
@@ -279,30 +278,6 @@ The starter comes with a simple layout, structured like the following:
 
 ### Highlighting site structure
 There is also a **Sass utility allowing to highlight the site structure** (pretty useful in development). Simply uncomment [`@import "dev/structure.sass"` in `style.sass`](sass/style.sass#L51) if you want to use it.
-
-<a name="linting-php-files"></a>
-## 🚨 Linting PHP files
-Follow these steps if you want to lint PHP files using [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
-
-**Step 1:** Install `wp-coding-standards/wpcs`:
-
-```
-make install-wpcs
-```
-
-**Step 2:** Move to your theme folder.
-
-**Step 3:** Set path for `wpcs`:
-
-```
-composer config-set
-```
-
-**Step 4:** You are now able to lint any PHP file:
-
-```
-composer lint [filename].php
-```
 
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
