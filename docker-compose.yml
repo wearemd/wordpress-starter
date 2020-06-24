@@ -1,8 +1,9 @@
 version: '3'
 services:
   web:
-    build: 
+    build:
       context: .
+      dockerfile: ./docker/web/Dockerfile
       args:
         HOST_UID: ${HOST_UID}
         HOST_USER: ${HOST_USER}

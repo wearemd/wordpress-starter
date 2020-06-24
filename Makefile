@@ -47,7 +47,7 @@ setup: up-docker deps app/index.php app/wp-config.php
 .PHONY: build-docker
 build-docker: .build-docker.mk
 
-.build-docker.mk: Dockerfile docker-compose.yml
+.build-docker.mk: docker/web/Dockerfile docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
 	@touch $@
 

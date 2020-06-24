@@ -166,6 +166,11 @@ make help
 │    └── dwp                         # Script to use WP-CLI inside a Docker container
 │
 │
+├── docker                           # DOCKER RELATED FILES
+│    └── web                         # Web Docker container files
+│        └── Dockerfile              # Docker container declaration
+│
+│
 ├── documentation-images             # PROJECT DOCUMENTATION IMAGES
 │
 │
@@ -241,7 +246,6 @@ make help
 ├── .gitignore                       # Files and folders ignored by Git
 ├── .tool-versions                   # Which version to use locally for each language, used by asdf
 ├── docker-compose.yml               # Services, networks and volumes, used by Docker Compose
-├── Dockerfile                       # Docker containers declaration
 ├── gulpfile.js                      # Gulp configuration
 ├── LICENSE                          # License
 ├── Makefile                         # Commands for this project
