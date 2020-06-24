@@ -10,7 +10,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Theme\\": "lib/"
+            "Theme\\": "lib/",
+            "Theme\\Actions\\": "lib/actions",
+            "Theme\\Filters\\": "lib/filters"
         }
     },
     "scripts": {
