@@ -69,6 +69,7 @@ up-docker: build-docker
 ## - WordPress back-office at http://localhost:3010/wp-admin
 ##   (username: admin, password: password)
 ## - phpMyAdmin at http://localhost:3011
+## - MailHog at http://localhost:3012
 .PHONY: serve
 serve: deps up-docker
 	@$(GULP) --continue

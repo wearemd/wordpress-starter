@@ -15,6 +15,7 @@ services:
       - ./app:/var/www/html
     depends_on:
       - mysqldb
+      - mailhog
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -34,3 +35,8 @@ services:
       - "3306:3306"
     volumes:
       - ./db:/var/lib/mysql
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "3012:8025"

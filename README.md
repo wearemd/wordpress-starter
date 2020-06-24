@@ -8,6 +8,7 @@
   <b><a href="https://babeljs.io">Babel</a></b>,
   <b><a href="https://www.browsersync.io">Browsersync</a></b>,
   <b><a href="https://gulpjs.com">Gulp</a></b>,
+  <b><a href="https://github.com/mailhog/MailHog">MailHog</a></b>,
   <b><a href="https://jgthms.com/minireset.css/">minireset.css</a></b>,
   <b><a href="https://sass-lang.com">Sass</a></b>,
   <br>
@@ -89,6 +90,7 @@ make setup
 ## - WordPress back-office at http://localhost:3010/wp-admin
 ##   (username: admin, password: password)
 ## - phpMyAdmin at http://localhost:3011
+## - MailHog at http://localhost:3012
 
 make
 ```
