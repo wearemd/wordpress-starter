@@ -131,12 +131,7 @@ make help
 │   │   │   ├── fr_FR.po             # fr_FR theme localization
 │   │   │   └── md-starter.pot       # Theme localization template
 │   │   │
-│   │   ├── lib                      # Theme features
-│   │   │   ├── disable_wp_emoji.php # Disabling WordPress emoji
-│   │   │   └── theme.php            # Theme declaration and initialization
-│   │   │
-│   │   ├── post-types               # Post types
-│   │   │   └── .gitkeep             # Tracking an empty directory within Git
+│   │   ├── lib                      # 🚧 Theme features
 │   │   │
 │   │   ├── templates                # Twig templates
 │   │   │   ├── components           # Components
