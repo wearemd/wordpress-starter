@@ -29,6 +29,7 @@
 - [**Cache busting**](#cache-busting)
 - [**Authors**](#authors)
 - [**Contributing**](#contributing)
+- [**Code formatting**](#code-formatting)
 - [**License**](#license)
 
 - - -
@@ -311,6 +312,11 @@ composer lint [filename].php
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
 Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in `style.css`](app/wp-content/themes/md-starter/style.css#L5).
+
+<a name="code-formatting"></a>
+## 🎨 Code formatting
+### PHP
+PHP code formatting is achieved using [**PHP CS Fixer**](https://github.com/FriendsOfPHP/PHP-CS-Fixer) through the [PHP CS Fixer](https://packagecontrol.io/packages/PHP%20CS%20Fixer) plugin for Sublime Text.
 
 <a name="authors"></a>
 ## ✍️ Authors
