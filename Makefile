@@ -1,3 +1,8 @@
+# Here we ensure that every command this Makefile run will run in a bash shell,
+# instead of the default 'sh'. This is actually just a variable assignement.
+# Source: https://tech.davis-hansson.com/p/make/
+SHELL := /usr/bin/env bash
+
 GULP  := $(PWD)/node_modules/.bin/gulp
 WPCLI := $(PWD)/bin/dwp
 
@@ -47,7 +52,10 @@ setup: up-docker deps app/index.php app/wp-config.php
 .PHONY: build-docker
 build-docker: .build-docker.mk
 
-.build-docker.mk: docker/web/Dockerfile docker-compose.yml
+DOCKER_DIRS := $(shell find docker/ -type d)
+DOCKER_FILES := $(shell find docker/ -type f -name 'Dockerfile')
+
+.build-docker.mk: $(DOCKER_DIRS) $(DOCKER_FILES) docker-compose.yml
 	@sudo HOST_UID=$(shell id -u) HOST_USER=$(shell whoami) docker-compose build
 	@touch $@
 
