@@ -62,8 +62,14 @@ up-docker: build-docker
 ##   (username: admin, password: password)
 ## - phpMyAdmin at http://localhost:3011
 .PHONY: serve
-serve: deps up-docker
+serve: check-setup deps up-docker
 	@$(GULP) --continue
+
+.PHONY: check-setup
+check-setup:
+ifeq (,$(wildcard ./app/index.php))
+	$(error ❌ WordPress doesn't seem to be installed. You should run make setup first.)
+endif
 
 ## Build WordPress theme for production use
 .PHONY: build
