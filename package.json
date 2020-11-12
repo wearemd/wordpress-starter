@@ -30,7 +30,7 @@
     "is-url": "1.2.4",
     "prompts": "2.4.0",
     "replace-in-file": "6.1.0",
-    "webpack-merge": "5.3.0",
+    "webpack-merge": "5.4.0",
     "webpack-stream": "5.2.1"
   },
   "repository": {
