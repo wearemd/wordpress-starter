@@ -11,8 +11,13 @@ RUN apt-get update \
 RUN apt-get install -y \
   mariadb-client \
   libpng-dev \
-  libjpeg-dev \
-  libonig-dev
+  libjpeg62-turbo-dev \
+  libonig-dev \
+  libfreetype6-dev
+
+# Configure gd
+# Related issue: https://github.com/docker-library/php/issues/912
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
 RUN docker-php-ext-install gd \
  && docker-php-ext-install mbstring \
