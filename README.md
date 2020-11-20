@@ -27,6 +27,7 @@
 - [**Project structure**](#project-structure)
 - [**Layout structure**](#layout-structure)
 - [**Cache busting**](#cache-busting)
+- [**Install WordPress plugins**](#install-wordpress-plugins)
 - [**Authors**](#authors)
 - [**Contributing**](#contributing)
 - [**Code formatting**](#code-formatting)
@@ -288,6 +289,15 @@ There is also a **Sass utility allowing to highlight the site structure** (prett
 <a name="cache-busting"></a>
 ## 🍱 Cache busting
 Our strategy for cache busting is to automatically append a `?ver=[version]` to each asset query. When you need to bust the cache, simply update [`Version` in `style.css`](app/wp-content/themes/md-starter/style.css#L5).
+
+<a name="install-wordpress-plugins"></a>
+## ➕ Install WordPress plugins
+To keep tracks of the plugins the theme will depends on, we use [WordPress Packagist](https://wpackagist.org/). This allows to install plugins with Composer, for example to install [Query Monitor](https://fr.wordpress.org/plugins/query-monitor/):
+
+```bash
+cd app/wp-content/themes/md-starter
+composer require --dev wpackagist-plugin/query-monitor
+```
 
 <a name="code-formatting"></a>
 ## 🎨 Code formatting

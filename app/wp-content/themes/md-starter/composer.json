@@ -5,12 +5,24 @@
         "timber/timber": "^1.9.1"
     },
     "require-dev": {
+        "wpackagist-plugin/query-monitor": "^3.6"
     },
     "autoload": {
         "psr-4": {
             "Theme\\": "lib/",
             "Theme\\Actions\\": "lib/actions",
             "Theme\\Filters\\": "lib/filters"
+        }
+    },
+    "repositories": [
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "../../plugins/{$name}": ["vendor:wpackagist-plugin", "type:wordpress-plugin"]
         }
     }
 }
