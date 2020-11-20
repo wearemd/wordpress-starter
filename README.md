@@ -299,6 +299,27 @@ cd app/wp-content/themes/md-starter
 composer require --dev wpackagist-plugin/query-monitor
 ```
 
+For premium plugins, like [ACF Pro](https://www.advancedcustomfields.com/pro/), you will need to manually edit your `app/wp-content/themes/md-starter/composer.json`. For example with ACF Pro:
+
+```json
+{
+  "repositories":[
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.9.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=YOUR-PRIVATE-KEY"
+        }
+      }
+    }
+    ]
+}
+```
+
 <a name="code-formatting"></a>
 ## 🎨 Code formatting
 ### PHP
