@@ -6743,10 +6743,10 @@ watchpack@^1.6.0:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
-webpack-merge@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.5.0.tgz#18b860249ee3f940ed1607c6b0cf1912b27dbf44"
-  integrity sha512-EYKu2To70zpXh65y+ERG/8TbOy0YxPERP1hGvl5nnx7zY0HLZU57zNRlIowiPYQ8lI7kXsCHa5owKMgv/ImW/w==
+webpack-merge@5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.6.0.tgz#21e0dbfb8399fda37b9bbccf1a83134dfd1715f7"
+  integrity sha512-/2Dz4af6I3uG4QubAttbaV5WXv+Voc7Ud3VSIha744qPifRreMAB+o62376ZkMRt87JQSyvxxaCnkeEpl8pXpA==
   dependencies:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
