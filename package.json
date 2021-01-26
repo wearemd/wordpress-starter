@@ -6,7 +6,7 @@
   "author": "awea <aweaoftheworld@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "minireset.css": "^0.0.6"
+    "minireset.css": "^0.0.7"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
