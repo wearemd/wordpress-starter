@@ -1,7 +1,7 @@
 {
     "name": "md-starter",
     "require": {
-        "timber/timber": "^1.9.1"
+        "timber/timber": "^1.15.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
