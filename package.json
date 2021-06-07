@@ -31,7 +31,7 @@
     "prompts": "2.4.1",
     "replace-in-file": "6.2.0",
     "webpack-merge": "5.8.0",
-    "webpack-stream": "5.2.1"
+    "webpack-stream": "6.1.2"
   },
   "repository": {
     "url": "git@github.com:wearemd/wordpress-starter.git",
