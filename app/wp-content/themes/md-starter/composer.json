@@ -1,5 +1,5 @@
 {
-    "name": "md-starter",
+    "name": "wearemd/md-starter",
     "require": {
         "timber/timber": "^1.15.1"
     },
