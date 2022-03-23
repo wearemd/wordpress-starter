@@ -21,7 +21,7 @@
     "@babel/plugin-syntax-import-meta": "7.10.4",
     "@babel/preset-env": "7.16.11",
     "@sindresorhus/slugify": "2.1.0",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.4",
     "browser-sync": "2.27.9",
     "gulp": "4.0.2",
     "gulp-cached": "1.1.1",
