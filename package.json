@@ -22,7 +22,7 @@
     "@babel/preset-env": "7.20.2",
     "@sindresorhus/slugify": "2.2.0",
     "babel-loader": "8.3.0",
-    "browser-sync": "2.27.12",
+    "browser-sync": "2.28.1",
     "gulp": "4.0.2",
     "gulp-cached": "1.1.1",
     "gulp-rename": "2.0.0",
