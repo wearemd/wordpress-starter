@@ -2176,10 +2176,10 @@ axios@0.21.1:
   dependencies:
     follow-redirects "^1.10.0"
 
-babel-loader@8.4.0:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.4.0.tgz#8650d60aca1e43ca6538e9d276fa92a0bb73f26f"
-  integrity sha512-6J0F0cgwhd9pq6TAaeM0cfR2F1rHpV4Zc1v/nSyNtoE+iD1jexulNBsmXOozLVeuKUWTkI0uoJdc0E+bMK+qwQ==
+babel-loader@8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.4.1.tgz#6ccb75c66e62c3b144e1c5f2eaec5b8f6c08c675"
+  integrity sha512-nXzRChX+Z1GoE6yWavBQg6jDslyFF3SDjl2paADuoQtQW10JqShJt62R6eJQ5m/pjJFDT8xgKIWSP85OY8eXeA==
   dependencies:
     find-cache-dir "^3.3.1"
     loader-utils "^2.0.4"
