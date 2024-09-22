@@ -29,7 +29,7 @@
     "gulp-sass": "5.1.0",
     "is-url": "1.2.4",
     "prompts": "2.4.2",
-    "replace-in-file": "6.3.5",
+    "replace-in-file": "8.2.0",
     "sass": "1.79.3",
     "webpack": "5.94.0",
     "webpack-merge": "5.10.0",
