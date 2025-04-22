@@ -30,7 +30,7 @@
     "is-url": "1.2.4",
     "prompts": "2.4.2",
     "replace-in-file": "6.3.5",
-    "sass": "1.86.3",
+    "sass": "1.87.0",
     "webpack": "5.99.6",
     "webpack-merge": "5.10.0",
     "webpack-stream": "7.0.0"
