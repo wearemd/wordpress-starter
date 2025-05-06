@@ -19,7 +19,7 @@
     "@babel/plugin-proposal-throw-expressions": "7.27.1",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@babel/plugin-syntax-import-meta": "7.10.4",
-    "@babel/preset-env": "7.27.1",
+    "@babel/preset-env": "7.27.2",
     "@sindresorhus/slugify": "2.2.1",
     "babel-loader": "8.4.1",
     "browser-sync": "2.29.3",
