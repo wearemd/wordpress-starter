@@ -31,7 +31,7 @@
     "prompts": "2.4.2",
     "replace-in-file": "6.3.5",
     "sass": "1.89.2",
-    "webpack": "5.99.9",
+    "webpack": "5.100.0",
     "webpack-merge": "5.10.0",
     "webpack-stream": "7.0.0"
   },
