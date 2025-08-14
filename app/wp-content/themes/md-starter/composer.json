@@ -1,7 +1,7 @@
 {
     "name": "wearemd/md-starter",
     "require": {
-        "timber/timber": "^1.15.1"
+        "timber/timber": "^2.0.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "3.13.2",
