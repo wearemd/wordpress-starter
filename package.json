@@ -32,7 +32,7 @@
     "replace-in-file": "6.3.5",
     "sass": "1.91.0",
     "webpack": "5.101.3",
-    "webpack-merge": "5.10.0",
+    "webpack-merge": "6.0.1",
     "webpack-stream": "7.0.0"
   },
   "repository": {
