@@ -1428,21 +1428,18 @@
     "@parcel/watcher-win32-ia32" "2.4.1"
     "@parcel/watcher-win32-x64" "2.4.1"
 
-"@sindresorhus/slugify@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-2.2.1.tgz#fa2e2e25d6e1e74a2eeb5e2c37f5ccc516ed2c4b"
-  integrity sha512-MkngSCRZ8JdSOCHRaYd+D01XhvU3Hjy6MGl06zhOk614hp9EOAp5gIkBeQg7wtmxpitU6eAL4kdiRMcJa2dlrw==
+"@sindresorhus/slugify@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-3.0.0.tgz#7b3c9bb8a5454923ef693c272141a46a6a29e62d"
+  integrity sha512-SCrKh1zS96q+CuH5GumHcyQEVPsM4Ve8oE0E6tw7AAhGq50K8ojbTUOQnX/j9Mhcv/AXiIsbCfquovyGOo5fGw==
   dependencies:
-    "@sindresorhus/transliterate" "^1.0.0"
+    "@sindresorhus/transliterate" "^2.0.0"
     escape-string-regexp "^5.0.0"
 
-"@sindresorhus/transliterate@^1.0.0":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/transliterate/-/transliterate-1.2.1.tgz#caeb2c9399180d83b3c6c0e02377eff88da7cde4"
-  integrity sha512-23FnrtOdR6JHZq2yvC8d96PwycOZsCmCrJaGfvbQEL9YM9vYLalb+5J7hxzUI/Ararucu9hlKf0UfQeq0Z0izQ==
-  dependencies:
-    escape-string-regexp "^5.0.0"
-    lodash.deburr "^4.1.0"
+"@sindresorhus/transliterate@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/transliterate/-/transliterate-2.0.0.tgz#e22e9a2eb6e426b19cddb3993d2d78e0893e44bc"
+  integrity sha512-lRx63oCHxeJ90DqIgmbxH1PQmiBDY1wVaLzB4hK0d/xS5BrG1iZO3HdCJS/DQJk6GJ8xHDev8OMI7iGxvE1ZUA==
 
 "@socket.io/base64-arraybuffer@~1.0.2":
   version "1.0.2"
@@ -3967,11 +3964,6 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
-
-lodash.deburr@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
-  integrity sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=
 
 lodash.defaults@^4.2.0:
   version "4.2.0"
