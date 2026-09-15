@@ -23,7 +23,7 @@
     "@sindresorhus/slugify": "2.2.1",
     "babel-loader": "8.4.1",
     "browser-sync": "2.29.3",
-    "gulp": "4.0.2",
+    "gulp": "5.0.1",
     "gulp-cached": "1.1.1",
     "gulp-rename": "2.1.0",
     "gulp-sass": "5.1.0",
